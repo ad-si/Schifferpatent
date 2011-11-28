@@ -1,0 +1,150 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+html {
+}
+
+body {
+	font: 500 13px/14px "Helvetica", sans-serif;
+	color: rgb(0,0,0);
+}
+
+div#wrapper {
+    margin: 0 auto 0 auto;
+}
+
+div#wrapcontent {
+	min-height: 500px;
+	padding: 10px;
+}
+
+h1 {	
+	width: 290px;
+	height: 30px;
+	display: inline-block;
+	font: 900 25px/30px "Trebuchet MS", sans-serif;
+	color: rgba(25,255,255,0.4);
+	background: url(../img/logo.svg) no-repeat;
+	background-size: 290px;
+	margin: 5px 0 0 5px;
+}
+
+h2 {
+	text-align: center;
+	font: 500 30px/40px "Tahoma", sans-serif;
+	color: rgba(50,50,50,1);
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+h2 a {	
+	text-decoration: none;
+	color: rgba(0,0,0,1);
+}
+
+h3 {
+	text-align: center;
+	font: 500 20px/30px "Tahoma", sans-serif;
+	color: rgba(50,50,50,1);
+	text-shadow: 1px 1px 1px rgb(100,100,100);
+}
+
+img{
+	max-width: 300px;
+}
+
+/*------------------------------------------------------Navivation----------------*/
+
+#nav {
+	text-align: center;
+	color: white;
+	background: rgb(45,140,240);
+	position: relative;
+}
+
+#links {
+	display: inline-block;
+	margin: 10px 0 0 0;
+}
+
+#nav #links a {
+	font: 100 12px/40px "Arial", sans-serif;
+	height: 40px;
+	min-width: 23px;
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	padding: 0px 5px 0px 5px;
+	background: rgb(30,110,200);
+	border-radius: 5px 5px 0 0;
+	vertical-align: middle;
+	margin: 0 5px 0 0;
+}
+
+
+#nav a:active:not(#adrian), div#nav a:focus:not(#adrian) {
+	box-shadow:inset 2px 0px 10px rgba(0,0,0,0.4);
+}
+
+#nav a#adrian{
+	display: inline-block;
+	font: 100 10px/40px "", serif;
+	color: rgb(50,50,50);
+	text-decoration: none;
+	float: right;
+	padding: 0 10px 0 0;
+	border: none;
+}
+
+#nav a#adrian:hover{
+	color: rgb(0,0,0);
+}
+ /*------------------------------------------------------Home-------------------------------------------*/
+
+div#home{
+	text-align: center;
+	padding: 40px 0 0px 0;
+}
+
+div#home img{
+	display: inline-block;
+	width: 100%;
+	margin: 20px 0 0 0;
+}
+
+
+/*---------------------------------------Questions---------------------------------------------------*/
+div#questions{
+	margin: 10px;
+}
+
+table#questionstable td:nth-of-type(2n){
+	display: inline-block;
+	background: rgba(0,0,0,0.2);
+}
+
+table#questionstable td:nth-of-type(3n){
+	display: inline-block;
+}
+
+table#questionstable td{
+	padding: 5px;
+}
+
+div#questions div{
+	display: inline-block;
+	padding: 5px;
+} 
+
+div#questions div:nth-of-type(2n+1){
+	background: rgba(0,0,0,0.2);
+}
+
+div#questions td{
+	vertical-align: top;
+	padding: 5px;
+}
+
+
