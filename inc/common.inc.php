@@ -23,7 +23,7 @@ $template_header = '
 <![endif]-->
 <link rel="stylesheet" media="all" href="styles/desktop.css" type="text/css" />	
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="img/favicon.png" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="img/favicon_hq.png" />
 <link rel="apple-touch-startup-image" href="/startup.png" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
