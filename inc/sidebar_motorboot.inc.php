@@ -1,13 +1,21 @@
 <?php
 
-$content .='<ul class="sidebar">'.
-		'<li><a href="motorbootstypen">Bootstypen</a></li>'.
-		'<li><a href="motor">Der Motor</a></li>'.
-		'<li><a href="propeller">Der Propeller</a></li>'.
-		'<li><a href="steuerung">Steuerung</a></li>'.
-		'<li><a href="sicherheit">Sicherheit</a></li>'.
-		'<li><a href="motorboottheorie">Fahrtheorie</a></li>'.
-		'<li><a href="motorbootprüfung">Die praktische Prüfung</a></li>'.
-	'</ul>';
+$topics = array(
+'Bootstypen' 				=> 'motorbootstypen',
+'Der Motor' 				=> 'motor',
+'Der Propeller' 			=> 'propeller',
+'Steuerung' 				=> 'steuerung',
+'Sicherheit' 				=> 'sicherheit',
+'Fahrtheorie' 				=> 'motorboottheorie',
+'Die praktische Prüfung' 	=> 'motorbootprüfung',
+); 
+
+$content .='<ul class="sidebar">';
+
+foreach($topics as $name => $link){
+	$content .= '<li><a href="'.$link.'">'.$name.'</a></li>';
+}
+
+$content .='</ul>';
 
 ?>

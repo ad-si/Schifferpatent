@@ -1,9 +1,3 @@
-/*	Less Framework 4
-	http://lessframework.com
-	by Joni Korpi
-	License: http://opensource.org/licenses/mit-license.php	*/
-
-
 /*	Resets
 	------	*/
 
@@ -17,6 +11,7 @@ menu, footer, header, nav, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	font-size: 100%;
 }
 
 article, aside, canvas, figure, figure img, figcaption, hgroup,
@@ -69,34 +64,32 @@ body {
 }
 */
 
-/* Selection colours (easy to forget) */
+/* Selection colours */
 
-::selection 	 	{background: rgb(255,255,158);}
-::-moz-selection 	{background: rgb(255,255,158);}
+::selection 	 	{background: rgb(50,180,250);}
+::-moz-selection 	{background: rgb(50,180,250);}
 img::selection 		{background: transparent;}
 img::-moz-selection	{background: transparent;}
-body {-webkit-tap-highlight-color: rgb(255,255,158);}
+body {-webkit-tap-highlight-color: rgb(50,180,250);}
 
 
 
-/*		Default Layout: 992px. 
-		Gutters: 24px.
-		Outer margins: 48px.
-		Leftover space for scrollbars @1024px: 32px.
-----------------------------------------------------------------------------------------
-cols    1     2      3      4      5      6      7      8      9      10    11    12     
-px      68    160    252    344    436    528    620    712    804    896   988   1080   */
+/*		Default Layout: 960px
+		Columns:	60px
+		Gutters: 	10px
+*/
 
 html {
 	background: url(../img/bg.jpg);
 }
 
 body {
-	width: 992px;
-    margin: 0 auto 100px auto;
+	width: 940px;
+	padding: 0 10px 0 10px;
+    margin: 0 auto 60px auto;
 	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
 	font: 500 16px/20px "Times New Roman", serif;
-	color: rgb(120,120,120);
+	color: rgb(100,100,100);
 	position: relative;
 }
 
@@ -104,7 +97,7 @@ h1 {
 	display: inline-block;
 }
 
-h1 a{	
+h1 a {	
 	vertical-align: baseline;
 	width: 260px;
 	color: rgba(25,255,255,0.4);
@@ -126,8 +119,9 @@ h2 a {
 }
 
 h3 {
-	font: 500 20px/40px "Tahoma", sans-serif;
+	font: 500 20px/24px "Tahoma", sans-serif;
 	color: rgba(50,50,50,1);
+	margin: 0 0 10px 0;
 }
 
 h4 {
@@ -137,15 +131,20 @@ h4 {
 }
 
 em {
-	font-weight: 900;
+	font-weight: 700;
 	font-style: normal;
-	font-family: sans-serif;
+	font-family: sans-serif
+}
+
+.not {
+	text-decoration: line-through;
 }
 
 /*------------------------------------------------------Navigation--------------------------------*/
 
-#nav {
-	width: 992px;
+nav {
+	width: 940px;
+	height: 30px;
 	color: white;
 	position: fixed;
 	top: 0px;
@@ -161,10 +160,10 @@ em {
 	display: inline-block;
 }
 
-#nav a {
+nav a {
 	vertical-align: top;
-	font: 900 14px/32px "Arial", sans-serif;
-	height: 32px;
+	font: 900 14px/30px "Arial", sans-serif;
+	height: 30px;
 	min-width: 23px;
 	display: inline-block;
 	text-decoration: none;
@@ -174,18 +173,18 @@ em {
 	vertical-align: middle;
 }
 
-#nav a:active:not(#adrian),
-#nav a:focus:not(#adrian) {
+nav a:active:not(#adrian),
+nav a:focus:not(#adrian) {
 	box-shadow: inset 2px 0px 10px rgba(0,0,0,0.5);
 }
 
-#nav:first-child:active,
-#nav:first-child:focus {
+nav:first-child:active,
+nav:first-child:focus {
 	border-radius: 0 0 0 8px;
 }
-#nav a#adrian{
+nav a#adrian{
 	display: inline-block;
-	font: 100 10px/32px "", serif;
+	font: 100 10px/30px "", serif;
 	color: rgb(50,50,50);
 	text-decoration: none;
 	float: right;
@@ -193,46 +192,101 @@ em {
 	border: none;
 }
 
-#nav a#adrian:hover{
+nav a#adrian:hover{
 	color: rgb(0,0,0);
 }
 
-ul.sidebar{
+.sidebar{
 	position: fixed;
-	overflow: hidden;
-	width: 160px;
+	width: 140px;
 	display: inline-block;
 	list-style-type: none;
 	margin: 60px 0 0 0;
 	border-radius: 8px;
    	box-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+   	background: white;
 }
 
-ul.sidebar li{
-	font: 500 13px/40px "Arial", sans-serif;
-	padding: 0px 10px 0 10px;
-	background: rgb(230,230,230);
+.sidebar li:nth-of-type(2n) {
+	background: rgba(0,0,0,0.03);
 }
 
-ul.sidebar li:nth-of-type(2n) {
-	background: rgba(245,245,245,1);
-}
-
-ul.sidebar li:first-of-type {
+.sidebar li:first-of-type {
 	border-radius: 8px 8px 0px 0;
 }
 
-ul.sidebar li:last-of-type {
+.sidebar li:last-of-type {
 	border-radius: 0 0px 8px 8px;
 }
 
-ul.sidebar li a{
+.sidebar li a{
+	display: inline-block;
 	text-decoration: none;
 	color: black;
+	font: 500 13px/40px "Arial", sans-serif;
+	padding: 0px 10% 0 10%;
+	width: 80%;
+}
+
+/*-------------------------------------- Sites -----------------------------------------*/
+
+.text {
+	display: inline-block;
+	vertical-align: top;
+	width: 700px;
+	margin: 60px 0px 10px 160px;
+	padding: 40px;
+	min-height: 400px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+	background: white;
+	border-radius: 8px;
+}
+
+.text p {
+	margin: 0px 0px 10px 0px;
+	text-align: justify;
+}
+
+.text hr {
+	height: 1px;
+	width: 100%;
+	background: grey;
+	margin: 20px 0 20px 0;
+}
+
+.text ul{
+	list-style: inside;
+	list-style-type: square;
+	margin: 15px 0 0 0;
 }
 
 
-/*------------------------------------------------Home-------------------------------------------*/
+.text table{
+	width: 100%;
+	margin: 10px 0 0 0;
+}
+
+	.text table tr {
+		background: rgb(200,225,250);
+	}
+	
+	.text table tr:nth-of-type(2n) {
+		background: rgb(230,240,251);
+	}
+	
+	.text table td{
+		min-width: 100px;
+		vertical-align: top;
+		padding: 8px 16px;
+	}
+	
+	.text table tr td:first-child{
+		font: 500 16px/16px "Arial", sans-serif;
+		color: rgb(50,50,50);
+	}
+
+
+/*----------------------------------------- Home ---------------------------------------*/
 
 #home{
     border-radius:  8px;
@@ -253,79 +307,33 @@ ul.sidebar li a{
 	margin: 30px;
 }
 
-/*---------------------------------------------Sites---------------------------------------------*/
 
-.text {
-	display: inline-block;
-	vertical-align: top;
-	width: 712px;
-	margin: 60px 0px 50px 184px;
-	padding: 24px;
-	min-height: 500px;
-	box-shadow: 0 1px 1px rgba(0,0,0,0.5);
-	background: white;
-	border-radius: 8px;
-}
-
-.text p {
-	margin: 0px 0px 10px 0px;
-}
-
-.text hr {
-	height: 1px;
-	width: 100%;
-	background: grey;
-	margin: 20px 0 20px 0;
-}
-
-.text ul{
-	list-style: inside;
-	list-style-type: square;
-	margin: 15px 0 0 0;
-}
-
-
-.text table{
-	width: 500px;
-	margin: 10px 0 0 0;
-}
-
-.text table td{
-	min-width: 100px;
-	vertical-align: top;
-	background: rgb(235,240,255);
-	padding: 5px;
-}
-
-.text table tr td:first-child{
-	font: 500 16px/16px "Arial", sans-serif;
-	color: rgb(50,50,50);
-}
-
-
-/*---------------------------------------Questions-----------------------------------------------*/
-div#questions{
-	padding: 50px;
+/*-------------------------------------- Questions -------------------------------------*/
+#questions{
+	padding: 60px;
 	margin: 60px 0px 0px 0px;
 	background: white;
 	border-radius: 8px;
 	box-shadow: 0 1px 1px rgba(0,0,0,0.5)
 }
 
-div#questions em{
-	font-size: 14px;
+#questions em{
 	color: rgb(50,50,50);
 }
 
-table#questionstable tr{
+#questionstable {
+	max-width: 100%;
+}
+
+#questionstable tr{
 	background: rgba(0,0,0,0.04);
 }
 
-table#questionstable tr:nth-of-type(2n+1){
+#questionstable tr:nth-of-type(2n+1){
 	background: rgba(0,0,0,0.1);
 }
 
-table#questionstable td{
+#questionstable td{
 	vertical-align: top;
 	padding: 10px;
 }
@@ -391,18 +399,37 @@ div#sailingboat div{
 
 
 /*		Tablet Layout: 768px.
-		Gutters: 24px.
-		Outer margins: 28px.
+		Gutters: 10px.
 		Inherits styles from: Default Layout.
------------------------------------------------------------------
-cols    1     2      3      4      5      6      7      8
-px      68    160    252    344    436    528    620    712    */
+*/
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 959px) {
 	
 	body {
-		width: 712px;
-		padding: 48px 28px 60px;
+		width: 740px;
+		padding: 0px;
+	}
+	
+	img {
+		max-width: 100%;
+	}
+	
+	nav {
+		width: 740px;
+	}
+	
+	nav a {
+		padding: 0 5px;
+		font-size: 13px;
+	}
+	
+	.sidebar {
+		margin: 50px 0 0 0;
+	}
+	
+	.text {
+		margin: 50px 0 0 150px;
+		width: 510px;
 	}
 }
 
@@ -419,8 +446,46 @@ px      68    160    252    */
 @media only screen and (max-width: 767px) {
 	
 	body {
-		width: 252px;
-		padding: 48px 34px 60px;
+		width: 100%;
+		padding: 0;
+	}
+	
+	nav {
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+	
+	.sidebar {
+		position: relative;
+		width: 100%;
+		margin: 0;
+	}
+	
+	.text {
+		margin: 20px 0 0 0;
+		width: 90%;
+		padding: 5%
+	}
+	
+	img, table {
+		max-width: 100%;
+	}
+	
+	#questions{
+		font-size: 12px;
+		padding: 5%;
+	}
+
+	#questionstable td:nth-of-type(2n){
+		display: inline-block;
+	}
+	
+	#questionstable td:nth-of-type(3n){
+		display: inline-block;
+	}
+	
+	#questionstable td{
 	}
 	
 }
@@ -438,8 +503,8 @@ px      68    160    252    344    436    */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	
 	body {
-		width: 436px;
-		padding: 36px 22px 48px;
+		width: 440px;
+		padding: 0 40px;
 	}
 	
 }

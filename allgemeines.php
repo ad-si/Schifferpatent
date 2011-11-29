@@ -3,16 +3,13 @@
 include('inc/common.inc.php');
 include('inc/sidebar_allgemeines.inc.php');
 
-$title ='| Allgemeines';   
+$title =' | Allgemeines'; 
    
-$content .=
-'<div id="general">'.
+$content .=	
+'<div class="text" id="general">';
 	
-	'<div class="text">';
-	
-		$content .='
-		<img src="img/schein_außen_small.png" alt="Bodenseeschifferpatent Umschlag" height="250px" />
-		&nbsp;&nbsp;
+		$content .=
+		'<img src="img/schein_außen_small.png" alt="Bodenseeschifferpatent Umschlag" height="250px" />
 		<img src="img/schein_innen_small.png" alt="Bodenseeschifferpatent Schein" height="250px" />
 		<br />
 		<br />
@@ -109,12 +106,10 @@ $content .=
 		<p>Jedes zulassungs- und regisrierungspflichtige Boot erhält vom Landratsamt ein Kennzeichen.
 		Alle anderes Wasserfahrzeuge sind mit Namen und Adresse des Besitzers zu versehen.
 		Das Kennzeichen muss gut sichtbar und mindestens 8cm hoch sein.</p>
-		<hr />
-		';
+		<hr />';
 	
-	$content .='
-	</div>
-</div>';
+$content .=
+'</div>';
 
 $template = new template($template_file);//Template parsen
 $template->readtemplate();

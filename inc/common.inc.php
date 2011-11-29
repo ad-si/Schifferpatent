@@ -5,7 +5,7 @@ require_once('classes/db_mysql.php');
 require_once('functions.inc.php');
 
 function error_handler($errno, $errstr, $errfile, $errline) {
-    if (substr($_SERVER['REQUEST_URI'], 0, 24) == '/bodenseeschifferpatent/')
+    if (substr($_SERVER['REQUEST_URI'], 0, 24) == '/dev/')
         echo '<pre>'.(new ErrorException($errstr, 0, $errno, $errfile, $errline)).'</pre>';
     else
     // mail('adriansieber@web.de', 'Bodenseeschifferpatent error', new ErrorException($errstr, 0, $errno, $errfile, $errline));
@@ -17,8 +17,8 @@ set_error_handler('error_handler');
 
 $template_file = 'template/home.htm';
 
-$template_header = '
-<!--[if lt IE 9]>
+$template_header = 
+'<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <link rel="stylesheet" media="all" href="styles/desktop.css" type="text/css" />	

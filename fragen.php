@@ -6,16 +6,14 @@ $title .= ' | Fragen';
 
 $content .= 
 '<div id="questions">
-<h2>Die Fragen der theoretischen Prüfung</h2>
-<p>Im folgenden sind alle Prüfungsfragen der theoretischen Prüfung des Bodenseeschifferpatents aufgelistet.</p>
-<br />';
-
-
-
+	<h2>Die Fragen der theoretischen Prüfung</h2>
+	<p>Im folgenden sind alle Prüfungsfragen der theoretischen Prüfung des Bodenseeschifferpatents aufgelistet.</p>
+	<br />';
 	
 	$fragen = db::getALL('fragen', 'deleted = 0');
 	
-	$content .= '<table id="questionstable">'; 
+	$content .= 
+	'<table id="questionstable">'; 
 	
 		foreach ($fragen as $frage){
 			$content .=
@@ -26,12 +24,10 @@ $content .=
 			'</tr>';
 		}
 	
-	$content .= '</table>';
-	
-
+	$content .= 
+	'</table>';
 
 $content .= '</div>';
-     
 
 
 $template = new template($template_file);//Template parsen
