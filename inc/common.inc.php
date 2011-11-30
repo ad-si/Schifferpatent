@@ -30,21 +30,19 @@ $template_header =
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <script src="js/functions.js" type="text/javascript"></script>';
 
-	
 $menu = 
-	'<h1><a href="/"></a></h1>'.
-	'<div id="links">'.
-		'<a href="allgemeines" title="Allgemeine Informationen" >Allgemeines</a>'.
-		'<a href="segelboot" title="Alles rund um das Segelboot" >Segelboot</a>'.
-		'<a href="motorboot" title="Alles rund um das Motorboot" >Motorboot</a>'.
-		'<a href="fragen" title="Alle offiziellen Prüfungsfragen">Fragenkatalog</a>'.
-	'</div>'.
-	'<a id="adrian" href="http://www.adriansieber.com/">© Adrian Sieber</a>';
+'<h1><a href="/"></a></h1>'.
+'<div id="links">'.
+	'<a href="allgemeines" title="Allgemeine Informationen" >Allgemeines</a>'.
+	'<a href="segelboot" title="Alles rund um das Segelboot" >Segelboot</a>'.
+	'<a href="motorboot" title="Alles rund um das Motorboot" >Motorboot</a>'.
+	'<a href="fragen" title="Alle offiziellen Prüfungsfragen">Fragenkatalog</a>'.
+'</div>'.
+'<a id="adrian" href="http://www.adriansieber.com/">© Adrian Sieber</a>';
 
 
-$footer ='';	
-
-$content = '';
 $title = '';
+$content = '';
+$footer = '';
 
 ?>

@@ -9,10 +9,10 @@ $content .=
 '<div class="text" id="general">';
 	
 		$content .=
-		'<img src="img/schein_außen_small.png" alt="Bodenseeschifferpatent Umschlag" height="250px" />
-		<img src="img/schein_innen_small.png" alt="Bodenseeschifferpatent Schein" height="250px" />
-		<br />
-		<br />
+		'<img src="img/schein_außen_small.png" alt="Bodenseeschifferpatent Umschlag" />
+		<img src="img/schein_innen_small.png" alt="Bodenseeschifferpatent Schein" />
+		
+		<hr />
 		
 		<h3>Wer benötigt das Schifferpatent?</h3>
 		
@@ -105,8 +105,7 @@ $content .=
 		<h3>Muss man sein Boot kennzeichnen?</h3>
 		<p>Jedes zulassungs- und regisrierungspflichtige Boot erhält vom Landratsamt ein Kennzeichen.
 		Alle anderes Wasserfahrzeuge sind mit Namen und Adresse des Besitzers zu versehen.
-		Das Kennzeichen muss gut sichtbar und mindestens 8cm hoch sein.</p>
-		<hr />';
+		Das Kennzeichen muss gut sichtbar und mindestens 8cm hoch sein.</p>';
 	
 $content .=
 '</div>';

@@ -8,6 +8,7 @@ $title =' | Vorfahrtsregeln';
 $content .= 
 '<div class="text">
 	<h2>Vorfahrtsregeln</h2>
+	<hr />
 	<p>Grundsätzlich gilt, dass das besser manövrierfähige Fahrzeug ausweichen muss.
 	Dabei sollte das andere Boot hinter dem Heck passiert werden.
 	Ist dies nicht möglich muss der Schiffsführer mit einem Schallsignal angeben, wie er ausweichen wird.

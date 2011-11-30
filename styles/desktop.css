@@ -102,7 +102,7 @@ h1 a {
 	width: 260px;
 	color: rgba(25,255,255,0.4);
 	background: url(../img/logo.svg) no-repeat;
-	background-size: 260px;
+	background-size: 240px;
 	background-position: 50% 50%;
 }
 
@@ -156,41 +156,42 @@ nav {
 	display: inline-block;
 }
 
-nav a {
+nav a:not(#adrian) {
 	vertical-align: top;
-	font: 900 14px/30px "Arial", sans-serif;
+	font: 700 13px/30px "Arial", sans-serif;
 	height: 30px;
 	min-width: 23px;
 	display: inline-block;
 	text-decoration: none;
-	color: black;
+	color: rgba(0,0,0,0.7);
 	padding: 0px 10px 0px 10px;
-	border-right: 2px solid rgba(0,0,0,0.5);
-	vertical-align: middle;
+	border-right: 2px solid rgba(0,0,0,0.4);
 }
 
-nav a:active:not(#adrian),
-nav a:focus:not(#adrian) {
-	box-shadow: inset 2px 0px 10px rgba(0,0,0,0.5);
-}
-
-nav:first-child:active,
-nav:first-child:focus {
-	border-radius: 0 0 0 8px;
-}
-nav a#adrian{
-	display: inline-block;
-	font: 100 10px/30px "", serif;
-	color: rgb(50,50,50);
-	text-decoration: none;
-	float: right;
-	padding: 0 10px 0 0;
-	border: none;
-}
-
-nav a#adrian:hover{
-	color: rgb(0,0,0);
-}
+	nav a:active:not(#adrian),
+	nav a:focus:not(#adrian) {
+		box-shadow: inset 2px 0px 10px rgba(0,0,0,0.5);
+	}
+	
+	nav h1 a:active,
+	nav h1 a:focus {
+		border-radius: 0 0 0 8px;
+	}
+	
+	nav a#adrian{
+		display: inline-block;
+		font: 100 10px/30px "", serif;
+		color: rgba(0,0,0,0.6);
+		text-decoration: none;
+		float: right;
+		padding: 0 10px 0 0;
+		border: none;
+	}
+	
+	nav a#adrian:hover,
+	nav a#adrian:active {
+		color: rgb(0,0,0);
+	}
 
 .sidebar{
 	position: fixed;
@@ -246,48 +247,64 @@ nav a#adrian:hover{
 	border-radius: 8px;
 }
 
-.text p {
-	margin: 0px 0px 10px 0px;
-	text-align: justify;
-}
-
-.text hr {
-	height: 1px;
-	width: 100%;
-	background: grey;
-	margin: 20px 0 20px 0;
-}
-
-.text ul{
-	list-style: inside;
-	list-style-type: square;
-	margin: 15px 0 0 0;
-}
-
-
-.text table{
-	width: 100%;
-	margin: 10px 0 0 0;
-}
-
-	.text table tr {
-		background: rgb(200,225,250);
+	.text p {
+		margin: 0px 0px 10px 0px;
+		text-align: justify;
+		/*
+-moz-column-count: 2;
+    	-moz-column-gap: 40px;
+    	hyphenate: auto;
+*/
 	}
 	
-	.text table tr:nth-of-type(2n) {
-		background: rgb(230,240,251);
+	.text hr {
+		height: 1px;
+		width: 100%;
+		background: grey;
+		margin: 20px 0 20px 0;
+		clear: both;
 	}
 	
-	.text table td{
-		min-width: 100px;
-		vertical-align: top;
-		padding: 8px 16px;
+	.text ul{
+		list-style: inside;
+		list-style-type: square;
+		margin: 15px 0 0 0;
 	}
 	
-	.text table tr td:first-child{
-		font: 500 16px/16px "Arial", sans-serif;
-		color: rgb(50,50,50);
+	
+	/*
+.text img {
+		width: 100%;
 	}
+*/	
+	.right{
+		float: right;
+		margin: 0 0 20px 20px;
+	}
+	
+	.text table{
+		width: 100%;
+		margin: 10px 0 0 0;
+	}
+
+		.text table tr {
+			background: rgb(200,225,250);
+		}
+		
+		.text table tr:nth-of-type(2n) {
+			background: rgb(230,240,251);
+		}
+		
+		.text table td{
+			min-width: 100px;
+			vertical-align: top;
+			padding: 8px 16px;
+		}
+		
+		.text table tr td:first-child{
+			font: 500 16px/16px "Arial", sans-serif;
+			color: rgb(50,50,50);
+		}
 
 
 /*----------------------------------------- Home ---------------------------------------*/
@@ -343,13 +360,15 @@ nav a#adrian:hover{
 }
 
 
-/*---------------------------------------------General-------------------------------------------*/
+/*---------------------------------------- General -------------------------------------*/
 
-#general{
+#general img:nth-of-type(2){
+	float: right;
 }
 
-/*---------------Wetterkunde---------------------*/
-#starkwindwarnung, #sturmwarnung {
+/*--------------- Wetterkunde ---------------------*/
+#starkwindwarnung,
+#sturmwarnung {
 	display: inline-block;
 	vertical-align: middle;
 	height: 30px;
@@ -358,7 +377,7 @@ nav a#adrian:hover{
 	border: 1px solid grey;
 }
 
-/*---------------Schifffahrtszeichen---------------------*/
+/*--------------- Schifffahrtszeichen ---------------------*/
 .sign {
 	font-size: 13px;
 	text-align: center;

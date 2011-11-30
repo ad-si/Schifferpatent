@@ -72,7 +72,6 @@ $notAvailable = array(
 	
 	'Bootstypen',	
 	'Der Motor',
-	'Der Propeller',
 	'Steuerung',
 	'Sicherheit',
 	'Fahrtheorie',

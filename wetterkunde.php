@@ -12,22 +12,17 @@ $content .= '
 
 	$content .= '
 	<h3>Seewind</h3>
-	<p>Weht tagsüber vom Wasser auf das Land (auflandig).
-	<br />
-	<br />
+	<p>Weht tagsüber vom Wasser auf das Land (auflandig).</p>
 	<img src="img/seewind.svg" alt="Landwind" />
-	</p>
-	<br />
-	<br />
+	
 	<h3>Landwind</h3>
-	<p>Weht nachts vom Land auf den See (ablandig)
-	<br />
-	<br />
-	<img src="img/landwind.svg" alt="Seewind" /></p>
+	<p>Weht nachts vom Land auf den See (ablandig)</p>
+	<img src="img/landwind.svg" alt="Seewind" />
+	
 	<hr />
 	
 	<h3>Der Föhn</h3>
-	<img src="img/föhn.svg" alt="Föhn" style="float:right; margin: 10px;" />
+	<img src="img/föhn.svg" alt="Föhn" class="right" />
 	<p>Wenn nördlich der Alpen ein Hochdruckgebiet und südlich ein Tiefdruckgebiet liegen, 
 	strömen gewaltige Luftmassen von Norditalien über die Alpen hinweg nach Norden.
 	Beim aufsteigen der Luft wird sie abgekühlt und die vom Mittelmeer kommende Feuchtigkeit
