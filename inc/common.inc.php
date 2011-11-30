@@ -41,10 +41,10 @@ $menu =
 	'</div>'.
 	'<a id="adrian" href="http://www.adriansieber.com/">© Adrian Sieber</a>';
 
-				
+
 $footer ='';	
 
 $content = '';
-$title = ''; 
+$title = '';
 
 ?>

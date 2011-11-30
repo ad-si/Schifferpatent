@@ -1,24 +1,18 @@
 <?php
 
 $topics = array(
-'Der Bodensee' 				=> 'motorbootstypen',
-'Wetterkunde' 				=> 'motor',
-'Navigation' 				=> 'propeller',
-'Ausrüstung' 				=> 'steuerung',
-'Anker' 					=> 'sicherheit',
-'Schifffahrtszeichen' 		=> 'motorboottheorie',
-'Lichter' 					=> 'motorbootprüfung',
+'Der Bodensee' 				=> 'bodensee',
+'Wetterkunde' 				=> 'wetterkunde',
+'Navigation' 				=> 'navigation',
+'Ausrüstung' 				=> 'ausrüstung',
+'Anker' 					=> 'anker',
+'Schifffahrtszeichen' 		=> 'schifffahrtszeichen',
+'Lichter' 					=> 'lichter',
 'Schallsignale' 			=> 'schallsignale',
 'Notsignale' 				=> 'notsignale',
-'Vorfahrtsregeln' 			=> 'Vorfahrtsregeln',
+'Vorfahrtsregeln' 			=> 'vorfahrtsregeln',
 ); 
 
-$content .='<ul class="sidebar">';
-
-foreach($topics as $name => $link){
-	$content .= '<li><a href="'.$link.'">'.$name.'</a></li>';
-}
-
-$content .='</ul>';
+$content .= getSidebar($topics);
 
 ?>

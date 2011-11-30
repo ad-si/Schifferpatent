@@ -10,12 +10,6 @@ $topics = array(
 'Die praktische Prüfung' 	=> 'motorbootprüfung',
 ); 
 
-$content .='<ul class="sidebar">';
-
-foreach($topics as $name => $link){
-	$content .= '<li><a href="'.$link.'">'.$name.'</a></li>';
-}
-
-$content .='</ul>';
+$content .= getSidebar($topics);
 
 ?>

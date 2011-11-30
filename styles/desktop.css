@@ -136,10 +136,6 @@ em {
 	font-family: sans-serif
 }
 
-.not {
-	text-decoration: line-through;
-}
-
 /*------------------------------------------------------Navigation--------------------------------*/
 
 nav {
@@ -207,26 +203,34 @@ nav a#adrian:hover{
    	background: white;
 }
 
-.sidebar li:nth-of-type(2n) {
-	background: rgba(0,0,0,0.03);
-}
-
-.sidebar li:first-of-type {
-	border-radius: 8px 8px 0px 0;
-}
-
-.sidebar li:last-of-type {
-	border-radius: 0 0px 8px 8px;
-}
-
-.sidebar li a{
-	display: inline-block;
-	text-decoration: none;
-	color: black;
-	font: 500 13px/40px "Arial", sans-serif;
-	padding: 0px 10% 0 10%;
-	width: 80%;
-}
+	.sidebar li:nth-of-type(2n) {
+		background: rgba(0,0,0,0.03);
+	}
+	
+	.sidebar li:first-of-type a {
+		border-radius: 8px 8px 0px 0;
+	}
+	
+	.sidebar li:last-of-type a {
+		border-radius: 0 0px 8px 8px;
+	}
+	
+	.sidebar a{
+		display: inline-block;
+		text-decoration: none;
+		color: black;
+		font: 500 13px/16px "Arial", sans-serif;
+		padding: 12px 10% 12px 10%;
+		width: 80%;
+	}
+	
+	.sidebar a:hover{
+		background: rgba(0,0,0,0.2);
+	}
+	
+	.sidebar a:active {
+		box-shadow: inset 0px 0px 5px rgba(0,0,0,0.5);
+	}
 
 /*-------------------------------------- Sites -----------------------------------------*/
 
@@ -393,8 +397,6 @@ div#sailingboat div{
 }
 
 /*---------------------------------------------Motorboat-----------------------------------------*/
-
-
 
 
 

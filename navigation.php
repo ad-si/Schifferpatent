@@ -5,28 +5,19 @@ include('inc/sidebar_allgemeines.inc.php');
 
 $title =' | Navigation';   
 
-$content .= '
-<div class="text">
+$content .= 
+'<div class="text">
 
-<h2>Navigation</h2>
-<hr />'; 
-
-	$content .= '
+	<h2>Navigation</h2>
+	<hr />'; 
 	
-	<h3>Der Föhn</h3>
+	$content .= 
+	'<h3>Diese Seite ist bald verfügbar!</h3>
 	<p></p>
-	<hr />
-	
-	<h3>Gewitter</h3>
-	<p></p>
-	<hr />
-	
-	<h3>Der Sturmwarndienst</h3>
-	<p></p>
-	<hr />
-	';
+	<hr />';
 		
-$content .= '</div>';
+$content .= 
+'</div>';
 
 $template = new template($template_file);//Template parsen
 $template->readtemplate();
