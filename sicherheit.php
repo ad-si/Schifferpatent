@@ -71,8 +71,8 @@ Pro 100 l Treibstoff muss ein weiterer Feuerlöscher mitgeführt werden.</p>
 	<tr>
 		<td>Nachteile</td>
 		<td>Gelöschtes Material wird nicht abgekühlt. Somit gast es weiter</td>
-		<td>Gefahr einer CO<sub>2</sub>-Vergiftung in kleinen Räumen</td>
 		<td>Es bleiben Rückstände</td>
+		<td>Gefahr einer CO<sub>2</sub>-Vergiftung in kleinen Räumen</td>
 	</tr>
 	<tr>
 		<td>Brandklasse A: Feste Stoffe<br />(Holz, Papier, Textilien, Gummi)</td>

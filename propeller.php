@@ -13,8 +13,7 @@ $content .= '
 
 $content .= 
 '<h3>Die Anzahl der Flügel</h3>
-<p>Es gibt Propeller mit einer verschiedenen Anzahl von Flügeln. Dabei ist zu beachten,
-dass eine geringere Flügelanzahl zwar effizienter ist, jedoch die Vibrationen zunehmen.
+<p>Es ist zu beachten, dass eine geringere Flügelanzahl zwar effizienter ist, jedoch die Vibrationen zunehmen.
 Die meisten Bootspropeller sind Dreiflügler, da sie somit einen guter Kompromiss zwischen Wirkungsgrad,
 Vibrationen und Herstellungskosten gewährleisten.</p>
 
