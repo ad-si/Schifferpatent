@@ -8,11 +8,11 @@ $title =' | Propeller';
 $content .= '
 <div class="text">
 <h2>Der Propeller</h2>
+<p>Es gibt zunächst 4 Größen die einen Propeller beschreiben.</p>
 <hr />'; 
 
 $content .= 
-'<p>Es gibt zunächst 4 Größen die einen Propeller beschreiben.</p>
-<h3>Die Anzahl der Flügel</h3>
+'<h3>Die Anzahl der Flügel</h3>
 <p>Es gibt Propeller mit einer verschiedenen Anzahl von Flügeln. Dabei ist zu beachten,
 dass eine geringere Flügelanzahl zwar effizienter ist, jedoch die Vibrationen zunehmen.
 Die meisten Bootspropeller sind Dreiflügler, da sie somit einen guter Kompromiss zwischen Wirkungsgrad,

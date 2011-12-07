@@ -1,7 +1,6 @@
 <?php
 
 require_once('classes/template.class.php');
-require_once('classes/db_mysql.php');
 require_once('functions.inc.php');
 
 function error_handler($errno, $errstr, $errfile, $errline) {
@@ -12,8 +11,8 @@ function error_handler($errno, $errstr, $errfile, $errline) {
     if ($errno != E_WARNING && $errno != E_NOTICE)
         exit;
 }
-
 set_error_handler('error_handler');
+
 
 $template_file = 'template/home.htm';
 

@@ -266,9 +266,9 @@ nav a:not(#adrian) {
 	}
 	
 	.text ul{
-		list-style: inside;
+		list-style: outside;
 		list-style-type: square;
-		margin: 15px 0 0 0;
+		margin: 15px 0 0 15px;
 	}
 	
 	
