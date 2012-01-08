@@ -1,0 +1,33 @@
+---
+layout: default
+---
+		
+<ul class="sidebar">
+
+		{% for p in site.posts reversed %}
+			{% if page.categories == p.categories  %}
+				<li>
+					<a {% if p.available == false %}style="text-decoration: line-through"{% endif %}
+						href="{{ site.url | append: p.url}}">
+						{{ p.title }}
+					</a>
+				</li>
+			{% endif %}
+		{% endfor %}
+
+</ul>
+
+{% if page.available == false %}
+<div class="text">
+
+	<h2>{{ page.title }}</h2>
+	<hr /> 	
+	 
+	<h3>Diese Seite ist bald verfügbar!</h3>
+	<p></p>
+	<hr />
+		
+</div>
+{% endif %}
+
+{{ content }}
