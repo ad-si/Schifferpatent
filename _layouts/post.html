@@ -8,7 +8,7 @@ layout: default
 			{% if page.categories == p.categories  %}
 				<li>
 					<a {% if p.available == false %}style="text-decoration: line-through"{% endif %}
-						href="{{ site.url | append: p.url}}">
+						href=".{{ p.url | remove:'.html' }}">
 						{{ p.title }}
 					</a>
 				</li>
