@@ -2,4 +2,4 @@ dev
 ._*
 .DS_Store
 .sass-cache
-_site
+.idea
