@@ -1,0 +1,59 @@
+---
+layout: post
+title: Beschläge
+category: segelboot
+
+fittings:
+    - rundkausch
+    - spitzkausch
+    - rutscher
+    - stagreiter
+    - schotschäkel
+    - schnappschäkel
+    - schlüsselschäkel
+    - schraubschäkel
+    - pütting
+    - augbolzen
+    - doppelkreuzpoller
+    - klampe
+    - curryklemme
+    - kammklemme
+    - fockschotleitschiene
+    - schotleitauge
+    - block
+    - schotwinsch
+    - knarrpoller
+    - schotring
+    - wantenspanner
+    - wantenhänger
+    - birnenfender
+    - bootshaken
+    - traveller
+    - lenzventil
+    - ösfass
+    - lenzpumpe
+---
+
+
+
+
+<div class="text">
+<h2>Beschläge</h2>
+<hr />
+
+{% for fitting in page.fittings %}
+
+	{% capture name %}{{ fitting | replace:'ä','ae' | replace:'ü','ue' | replace: 'ö','oe' }}{% endcapture %}
+	
+	<div class="fitting">
+		<img src="{{ site.url }}img/beschlaege/{{ name }}.png" alt="{{ fitting }}" />
+		<br />
+		<span>{{ fitting | capitalize }}</span>
+	</div>
+{% endfor %}
+
+<h3></h3>
+<p></p>
+<hr />
+
+</div>

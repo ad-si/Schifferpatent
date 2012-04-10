@@ -1,5 +1,4 @@
-dev
-._*
 .DS_Store
 .sass-cache
 .idea
+_site/

@@ -1,3 +1,4 @@
+@import compass
 @import reset.sass
 
 html
@@ -8,7 +9,7 @@ body
 	padding: 0 10px 0 10px
 	margin: 0 auto 60px auto
 	font: 500 16px/1.2 "Times New Roman", serif
-	color: rgb(100,100,100)
+	color: rgb(80,80,80)
 	position: relative
 
 h1
@@ -20,7 +21,7 @@ h2,h3,h4
 	font-weight: 500
 	line-height: 1.2
 	font-family: "Tahoma", sans-serif
-	color: rgba(50,50,50,1)
+	color: rgba(30,30,30,1)
 
 h2
 	font-size: 40px
@@ -46,49 +47,44 @@ em
 /*------------------------------------------------------Navigation--------------------------------*/
 nav
 	width: 940px
-	color: white
 	position: fixed
 	top: 0px
-	background: rgb(50,140,240)
-	background: -o-linear-gradient(rgb(50,180,250), rgb(40,120,220))
-	background: -moz-linear-gradient(rgb(50,150,250), rgb(40,120,220))
-	background: -webkit-linear-gradient(rgb(50,150,250), rgb(40,120,220))
+	background-color: rgb(50,140,240)
+	+background-image(linear-gradient(rgb(50,180,250), rgb(40,120,220)))
 	box-shadow: 0px 1px 1px rgba(0,0,0,0.5)
 	border-radius: 0 0 8px 8px
-	
 	a
-		&#adrian
-			display: inline-block
-			font: 100 10px/30px "", serif
-			color: rgba(0,0,0,0.6)
-			text-decoration: none
-			float: right
-			padding: 0 10px 0 0
-			border: none
-		
-			&:hover,
-			&:active
-				color: rgb(0,0,0)
-				
+		display: inline-block
 		&:active h1,
 		&:focus h1
 			box-shadow: inset 2px 0px 10px rgba(0,0,0,0.5)
 			border-right: 1px solid rgba(0,0,0,0.2) !important
-	
 
-	
+	h1
+		text-indent: -9999px
+		width: 260px
+		height: 30px
+		background: url(../img/logo.svg) 50% no-repeat
+		background-size: 240px
+		border-right: 1px solid rgba(255,255,255,0.1)
+
+		&:active,
+		&:focus
+			border-radius: 0 0 0 8px
+			border: none !important
+
 	#links
 		display: inline-block
 		a
 			vertical-align: top
 			font: 700 13px/30px "Arial", sans-serif
 			height: 30px
-			display: inline-block
 			text-decoration: none
 			color: rgba(0,0,0,0.7)
 			padding: 0px 10px 0px 10px
 			border-right: 1px solid rgba(255,255,255,0.1)
 			border-left: 1px solid rgba(0,0,0,0.2)
+			text-shadow: 0px 1px 0px rgba(255,255,255,0.4)
 
 			&:last-of-type
 				border-right: 1px solid rgba(0,0,0,0.2) !important
@@ -97,19 +93,17 @@ nav
 			&:focus
 				box-shadow: inset 2px 0px 10px rgba(0,0,0,0.5)
 				border-right: 1px solid rgba(0,0,0,0.2)
-		
-	h1	
-		text-indent: -9999px
-		width: 260px
-		height: 30px
-		background: url(../img/logo.svg) 50% no-repeat
-		background-size: 240px
-		border-right: 1px solid rgba(255,255,255,0.1)
-			
-		&:active,
-		&:focus
-			border-radius: 0 0 0 8px
-			border: none !important
+
+	#adrian
+		font: 100 10px/30px "", serif
+		color: rgba(0,0,0,0.6)
+		text-decoration: none
+		float: right
+		padding: 0 10px 0 0
+		border: none
+		&:hover,
+		&:active
+			color: rgb(0,0,0)
 
 .sidebar
 	position: fixed
@@ -140,12 +134,16 @@ nav
 		font: 500 13px/16px "Arial", sans-serif
 		padding: 10px 10% 10px 10%
 		width: 80%
+		&.coming_soon
+			color: rgb(200,200,200)
 	
 		&:hover
 			background: rgba(0,0,0,0.2)
 	
 		&:active
 			box-shadow: inset 0px 0px 5px rgba(0,0,0,0.5)
+
+
 		
 		
 /*-------------------------------------- Sites -----------------------------------------*/

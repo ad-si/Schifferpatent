@@ -7,8 +7,7 @@ layout: default
 		{% for p in site.posts reversed %}
 			{% if page.categories == p.categories  %}
 				<li>
-					<a {% if p.available == false %}style="text-decoration: line-through"{% endif %}
-						href=".{{ p.url | remove:'.html' }}">
+					<a {% if p.available == false %}class="coming_soon"{% endif %} href=".{{ p.url | remove:'.html' }}">
 						{{ p.title }}
 					</a>
 				</li>

@@ -12,17 +12,17 @@ title: Fragen
 	</table>
 </div>
 
-<script src="{{ site.url }}js/questions.json"></script>
+<script src="{{ site.url }}js/questions.js"></script>
 <script>	
-	var d = document;	
+	var d = document;
 	
 	questions.forEach(function(question,index){
 		var cell1 = d.createElement('td');
 			cell1.innerHTML = index + 1;
 		var cell2 = d.createElement('td');
-			cell2.innerHTML = question.frage;
+			cell2.innerHTML = question.q;
 		var cell3 = d.createElement('td');
-			cell3.innerHTML = question.antwort;
+			cell3.innerHTML = question.a;
 		
 		
 		var row = d.createElement('tr');
