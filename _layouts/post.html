@@ -17,16 +17,22 @@ layout: default
 </ul>
 
 {% if page.available == false %}
-<div class="text">
 
-	<h2>{{ page.title }}</h2>
-	<hr /> 	
-	 
-	<h3>Diese Seite ist bald verfügbar!</h3>
-	<p></p>
-	<hr />
-		
-</div>
+	<div class="text">
+
+		<h2>{{ page.title }}</h2>
+		<hr />
+
+		<h3>Diese Seite ist bald verfügbar!</h3>
+		<p></p>
+		<hr />
+
+	</div>
+
+{% else %}
+
+	<div class="text" id="{{ page.url | remove:'.html' | remove_first:'/'  }}">
+		{{ content }}
+	</div>
+
 {% endif %}
-
-{{ content }}

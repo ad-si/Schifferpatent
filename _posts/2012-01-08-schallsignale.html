@@ -4,61 +4,67 @@ title: Schallsignale
 category: allgemeines
 ---
 
-{% assign circle="<svg height="10" width="10"><circle cx="5" cy="5" r="4"/></svg>" %}
-{% assign rect="<svg height="10" width="32"><rect x="0" y="1" height="8" width="32px" /></svg>" %}
+{% assign circle="
+<svg height="10" width="10">
+	<circle cx="5" cy="5" r="4"/>
+</svg>" %}
+{% assign rect="
+<svg height="10" width="32">
+	<rect x="0" y="1" height="8" width="32px"/>
+</svg>" %}
 
-<div class="text">
-	<h2>Schallsignale</h2>
-	<hr /> 
+<h2>Schallsignale</h2>
+<hr/>
 
-	<p>Damit Schiffsführer kommunizieren können, gibt es Schallsignale.
-	Diese bestehen aus kurzen und langen Tönen. Die Pause dazwischen ist 1 Sekunde lang.<br />
-	{{ circle }} = 1 Sekunde<br />
-	{{ rect }} = 4 Sekunden<br />
-	
-	<table>
-		<tr>
-			<td>{{ circle }}</td>
-			<td>Ich richte meinen Kurs nach Steuerbord</td>
-		</tr>
-		<tr>
-			<td>{{ circle }}{{ circle }}</td>
-			<td>Ich richte meinen Kurs nach Backbord</td>
-		</tr>
-		<tr>
-			<td>{{ circle }}{{ circle }}{{ circle }}</td>
-			<td>Meine Maschine geht rückwärts</td>
-		</tr>
-		<tr>
-			<td>{{ circle }}{{ circle }}{{ circle }}{{ circle }}</td>
-			<td>Ich bin manövrierunfähig</td>
-		</tr>
-		
-		<tr>
-			<td>{{ rect }}</td>
-			<td>Achtung ich behalte meinen Kurs bei, Hafenausfahrtssignal, Nebelsignal (ausgenommen Vorrangschiffe), Brückendurchfahrtssignal</td>
-		</tr>
-		<tr>
-			<td>{{ rect }} {{ rect }}</td>
-			<td>Nebelsignal der Vorrangschiffe</td>
-		</tr>
-		<tr>
-			<td>{{ rect }} {{ rect }} {{ rect }}</td>
-			<td>Hafeneinfahrtssignal der Vorrangschiffe, Schleppverbände und Schiffe in Not</td>
-		</tr>
-		<tr>
-			<td>Folge langer Töne</td>
-			<td>Notsignal</td>
-		</tr>	
-		<tr>
-			<td>
-				{{ circle }}{{ circle }}
-				<br />
-				3x pro Minute<br />
-				oder Glockengeläute
-			</td>
-			<td>Nebelsignal der Häfen, Landestellen und Nebelwarnanlagen</td>
-		</tr>
-	</table>
-	</p>
-</div>
+<p>Damit Schiffsführer kommunizieren können, gibt es Schallsignale.
+	Diese bestehen aus kurzen und langen Tönen. Die Pause dazwischen ist 1 Sekunde lang.<br/>
+	{{ circle }} = 1 Sekunde<br/>
+	{{ rect }} = 4 Sekunden<br/>
+
+<table>
+	<tr>
+		<td>{{ circle }}</td>
+		<td>Ich richte meinen Kurs nach Steuerbord</td>
+	</tr>
+	<tr>
+		<td>{{ circle }}{{ circle }}</td>
+		<td>Ich richte meinen Kurs nach Backbord</td>
+	</tr>
+	<tr>
+		<td>{{ circle }}{{ circle }}{{ circle }}</td>
+		<td>Meine Maschine geht rückwärts</td>
+	</tr>
+	<tr>
+		<td>{{ circle }}{{ circle }}{{ circle }}{{ circle }}</td>
+		<td>Ich bin manövrierunfähig</td>
+	</tr>
+
+	<tr>
+		<td>{{ rect }}</td>
+		<td>Achtung ich behalte meinen Kurs bei, Hafenausfahrtssignal, Nebelsignal (ausgenommen Vorrangschiffe),
+			Brückendurchfahrtssignal
+		</td>
+	</tr>
+	<tr>
+		<td>{{ rect }} {{ rect }}</td>
+		<td>Nebelsignal der Vorrangschiffe</td>
+	</tr>
+	<tr>
+		<td>{{ rect }} {{ rect }} {{ rect }}</td>
+		<td>Hafeneinfahrtssignal der Vorrangschiffe, Schleppverbände und Schiffe in Not</td>
+	</tr>
+	<tr>
+		<td>Folge langer Töne</td>
+		<td>Notsignal</td>
+	</tr>
+	<tr>
+		<td>
+			{{ circle }}{{ circle }}
+			<br/>
+			3x pro Minute<br/>
+			oder Glockengeläute
+		</td>
+		<td>Nebelsignal der Häfen, Landestellen und Nebelwarnanlagen</td>
+	</tr>
+</table>
+</p>

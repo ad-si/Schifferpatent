@@ -17,7 +17,9 @@ h1
 	a
 		vertical-align: baseline
 
-h2,h3,h4
+h2,
+h3,
+h4
 	font-weight: 500
 	line-height: 1.2
 	font-family: "Tahoma", sans-serif
@@ -44,7 +46,7 @@ em
 	font-family: sans-serif
 
 
-/*------------------------------------------------------Navigation--------------------------------*/
+//------------------------------------------------------Navigation--------------------------------
 nav
 	width: 940px
 	position: fixed
@@ -146,7 +148,7 @@ nav
 
 		
 		
-/*-------------------------------------- Sites -----------------------------------------*/
+//-------------------------------------- Sites -----------------------------------------
 .text
 	display: inline-block
 	vertical-align: top
@@ -204,7 +206,7 @@ nav
 			font-size: 11px
 			display: block
 
-/*----------------------------------------- Home ---------------------------------------*/
+//----------------------------------------- Home ---------------------------------------
 #home
 	border-radius:	8px
 	background: white
@@ -221,7 +223,7 @@ nav
 		width: 80%
 		margin: 30px
 
-/*-------------------------------------- Questions -------------------------------------*/
+//-------------------------------------- Questions -------------------------------------
 #questions
 	padding: 60px
 	margin: 60px 0px 0px 0px
@@ -248,12 +250,17 @@ nav
 			font-family: sans-serif
 		
 		
-/*---------------------------------------- General -------------------------------------*/
+//--------------------------------- Allgemeines -------------------------------------
 #general img:nth-of-type(2)
 	float: right
 
+//--------------- Bodensee ------------------------
+#bodensee
+	img[src="img/bodensee.svg"]
+		display: inline-block
+		width: 100%
 
-/*--------------- Wetterkunde ---------------------*/
+//--------------- Wetterkunde ---------------------
 #starkwindwarnung,
 #sturmwarnung
 	display: inline-block
@@ -263,8 +270,7 @@ nav
 	border-radius: 25px
 	border: 1px solid grey
 
-
-/*--------------- Schifffahrtszeichen ---------------------*/
+//-------------- Schifffahrtszeichen --------------
 .sign
 	font-size: 13px
 	text-align: center
@@ -279,9 +285,9 @@ nav
 		max-height: 71px
 
 
-/*-------------------------------------------Sailingboat-----------------------------------------*/
+//----------------------------------- Segelboot -----------------------------------------
 
-/*---------------Fittings---------------------*/
+//--------------- Fittings ---------------------
 .fitting
 	font-size: 13px
 	text-align: center
@@ -296,17 +302,18 @@ nav
 		max-height: 100px
 		
 		
-/*---------------------------------------------Motorboat-----------------------------------------*/
+//------------------------------------ Motorboot -----------------------------------------
 
 
 
 
 
+// Media Queries
 
-
-/*	Tablet Layout: 768px.
+/*
+	Tablet Layout: 768px.
 	Gutters: 10px.
-	Inherits styles from: Default Layout.*/
+	Inherits styles from: Default Layout.
 
 @media only screen and (min-width: 768px) and (max-width: 959px)
 	body
@@ -329,13 +336,15 @@ nav
 		width: 510px
 
 
-/*	Mobile Layout: 320px.
+
+/*
+	Mobile Layout: 320px.
 	Gutters: 24px.
 	Outer margins: 34px.
 	Inherits styles from: Default Layout.
 	---------------------------------------------
 	cols	1	  2		 3
-	px		68	  160	 252*/
+	px		68	  160	 252
 
 @media only screen and (max-width: 767px)
 	body
@@ -375,15 +384,17 @@ nav
 		display: inline-block
 
 
-/*	Wide Mobile Layout: 480px.
+
+/*
+	Wide Mobile Layout: 480px.
 	Gutters: 24px.
 	Outer margins: 22px.
 	Inherits styles from: Default Layout, Mobile Layout.
 	------------------------------------------------------------
 	cols	1	  2		 3		4	   5
-	px		68	  160	 252	344	   436*/
+	px		68	  160	 252	344	   436
 	
-	@media only screen and (min-width: 480px) and (max-width: 767px)
-		body
-			width: 440px
-			padding: 0 40px
+@media only screen and (min-width: 480px) and (max-width: 767px)
+	body
+		width: 440px
+		padding: 0 40px
