@@ -41,7 +41,7 @@ fittings:
 
 	{% capture name %}{{ fitting | replace:'ä','ae' | replace:'ü','ue' | replace: 'ö','oe' }}{% endcapture %}
 	<div>
-		<img src="{{ site.url }}img/beschlaege/{{ name }}.png" alt="{{ fitting }}"/>
+		<img src="img/beschlaege/{{ name }}.png" alt="{{ fitting }}"/>
 		<br>
 		<span>{{ fitting | capitalize }}</span>
 	</div>
