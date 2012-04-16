@@ -48,6 +48,7 @@ em
 
 //------------------------------------------------------Navigation--------------------------------
 nav
+	z-index: 1
 	width: 940px
 	position: fixed
 	top: 0px
@@ -59,8 +60,7 @@ nav
 		display: inline-block
 		&:active h1,
 		&:focus h1
-			box-shadow: inset 2px 0px 10px rgba(0,0,0,0.5)
-			border-right: 1px solid rgba(0,0,0,0.2) !important
+			box-shadow: inset 2px 0px 10px rgba(0,0,0,0.5) !important
 
 	h1
 		text-indent: -9999px
@@ -68,12 +68,7 @@ nav
 		height: 30px
 		background: url(../img/logo.svg) 50% no-repeat
 		background-size: 240px
-		border-right: 1px solid rgba(255,255,255,0.1)
-
-		&:active,
-		&:focus
-			border-radius: 0 0 0 8px
-			border: none !important
+		border-radius: 0 0 0 8px
 
 	#links
 		display: inline-block
@@ -84,17 +79,18 @@ nav
 			text-decoration: none
 			color: rgba(0,0,0,0.7)
 			padding: 0px 10px 0px 10px
-			border-right: 1px solid rgba(255,255,255,0.1)
-			border-left: 1px solid rgba(0,0,0,0.2)
+			border-right: 1px solid rgba(0,0,0,0.2)
+			box-shadow: 1px 0 0 rgba(255,255,255,0.2)
 			text-shadow: 0px 1px 0px rgba(255,255,255,0.4)
 
-			&:last-of-type
-				border-right: 1px solid rgba(0,0,0,0.2) !important
+			&:first-of-type
+				border-left: 1px solid rgba(255,255,255,0.2)
+				box-shadow: 1px 0 0 rgba(255,255,255,0.2), -1px 0 0 rgba(0,0,0,0.2)
 			
 			&:active,
 			&:focus
 				box-shadow: inset 2px 0px 10px rgba(0,0,0,0.5)
-				border-right: 1px solid rgba(0,0,0,0.2)
+				border-right: 1px solid rgba(255,255,255,0.1)
 
 	#adrian
 		font: 100 10px/30px "", serif
@@ -148,8 +144,9 @@ nav
 
 		
 		
-//-------------------------------------- Sites -----------------------------------------
+//-------------------------------------- Pages -----------------------------------------
 .text
+	position: relative
 	display: inline-block
 	vertical-align: top
 	width: 700px
@@ -203,8 +200,13 @@ nav
 			color: rgb(50,50,50)
 		
 		span
-			font-size: 11px
 			display: block
+
+#modified
+	font-family: sans-serif
+	color: rgb(180,180,180)
+	font-size: 11px
+	text-align: center
 
 //----------------------------------------- Home ---------------------------------------
 #home
@@ -251,8 +253,6 @@ nav
 		
 		
 //--------------------------------- Allgemeines -------------------------------------
-#general img:nth-of-type(2)
-	float: right
 
 //--------------- Bodensee ------------------------
 #bodensee
@@ -288,18 +288,26 @@ nav
 //----------------------------------- Segelboot -----------------------------------------
 
 //--------------- Fittings ---------------------
-.fitting
-	font-size: 13px
-	text-align: center
-	display: inline-block
-	width: 160px
-	word-wrap: break-word
-	vertical-align: top
-	margin: 0 5px 20px 0
-	
+#fittings
+	> div
+		position: relative
+		font-size: 13px
+		text-align: center
+		display: inline-block
+		width: 160px
+		height: 120px
+		word-wrap: break-word
+		margin: 0 5px 20px 0
+
+		img
+			max-width: 160px
+			max-height: 100px
+
+
+//--------------- Segel ---------------------
+.segel
 	img
-		max-width: 160px
-		max-height: 100px
+		height: 480px
 		
 		
 //------------------------------------ Motorboot -----------------------------------------

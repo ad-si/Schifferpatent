@@ -4,10 +4,10 @@ layout: default
 		
 <ul class="sidebar">
 
-		{% for p in site.posts reversed %}
+		{% for p in site.posts %}
 			{% if page.categories == p.categories  %}
 				<li>
-					<a {% if p.available == false %}class="coming_soon"{% endif %} href=".{{ p.url | remove:'.html' }}">
+					<a {% if p.available == false %}class="coming_soon"{% endif %} href=".{{ p.url | remove:'.html' }}" >
 						{{ p.title }}
 					</a>
 				</li>
@@ -32,7 +32,11 @@ layout: default
 {% else %}
 
 	<div class="text" id="{{ page.url | remove:'.html' | remove_first:'/'  }}">
+
 		{{ content }}
+
+		<div id="modified">Letzte Bearbeitung: {{ page.date | date:"%Y-%m-%d" }}</div>
+
 	</div>
 
 {% endif %}
