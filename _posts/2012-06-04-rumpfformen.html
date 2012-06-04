@@ -1,0 +1,48 @@
+---
+layout: post
+title: Rumpfformen
+category: segelboot
+
+hullforms:
+- Katamaran
+- Trimaran
+- Rundspant mit Flügelkiel
+- Knickspant
+- Rundspant
+- Rundspant mit S-Schlag
+- Spitz- oder V-Boden
+- Flachboden
+- Rundspant-Jolle
+
+bowforms:
+- Klippersteven
+- Prahmsteven
+- Gerader Steven
+- Yachtsteven
+
+sternforms:
+- Yachtheck
+- Kanuheck
+- Spitzgattheck
+- Plattgattheck
+---
+
+<h2>Rumpfformen</h2>
+<hr/>
+<div id="hullforms">
+	{% for hullform in page.hullforms %}
+	<div>
+		<img src="img/1px.gif" alt="{{ hullform }}" style="background-position: 0 {{ forloop.rindex | times:72 }}px"/>
+		<span>{{ hullform }}</span>
+	</div>
+	{% endfor %}
+</div>
+<hr/>
+
+
+
+
+
+
+
+
