@@ -1,13 +1,36 @@
 @import compass
-@import reset.sass
+
+*
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	+box-sizing(border-box)
+
+// Selection colours
+::selection
+	background: rgb(50,180,250)
+
+::-moz-selection
+	background: rgb(50,180,250)
+
+img::selection
+	background: transparent
+
+img::-moz-selection
+	background: transparent
+
+body
+	-webkit-tap-highlight-color: rgb(50,180,250)
+	-webkit-text-size-adjust: 100%
+
 
 html
 	background: url(../img/bg.jpg)
 
 body
-	width: 940px
-	padding: 0 10px 0 10px
-	margin: 0 auto 60px auto
+	width: 1080px
+	margin: 0 auto
 	font: 500 16px/1.2 "Times New Roman", serif
 	color: rgb(80,80,80)
 	position: relative
@@ -49,7 +72,7 @@ em
 //-------------------------------------------- Navigation --------------------------------
 nav
 	z-index: 1
-	width: 940px
+	width: 1080px
 	position: fixed
 	top: 0px
 	background-color: rgb(50,140,240)
@@ -83,11 +106,9 @@ nav
 			border-right: 1px solid rgba(0,0,0,0.2)
 			box-shadow: 1px 0 0 rgba(255,255,255,0.2)
 			text-shadow: 0px 1px 0px rgba(255,255,255,0.4)
-
 			&:first-of-type
 				border-left: 1px solid rgba(255,255,255,0.2)
 				box-shadow: 1px 0 0 rgba(255,255,255,0.2), -1px 0 0 rgba(0,0,0,0.2)
-			
 			&:active,
 			&:focus
 				box-shadow: inset 2px 0px 10px rgba(0,0,0,0.5)
@@ -115,18 +136,16 @@ nav
 	border-radius: 8px
 	box-shadow: 0px 1px 1px rgba(0,0,0,0.5)
 	background: white
-	
 	li
 		&:nth-of-type(2n)
 			background: rgba(0,0,0,0.03)
-	
 		&:first-of-type a
 			border-radius: 8px 8px 0px 0
-	
 		&:last-of-type a
 			border-radius: 0 0px 8px 8px
 	
 	a
+		+box-sizing(content-box)
 		display: inline-block
 		text-decoration: none
 		color: black
@@ -135,10 +154,8 @@ nav
 		width: 80%
 		&.coming_soon
 			color: rgb(200,200,200)
-	
 		&:hover
 			background: rgba(0,0,0,0.2)
-	
 		&:active
 			box-shadow: inset 0px 0px 5px rgba(0,0,0,0.5)
 
@@ -146,12 +163,19 @@ nav
 		
 		
 //-------------------------------------- Pages -----------------------------------------
+#ad_right
+	position: absolute !important
+	top: 60px
+	right: 0px
+	> *
+		box-shadow: 0 1px 1px rgba(0,0,0,0.5)
+
 .text
 	position: relative
 	display: inline-block
 	vertical-align: top
-	width: 700px
-	margin: 60px 0px 10px 160px
+	width: 780px
+	margin: 60px 140px 10px 160px
 	padding: 40px
 	min-height: 400px
 	box-shadow: 0 1px 1px rgba(0,0,0,0.5)
@@ -288,6 +312,10 @@ nav
 
 //----------------------------------- Segelboot -----------------------------------------
 
+#segelboot
+	img
+		width: 100%
+
 //--------------- Fittings ---------------------
 #fittings
 	> div
@@ -328,18 +356,14 @@ nav
 		
 //------------------------------------ Motorboot -----------------------------------------
 
+#motorboot
+	img
+		width: 100%
 
 
 
-
-// Media Queries
-
-/*
-	Tablet Layout: 768px.
-	Gutters: 10px.
-	Inherits styles from: Default Layout.
-
-@media only screen and (min-width: 768px) and (max-width: 959px)
+//Tablet
+@media only screen and (min-width: 768px) and (max-width: 1079px)
 	body
 		width: 740px
 		padding: 0px
@@ -357,19 +381,13 @@ nav
 	
 	.text
 		margin: 50px 0 0 150px
-		width: 510px
+		width: 590px
+
+	#ad_right
+		display: none !important
 
 
-
-/*
-	Mobile Layout: 320px.
-	Gutters: 24px.
-	Outer margins: 34px.
-	Inherits styles from: Default Layout.
-	---------------------------------------------
-	cols	1	  2		 3
-	px		68	  160	 252
-
+//Mobile
 @media only screen and (max-width: 767px)
 	body
 		width: 100%
@@ -391,7 +409,7 @@ nav
 	
 	.text
 		margin: 20px 0 0 0
-		width: 90%
+		width: 100%
 		padding: 5%
 	
 	img, table
@@ -407,18 +425,11 @@ nav
 	#questionstable td:nth-of-type(3n)
 		display: inline-block
 
+	#ad_right
+		display: none !important
 
-
-/*
-	Wide Mobile Layout: 480px.
-	Gutters: 24px.
-	Outer margins: 22px.
-	Inherits styles from: Default Layout, Mobile Layout.
-	------------------------------------------------------------
-	cols	1	  2		 3		4	   5
-	px		68	  160	 252	344	   436
-	
+//Wide Mobile
 @media only screen and (min-width: 480px) and (max-width: 767px)
 	body
-		width: 440px
+		width: 520px
 		padding: 0 40px
