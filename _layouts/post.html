@@ -4,15 +4,15 @@ layout: default
 
 <ul class="sidebar">
 
-	{% for p in site.posts %}
-	{% if page.categories == p.categories %}
-	<li>
-		<a {% if p.available == false %}class="coming_soon"{% endif %} href=".{{ p.url | remove:'.html' }}" >
-		{{ p.title }}
-		</a>
-	</li>
-	{% endif %}
-	{% endfor %}
+    {% for p in site.posts %}
+    {% if page.categories == p.categories %}
+    <li>
+        <a {% if p.available == false %}class="coming_soon"{% endif %} href=".{{ p.url | remove:'.html' }}" >
+        {{ p.title }}
+        </a>
+    </li>
+    {% endif %}
+    {% endfor %}
 
 </ul>
 
@@ -20,13 +20,13 @@ layout: default
 
 <div class="text">
 
-	<h2>{{ page.title }}</h2>
-	<hr/>
+    <h2>{{ page.title }}</h2>
+    <hr/>
 
-	<h3>Diese Seite ist bald verfügbar!</h3>
+    <h3>Diese Seite ist bald verfügbar!</h3>
 
-	<p></p>
-	<hr/>
+    <p></p>
+    <hr/>
 
 </div>
 
@@ -34,23 +34,22 @@ layout: default
 
 <div class="text" id="{{ page.url | remove:'.html' | remove_first:'/'  }}">
 
-	{{ content }}
+    {{ content }}
 
-	<div id="modified">Letzte Bearbeitung: {{ page.date | date:"%Y-%m-%d" }}</div>
+    <div id="modified">Letzte Bearbeitung: {{ page.date | date:"%Y-%m-%d" }}</div>
 
 </div>
 
 {% endif %}
 
 <div id="ad_right">
-	<script type="text/javascript"><!--
-	google_ad_client = "ca-pub-4448485104158739";
-	/* Schifferpatent Rechts */
-	google_ad_slot = "9351896398";
-	google_ad_width = 120;
-	google_ad_height = 600;
-	//-->
-	</script>
-	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-	</script>
+    <script type="text/javascript">
+        google_ad_client = "ca-pub-4448485104158739";
+        /* Schifferpatent Rechts */
+        google_ad_slot = "9351896398";
+        google_ad_width = 120;
+        google_ad_height = 600;
+    </script>
+    <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
 </div>
