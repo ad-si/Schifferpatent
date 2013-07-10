@@ -1,0 +1,31 @@
+extends article
+
+block append text
+
+	div#signs
+
+		- page.metadata.signs.forEach(function(sign, index){
+
+			div
+				img(src="img/schifffahrtszeichen/#{index + 1}.svg", alt="#{sign}")
+				br
+				span= sign
+
+			if index == 12
+				hr
+				h3 Gebote
+				br
+			if index == 17
+				hr
+				h3 Gebote
+				br
+			if index == 20
+				hr
+				h3 Einschränkungen
+				br
+			if index == 22
+				hr
+				h3 Hinweiszeichen
+				br
+
+		- })

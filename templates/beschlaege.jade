@@ -1,0 +1,17 @@
+extends article
+
+block append text
+
+	#fittings
+		for fitting in page.metadata.fittings
+
+			map = {"ae":"ä", "oe":"ö", "ue":"ü"}
+
+			name = fitting
+			- for(a in map)
+				name = name.replace(map[a], a)
+
+			div
+				img(src="img/beschlaege/#{name}.png", alt="#{fitting}")
+				br
+				span #{fitting[0].toUpperCase() + fitting.slice(1)}

@@ -1,0 +1,48 @@
+!!! 5
+html
+	head
+		meta(charset="UTF-8")
+		title
+			block title
+				| Bodenseeschifferpatent
+
+		meta(name='description', content=description)
+		meta(name='keywords', content='Bodenseeschifferpatent, Schifferpatent')
+		meta(name='viewport', content='user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0')
+		meta(name='apple-mobile-web-app-capable', content='yes')
+		meta(name='apple-mobile-web-app-status-bar-style', content='black')
+
+		link(rel='stylesheet', media='all', href='css/screen.css', type='text/css')
+		link(rel='icon', href='img/favicon.png', type='image/svg+xml')
+		link(rel='apple-touch-icon-precomposed', href='img/favicon_hq.png')
+		link(rel='apple-touch-startup-image', href='startup.png')
+
+	body
+		nav
+			h1
+				a(href='/') Bodenseeschifferpatent
+			#links
+				a(href='schifferpatent', title='Allgemeine Informationen') Allgemeines
+				a(href='segelboot', title='Alles rund um das Segelboot') Segelboot
+				a(href='motorboot', title='Alles rund um das Motorboot') Motorboot
+				a(href='fragen', title='Alle offiziellen Prüfungsfragen') Fragenkatalog
+
+			a#adrian(href='http://www.adriansieber.com/') © Adrian Sieber
+
+		block content
+
+		script(type='text/javascript').
+			var pkurl = (("https:" == document.location.protocol) ? "https://piwik.adriansieber.com/" : "http://piwik.adriansieber.com/");
+			document.write(unescape("%3Cscript src='" + pkurl + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+
+		script(type='text/javascript').
+			try {
+			var piwikTracker = Piwik.getTracker(pkurl + "piwik.php", 6);
+			piwikTracker.trackPageView();
+			piwikTracker.enableLinkTracking();
+			} catch (err) {
+			}
+
+		noscript
+			p
+				img(src='http://piwik.adriansieber.com/piwik.php?idsite=6', style='border: 0;', alt='')
