@@ -1,19 +1,12 @@
 {
     "name": "Schifferpatent",
-    "description": "education for everybody",
-    "version": "0.0.1",
+    "description": "Alles Wissenswerte für die theoretische und praktische Prüfung des Bodenseeschifferpatents sowie die amtlichen Prüfungsfragen mit Antworten.",
+    "version": "0.1.0",
     "private": true,
-    "dependencies": {
-        "express": "3.1.x",
-        "jake": "0.5.x",
-        "mongo": "0.1.x",
-        "mongodb": "1.2.x",
-        "uglify-js": "2.2.x"
-    },
     "engines": {
         "node": "0.10.x",
         "npm": "1.2.x"
-    }
+    },
     "dependencies": {
         "moment": "2.x",
         "underscore": "1.4.x",
