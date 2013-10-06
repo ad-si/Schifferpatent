@@ -1,8 +1,8 @@
 {
-    "locals": {
-        "description": "Alle Informationen und die offiziellen Prüfungsfragen für das Bodenseeschifferpatent."
-    },
-    "plugins": [
-        "./node_modules/wintersmith-stylus"
-    ]
+	"locals": {
+		"description": "Alle Informationen und die offiziellen Prüfungsfragen für das Bodenseeschifferpatent."
+	},
+	"plugins": [
+		"./node_modules/wintersmith-stylus/"
+	]
 }

@@ -31,11 +31,11 @@ html
 
 		block content
 
-		script(type='text/javascript').
+		script.
 			var pkurl = (("https:" == document.location.protocol) ? "https://piwik.adriansieber.com/" : "http://piwik.adriansieber.com/");
 			document.write(unescape("%3Cscript src='" + pkurl + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
 
-		script(type='text/javascript').
+		script.
 			try {
 			var piwikTracker = Piwik.getTracker(pkurl + "piwik.php", 6);
 			piwikTracker.trackPageView();

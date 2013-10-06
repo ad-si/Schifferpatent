@@ -1,16 +1,29 @@
 {
-    "name": "Schifferpatent",
-    "description": "Alles Wissenswerte für die theoretische und praktische Prüfung des Bodenseeschifferpatents sowie die amtlichen Prüfungsfragen mit Antworten.",
-    "version": "0.1.0",
-    "private": true,
-    "engines": {
-        "node": "0.10.x",
-        "npm": "1.2.x"
-    },
-    "dependencies": {
-        "moment": "2.x",
-        "underscore": "1.4.x",
-        "typogr": "0.5.x",
-        "wintersmith-stylus": "~0.3.0"
-    }
+	"name": "Schifferpatent",
+	"description": "Alles Wissenswerte für die theoretische und praktische Prüfung des Bodenseeschifferpatents sowie die amtlichen Prüfungsfragen mit Antworten.",
+	"version": "0.1.0",
+	"private": true,
+	"engines": {
+		"node": "~0.10.18",
+		"npm": "~1.3.8"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adius/schifferpatent.git"
+	},
+	"keywords": [
+		"Schifferpatent",
+		"Bodensee"
+	],
+	"author": {
+		"name": "Adrian Sieber",
+		"url": "http://adriansieber.com"
+	},
+	"bugs": {
+		"url": "https://github.com/adius/schifferpatent/issues"
+	},
+	"dependencies": {
+		"wintersmith": "~2.0.7",
+		"wintersmith-stylus": "~0.4.0"
+	}
 }
