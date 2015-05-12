@@ -11,13 +11,12 @@ block prepend content
 		each value, filename in contents
 			if /.*\.md$/gi.test(filename) && page.metadata.category === value.metadata.category
 
-				className = null
+				- var className = null
+				- var name = filename.slice(0,-3)
+				- var escName = name
 
 				if value.metadata.available === false
-					className = "coming_soon"
-
-				name = filename.slice(0,-3)
-				escName = name
+					- className = "coming_soon"
 
 				each umlaut, ligature in map
 					- escName = escName.replace(ligature, umlaut)
@@ -33,7 +32,7 @@ block prepend content
 
 		if page.metadata.available === false
 			each umlaut, ligature in map
-				escTitle = page.title.replace(ligature, umlaut)
+				- var escTitle = page.title.replace(ligature, umlaut)
 				h2= escTitle[0].toUpperCase() + escTitle.slice(1)
 				hr
 				h3 Diese Seite ist bald verfügbar!
@@ -41,7 +40,7 @@ block prepend content
 		block text
 			!= page.html
 
-		date = new Date(page.date).toISOString().substr(0,10)
+		- var date = new Date(page.date).toISOString().substr(0,10)
 		hr
 		#modified Letzte Bearbeitung: #{date}
 
