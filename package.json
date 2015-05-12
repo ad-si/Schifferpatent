@@ -22,8 +22,12 @@
 	"bugs": {
 		"url": "https://github.com/adius/schifferpatent/issues"
 	},
-	"dependencies": {
+	"devDependencies": {
 		"wintersmith": "~2.0.7",
 		"wintersmith-stylus": "~0.4.0"
+	},
+	"scripts":{
+		"start": "./node_modules/.bin/wintersmith preview",
+		"build": "./node_modules/.bin/wintersmith build"
 	}
 }
