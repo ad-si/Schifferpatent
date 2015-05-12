@@ -1,0 +1,12 @@
+icons:
+  -
+    fileName: schifferpatent.js
+    targets:
+      - number: 303
+      - number: 304
+      - number: 307
+      - number: 308
+      - number: 309
+      - number: 310
+      - number: 311
+      - number: 312
