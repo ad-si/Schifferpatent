@@ -32,17 +32,33 @@ html
 		block content
 
 		script.
-			var pkurl = (("https:" == document.location.protocol) ? "https://piwik.adriansieber.com/" : "http://piwik.adriansieber.com/");
-			document.write(unescape("%3Cscript src='" + pkurl + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+			var _paq = _paq || []
+				_paq.push(['trackPageView'])
+				_paq.push(['enableLinkTracking'])
+				!function() {
+					var u=(
+							("https:" == document.location.protocol) ?
+							"https" :
+							"http"
+						) + "://piwik.adriansieber.com/"
+					_paq.push(['setTrackerUrl', u+'piwik.php'])
+					_paq.push(['setSiteId', 6])
 
-		script.
-			try {
-			var piwikTracker = Piwik.getTracker(pkurl + "piwik.php", 6);
-			piwikTracker.trackPageView();
-			piwikTracker.enableLinkTracking();
-			} catch (err) {
-			}
+					var d=document,
+					g=d.createElement('script'),
+					s=d.getElementsByTagName('script')[0]
+					g.type='text/javascript'
+					g.defer=true
+					g.async=true
+					g.src=u+'piwik.js'
+					s.parentNode.insertBefore(g,s)
+				}()
 
 		noscript
 			p
-				img(src='http://piwik.adriansieber.com/piwik.php?idsite=6', style='border: 0;', alt='')
+				img(
+				src="http://piwik.adriansieber.com/piwik.php?idsite=6",
+				style="border:0",
+				alt=""
+				)
+

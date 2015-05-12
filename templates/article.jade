@@ -1,33 +1,39 @@
 extends layout
 
 block prepend title
-	| #{ page.title + " | "}
+	= page.title + " | "
 
 block prepend content
 
-	map = {"ae":"ä", "oe":"ö", "ue":"ü"}
+	- var map = {"ae":"ä", "oe":"ö", "ue":"ü"}
 
 	ul.sidebar
 		each value, filename in contents
-			- if(/.*\.md$/gi.test(filename) && page.metadata.category == value.metadata.category)
+			if /.*\.md$/gi.test(filename) && page.metadata.category === value.metadata.category
+
+				className = null
 
 				if value.metadata.available === false
 					className = "coming_soon"
-				else
-					className = null
 
 				name = filename.slice(0,-3)
 				escName = name
-				- for(a in map)
-					escName = escName.replace(a, map[a])
-				li
-					a(href='#{name}', class='#{className}')= escName[0].toUpperCase() + escName.slice(1)
 
-	.text(id='#{page.title.toLowerCase()}')
+				each umlaut, ligature in map
+					- escName = escName.replace(ligature, umlaut)
+
+				if name === 'steuerung'
+					- escName = 'Steuerung'
+
+				li
+					a(href=name, class=className)
+						= escName[0].toUpperCase() + escName.slice(1)
+
+	.text(id=page.title.toLowerCase())
 
 		if page.metadata.available === false
-				- for(a in map)
-					escTitle = page.title.replace(a, map[a])
+			each umlaut, ligature in map
+				escTitle = page.title.replace(ligature, umlaut)
 				h2= escTitle[0].toUpperCase() + escTitle.slice(1)
 				hr
 				h3 Diese Seite ist bald verfügbar!
@@ -37,8 +43,7 @@ block prepend content
 
 		date = new Date(page.date).toISOString().substr(0,10)
 		hr
-		#modified.
-			Letzte Bearbeitung: #{date}
+		#modified Letzte Bearbeitung: #{date}
 
 	#ad_right
 		script.
