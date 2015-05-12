@@ -2,7 +2,7 @@
 template: beschlaege.jade
 title: Beschläge
 category: segelboot
-date: 2013-07-08
+date: 2014-06-27
 
 fittings:
 - rundkausch
@@ -32,6 +32,7 @@ fittings:
 - traveller
 - lenzventil
 - ösfass
+- pütz
 - lenzpumpe
 ---
 
