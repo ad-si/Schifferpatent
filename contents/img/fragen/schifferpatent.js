@@ -443,13 +443,26 @@ module.exports.shaven = function (conf, tools) {
 		],
 		['g.exerciseImage', conf.number === 310,
 			['use', {'xlink:href': '#water'}],
-			['use', {
-				transform: 'translate(50, 40) rotate(135)',
-				style: {
-					fill: 'white'
+			['g',
+				{
+					transform: 'translate(50, 40) rotate(135)'
 				},
-				'xlink:href': '#boat'
-			}],
+				['use', {
+					style: {
+						fill: 'white'
+					},
+					'xlink:href': '#boat'
+				}],
+				['line', {
+					style: {
+						'marker-end': 'url(#endMarkerArrow)'
+					},
+					x1: -5,
+					x2: -15,
+					y1: 0.5,
+					y2: 0.5
+				}]
+			],
 			['g',
 				{
 					transform: 'translate(90, 20)'
@@ -458,6 +471,58 @@ module.exports.shaven = function (conf, tools) {
 					style: {
 						fill: 'white'
 					},
+					'xlink:href': '#boat-outline'
+				}],
+				['g',
+					{
+						transform: [
+							{
+								type: 'translate',
+								x: 4
+							},
+							{
+								type: 'rotate',
+								degrees: -35
+							}
+						]
+					},
+					['title', 'Small sail'],
+					['path', {
+						d: 'M0,0 h20 A 18,18 0 0 0 0,0'
+					}]
+				],
+				['g',
+					{
+						transform: [
+							{
+								type: 'translate',
+								x: 20
+							},
+							{
+								type: 'rotate',
+								degrees: -25
+							}
+						]
+					},
+					['title', 'Large sail'],
+					['path', {
+						d: 'M0,0 h25 A 22,22 0 0 0 0,0'
+					}],
+					['circle', {
+						r: 1
+					}]
+				],
+				['line', {
+					style: {
+						'marker-end': 'url(#endMarkerArrow)'
+					},
+					x1: -5,
+					x2: -15,
+					y1: 0.5,
+					y2: 0.5
+				}]
+			]
+		],
 					'xlink:href': '#boat'
 				}]
 			]
