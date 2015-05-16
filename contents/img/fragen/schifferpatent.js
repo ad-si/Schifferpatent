@@ -51,6 +51,33 @@ function getLargeBoat () {
 	]
 }
 
+function getRowingBoat () {
+
+	return ['g#rowingBoat',
+		['path#boat-outline', {
+			d:
+			'M0.5,0' +
+			'q22,-14.5 43.5,0' +
+			'q-22,14.5 -43.5,0' +
+			'z'
+		}],
+		['polygon',{
+			transform: 'translate(12 0)',
+			points:
+			'0,0 4,-4 14,-4 18,0 ' +
+			'14,4 4,4'
+		}],
+		['use', {
+			transform: 'translate(18 0) rotate(60) translate(2 0)',
+			'xlink:href': '#paddle'
+		}],
+		['use',{
+			transform: 'translate(18 0) rotate(-60) translate(2 0)',
+			'xlink:href': '#paddle'
+		}]
+	]
+}
+
 module.exports.shaven = function (conf, tools) {
 
 	var defaults = {
@@ -138,8 +165,21 @@ module.exports.shaven = function (conf, tools) {
 					'z'
 				}]
 			],
+			['g#paddle',
+				['line', {
+					x2: 16
+				}],
+				['circle',{
+					style: {
+						fill: 'black'
+					},
+					cx: 16,
+					r: 2
+				}]
+			],
 			getBoat(),
-			getLargeBoat()
+			getLargeBoat(),
+			getRowingBoat()
 		],
 		['g.exerciseImage', conf.number === 303,
 			['use', {'xlink:href': '#water'}],
