@@ -108,6 +108,36 @@ module.exports.shaven = function (conf, tools) {
 					d: 'M0,0 L4,2 L0,4 z'
 				}]
 			],
+			['g#light-ball',
+				{
+					transform: 'translate(26 20)'
+				},
+				['line', {
+					y2: -20
+				}],
+				['circle', {
+					r: 5
+				}]
+			],
+			['g#flag',
+				{
+					transform: 'translate(26 20)'
+				},
+				['line', {
+					y2: -20
+				}],
+				['path', {
+					transform: 'translate(0 -2)',
+					d:
+					'M0,0' +
+					'q2,-1 4,0' +
+					't4,0' +
+					'v4' +
+					'q-2,1 -4,0' +
+					't-4,0' +
+					'z'
+				}]
+			],
 			getBoat(),
 			getLargeBoat()
 		],
