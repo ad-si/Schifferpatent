@@ -382,20 +382,12 @@ module.exports.shaven = function (conf, tools) {
 					},
 					'xlink:href': '#largeBoat'
 				}],
-				['g',
-					{
-						transform: 'translate(26 20)'
-					},
-					['line', {
-						y2: -20
-					}],
-					['circle', {
-						style: {
-							fill: 'green'
-						},
-						r: 5
-					}]
-				]
+				['use', {
+					'xlink:href': '#light-ball',
+					style: {
+						fill: 'green'
+					}
+				}]
 			],
 			['use', {
 				transform: 'translate(90, 50) rotate(-30)',
