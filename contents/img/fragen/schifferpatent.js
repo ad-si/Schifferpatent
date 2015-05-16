@@ -1,6 +1,6 @@
 function getBoat () {
 
-	return ['g', {id: 'boat'},
+	return ['g#boat',
 		['path#boat-outline', {
 			d: 'M0.5,0.5' +
 			'c12,-12 22,-12 45,-7' +
@@ -38,7 +38,7 @@ function getBoat () {
 }
 
 function getLargeBoat () {
-	return ['g', {id: 'largeBoat'},
+	return ['g#largeBoat',
 		['path', {
 			d: 'M0,0' +
 			'c5,-10 15,-10 20,-10' +
