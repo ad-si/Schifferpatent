@@ -928,6 +928,60 @@ module.exports.shaven = function (conf, tools) {
 				},
 				'xlink:href': '#sailingBoat'
 			}]
+		],
+		['g.exerciseImage', conf.number === 429,
+			{
+				style: {
+					fill: 'white',
+					'font-size': 11
+				}
+			},
+			['use', {'xlink:href': '#water'}],
+			['g',
+				{
+					transform: 'translate(110 10)'
+				},
+				['line', {
+					style: {
+						'marker-end': 'url(#endMarkerArrow)'
+					},
+					y2: 30
+				}],
+				['text', 'Wind', {
+					x: 8,
+					y: 20
+				}]
+			],
+			['g',
+				['use', {
+					transform: 'translate(80 50) rotate(-90)',
+					'xlink:href': '#sailingBoat'
+				}],
+				['text', 3, {
+					x: 78,
+					y: 18
+				}]
+			],
+			['g',
+				['use', {
+					transform: 'translate(50, 60) rotate(200)',
+					'xlink:href': '#sailingBoat'
+				}],
+				['text', 2, {
+					x: 12,
+					y: 50
+				}]
+			],
+			['g',
+				['use', {
+					transform: 'translate(80, 65) rotate(-150) scale(-1 1)',
+					'xlink:href': '#sailingBoat'
+				}],
+				['text', 1, {
+					x: 108,
+					y: 86
+				}]
+			]
 		]
 	]
 }
