@@ -76,6 +76,20 @@ function getRowingBoat () {
 	]
 }
 
+function getSailingBoat () {
+	return ['g#sailingBoat',
+		['use', {
+			'xlink:href': '#boat-outline'
+		}],
+		['use', {
+			'xlink:href': '#small-sail'
+		}],
+		['use', {
+			'xlink:href': '#large-sail'
+		}]
+	]
+}
+
 module.exports.shaven = function (conf, tools) {
 
 	var defaults = {
@@ -221,7 +235,8 @@ module.exports.shaven = function (conf, tools) {
 			],
 			getBoat(),
 			getLargeBoat(),
-			getRowingBoat()
+			getRowingBoat(),
+			getSailingBoat()
 		],
 		['g.exerciseImage', conf.number === 303,
 			['use', {'xlink:href': '#water'}],
