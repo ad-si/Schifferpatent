@@ -823,6 +823,41 @@ module.exports.shaven = function (conf, tools) {
 					'xlink:href': '#large-sail'
 				}]
 			]
+		],
+		['g.exerciseImage', conf.number === 426,
+			['use', {'xlink:href': '#water'}],
+			['g',
+				{
+					transform: 'translate(10 50)'
+				},
+				['line', {
+					style: {
+						'marker-end': 'url(#endMarkerArrow)'
+					},
+					x2: 50
+				}],
+				['text', 'Wind', {
+					style: {
+						'font-size': 11
+					},
+					x: 8,
+					y: -4
+				}]
+			],
+			['use', {
+				transform: 'translate(80, 35) rotate(-20) scale(1 -1)',
+				style: {
+					fill: 'black'
+				},
+				'xlink:href': '#sailingBoat'
+			}],
+			['use', {
+				transform: 'translate(80, 65) rotate(20)',
+				style: {
+					fill: 'white'
+				},
+				'xlink:href': '#sailingBoat'
+			}]
 		]
 	]
 }
