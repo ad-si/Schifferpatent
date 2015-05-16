@@ -1,23 +1,23 @@
 function getBoat () {
 
 	return ['g', {id: 'boat'},
-		['path', {
+		['path#boat-outline', {
 			d: 'M0.5,0.5' +
-			   'c12,-12 22,-12 45,-7' +
-			   'v14 ' +
-			   'c-22,4 -33,4 -45,-7' +
-			   'z'
+			'c12,-12 22,-12 45,-7' +
+			'v14 ' +
+			'c-22,4 -33,4 -45,-7' +
+			'z'
 		}],
 		['path', {
 			style: {
 				fill: 'rgba(255,255,255,0.4)'
 			},
 			d: 'M20.5,-5.5' +
-			   'h22' +
-			   'v12' +
-			   'h-22' +
-			   'a6,6 0 0 1 0,-12' +
-			   'z'
+			'h22' +
+			'v12' +
+			'h-22' +
+			'a6,6 0 0 1 0,-12' +
+			'z'
 		}],
 		['line', {
 			x1: 0.5,
@@ -41,12 +41,12 @@ function getLargeBoat () {
 	return ['g', {id: 'largeBoat'},
 		['path', {
 			d: 'M0,0' +
-			   'c5,-10 15,-10 20,-10' +
-			   'h20' +
-			   'a1,1, 0,0,1 0,20' +
-			   'h-20' +
-			   'c-5,0 -15,0 -20,-10' +
-			   'z'
+			'c5,-10 15,-10 20,-10' +
+			'h20' +
+			'a1,1, 0,0,1 0,20' +
+			'h-20' +
+			'c-5,0 -15,0 -20,-10' +
+			'z'
 		}]
 	]
 }
@@ -221,14 +221,14 @@ module.exports.shaven = function (conf, tools) {
 					y1: 0.5,
 					y2: 0.5
 				}]
-			],
+			]
 		],
 		['g.exerciseImage', conf.number === 307,
 			['use', {'xlink:href': '#water'}],
 			['g',
 				{
 					transform: 'translate(60.5, 40.5)' +
-					           'rotate(180)'
+					'rotate(180)'
 				},
 				['use', {
 					style: {
@@ -343,8 +343,8 @@ module.exports.shaven = function (conf, tools) {
 			['use', {'xlink:href': '#water'}],
 			['g',
 				{
-					transform: 'translate(60.5, 65.5)' +
-					           'rotate(180)'
+					transform: 'translate(60.5, 65.5) ' +
+					'rotate(180)'
 				},
 				['use', {
 					style: {
@@ -379,8 +379,8 @@ module.exports.shaven = function (conf, tools) {
 			['use', {'xlink:href': '#water'}],
 			['g',
 				{
-					transform: 'translate(90, 40)' +
-					           'rotate(45)'
+					transform: 'translate(90, 40) ' +
+					'rotate(45)'
 				},
 				['use', {
 					style: {
