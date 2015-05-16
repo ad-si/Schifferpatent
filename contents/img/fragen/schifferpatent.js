@@ -174,6 +174,51 @@ module.exports.shaven = function (conf, tools) {
 					r: 2
 				}]
 			],
+			['g#small-sail',
+				{
+					transform: [
+						{
+							type: 'translate',
+							x: 4
+						},
+						{
+							type: 'rotate',
+							degrees: -35
+						}
+					]
+				},
+				['title', 'Small sail'],
+				['path', {
+					style: {
+						fill: 'white'
+					},
+					d: 'M0,0 h20 A 18,18 0 0 0 0,0'
+				}]
+			],
+			['g#large-sail',
+				{
+					transform: [
+						{
+							type: 'translate',
+							x: 20
+						},
+						{
+							type: 'rotate',
+							degrees: -25
+						}
+					]
+				},
+				['title', 'Large sail'],
+				['path', {
+					style: {
+						fill: 'white'
+					},
+					d: 'M0,0 h25 A 22,22 0 0 0 0,0'
+				}],
+				['circle', {
+					r: 1
+				}]
+			],
 			getBoat(),
 			getLargeBoat(),
 			getRowingBoat()
@@ -510,45 +555,12 @@ module.exports.shaven = function (conf, tools) {
 					},
 					'xlink:href': '#boat-outline'
 				}],
-				['g',
-					{
-						transform: [
-							{
-								type: 'translate',
-								x: 4
-							},
-							{
-								type: 'rotate',
-								degrees: -35
-							}
-						]
-					},
-					['title', 'Small sail'],
-					['path', {
-						d: 'M0,0 h20 A 18,18 0 0 0 0,0'
-					}]
-				],
-				['g',
-					{
-						transform: [
-							{
-								type: 'translate',
-								x: 20
-							},
-							{
-								type: 'rotate',
-								degrees: -25
-							}
-						]
-					},
-					['title', 'Large sail'],
-					['path', {
-						d: 'M0,0 h25 A 22,22 0 0 0 0,0'
-					}],
-					['circle', {
-						r: 1
-					}]
-				],
+				['use', {
+					'xlink:href': '#small-sail'
+				}],
+				['use', {
+					'xlink:href': '#large-sail'
+				}],
 				['line', {
 					style: {
 						'marker-end': 'url(#endMarkerArrow)'
