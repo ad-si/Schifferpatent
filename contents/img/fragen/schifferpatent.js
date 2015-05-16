@@ -87,7 +87,7 @@ module.exports.shaven = function (conf, tools) {
 			}'
 
 		],
-		['defs', //conf.number === 303,
+		['defs',
 			['rect#water', {
 				style: {
 					fill: 'PowderBlue',
