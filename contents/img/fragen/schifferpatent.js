@@ -86,7 +86,7 @@ module.exports.shaven = function (conf, tools) {
 		fill: 'orange',
 		stroke: 'black',
 		scale: 5,
-		number: 310
+		number: 315
 	}
 
 	conf = tools.svgKit.applyDefaults(conf, defaults)
@@ -711,6 +711,37 @@ module.exports.shaven = function (conf, tools) {
 				}],
 				['use', {
 					'xlink:href': '#flag'
+				}]
+			]
+		],
+		['g.exerciseImage', conf.number === 315,
+			['use', {'xlink:href': '#water'}],
+			['use', {
+				transform: 'translate(70, 20) rotate(180)',
+				style: {
+					fill: 'white'
+				},
+				'xlink:href': '#boat'
+			}],
+			['g',
+				{
+					transform: [
+						{
+							type: 'translate',
+							x: 110,
+							y: 40
+						},
+						{
+							type: 'rotate',
+							degrees: 90
+						}
+					],
+					style: {
+						fill: 'white'
+					}
+				},
+				['use', {
+					'xlink:href': '#rowingBoat'
 				}]
 			]
 		]
