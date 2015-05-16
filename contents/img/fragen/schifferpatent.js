@@ -55,23 +55,21 @@ function getRowingBoat () {
 
 	return ['g#rowingBoat',
 		['path#boat-outline', {
-			d:
-			'M0.5,0' +
+			d: 'M0.5,0' +
 			'q22,-14.5 43.5,0' +
 			'q-22,14.5 -43.5,0' +
 			'z'
 		}],
-		['polygon',{
+		['polygon', {
 			transform: 'translate(12 0)',
-			points:
-			'0,0 4,-4 14,-4 18,0 ' +
+			points: '0,0 4,-4 14,-4 18,0 ' +
 			'14,4 4,4'
 		}],
 		['use', {
 			transform: 'translate(18 0) rotate(60) translate(2 0)',
 			'xlink:href': '#paddle'
 		}],
-		['use',{
+		['use', {
 			transform: 'translate(18 0) rotate(-60) translate(2 0)',
 			'xlink:href': '#paddle'
 		}]
@@ -155,8 +153,7 @@ module.exports.shaven = function (conf, tools) {
 				}],
 				['path', {
 					transform: 'translate(0 -2)',
-					d:
-					'M0,0' +
+					d: 'M0,0' +
 					'q2,-1 4,0' +
 					't4,0' +
 					'v4' +
@@ -169,7 +166,7 @@ module.exports.shaven = function (conf, tools) {
 				['line', {
 					x2: 16
 				}],
-				['circle',{
+				['circle', {
 					style: {
 						fill: 'black'
 					},
