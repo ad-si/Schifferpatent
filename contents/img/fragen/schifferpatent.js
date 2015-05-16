@@ -398,8 +398,8 @@ module.exports.shaven = function (conf, tools) {
 				]
 			],
 			['use', {
+				transform: 'translate(90, 50) rotate(-30)',
 				style: {
-					transform: 'translate(90, 50) rotate(-30)',
 					fill: 'white'
 				},
 				'xlink:href': '#boat'
