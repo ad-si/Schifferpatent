@@ -1099,6 +1099,22 @@ module.exports.shaven = function (conf, tools) {
 				transform: 'translate(100, 50) rotate(-135) scale(-1 1)',
 				'xlink:href': '#sailingBoat'
 			}]
+		],
+		['g.exerciseImage', conf.number === 435,
+			{
+				style: {
+					fill: 'white'
+				}
+			},
+			['use', {'xlink:href': '#water'}],
+			['use', {
+				transform: 'translate(30, 45) rotate(90)',
+				'xlink:href': '#rowingBoat'
+			}],
+			['use', {
+				transform: 'translate(80, 25)',
+				'xlink:href': '#sailingBoat'
+			}]
 		]
 	]
 }
