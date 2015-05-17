@@ -227,7 +227,7 @@ module.exports.shaven = function (conf, tools) {
 	var defaults = {
 		width: 150,
 		height: 100,
-		fill: 'orange',
+		fill: 'white',
 		stroke: 'black',
 		scale: 5,
 		number: 315
@@ -437,9 +437,6 @@ module.exports.shaven = function (conf, tools) {
 					transform: 'translate(100, 50) rotate(60)'
 				},
 				['use', {
-					style: {
-						fill: 'white'
-					},
 					'xlink:href': '#boat'
 				}],
 				['line', {
@@ -486,9 +483,6 @@ module.exports.shaven = function (conf, tools) {
 					transform: 'translate(35, 50) rotate(120)'
 				},
 				['use', {
-					style: {
-						fill: 'white'
-					},
 					'xlink:href': '#boat'
 				}],
 				['line', {
@@ -533,9 +527,6 @@ module.exports.shaven = function (conf, tools) {
 					transform: 'translate(90, 50) rotate(30)'
 				},
 				['use', {
-					style: {
-						fill: 'white'
-					},
 					'xlink:href': '#boat'
 				}]
 			]
@@ -562,9 +553,6 @@ module.exports.shaven = function (conf, tools) {
 			],
 			['use', {
 				transform: 'translate(90, 50) rotate(-30)',
-				style: {
-					fill: 'white'
-				},
 				'xlink:href': '#boat'
 			}]
 		],
@@ -576,18 +564,12 @@ module.exports.shaven = function (conf, tools) {
 					'rotate(45)'
 				},
 				['use', {
-					style: {
-						fill: 'white'
-					},
 					'xlink:href': '#boat'
 				}],
 				['use', {'xlink:href': '#flashing-light-ball'}]
 			],
 			['use', {
 				transform: 'translate(50, 40) rotate(135)',
-				style: {
-					fill: 'white'
-				},
 				'xlink:href': '#boat'
 			}]
 		],
@@ -598,9 +580,6 @@ module.exports.shaven = function (conf, tools) {
 					transform: 'translate(50, 40) rotate(135)'
 				},
 				['use', {
-					style: {
-						fill: 'white'
-					},
 					'xlink:href': '#boat'
 				}],
 				['line', {
@@ -618,9 +597,6 @@ module.exports.shaven = function (conf, tools) {
 					transform: 'translate(90, 20)'
 				},
 				['use', {
-					style: {
-						fill: 'white'
-					},
 					'xlink:href': '#boat-outline'
 				}],
 				['use', {
@@ -651,9 +627,6 @@ module.exports.shaven = function (conf, tools) {
 					}]
 				},
 				['use', {
-					style: {
-						fill: 'white'
-					},
 					'xlink:href': '#boat'
 				}],
 				['line', {
@@ -671,9 +644,6 @@ module.exports.shaven = function (conf, tools) {
 					transform: 'translate(100, 50)'
 				},
 				['use', {
-					style: {
-						fill: 'white'
-					},
 					'xlink:href': '#boat'
 				}],
 				['line', {
@@ -704,18 +674,12 @@ module.exports.shaven = function (conf, tools) {
 					]
 				},
 				['use', {
-					style: {
-						fill: 'white'
-					},
 					'xlink:href': '#boat'
 				}]
 			],
 			['g',
 				{
-					transform: 'translate(100, 60) rotate(-45)',
-					style: {
-						fill: 'white'
-					}
+					transform: 'translate(100, 60) rotate(-45)'
 				},
 				['use', {
 					'xlink:href': '#boat-outline'
@@ -738,10 +702,7 @@ module.exports.shaven = function (conf, tools) {
 						{
 							type: 'rotate',
 							degrees: 180
-						}],
-					style: {
-						fill: 'white'
-					}
+						}]
 				},
 				['use', {
 					'xlink:href': '#large-boat'
@@ -752,9 +713,6 @@ module.exports.shaven = function (conf, tools) {
 			],
 			['use', {
 				transform: 'translate(90, 60)',
-				style: {
-					fill: 'white'
-				},
 				'xlink:href': '#boat'
 			}]
 		],
@@ -762,9 +720,6 @@ module.exports.shaven = function (conf, tools) {
 			['use', {'xlink:href': '#water'}],
 			['use', {
 				transform: 'translate(60, 20) rotate(180)',
-				style: {
-					fill: 'white'
-				},
 				'xlink:href': '#boat'
 			}],
 			['g',
@@ -778,10 +733,7 @@ module.exports.shaven = function (conf, tools) {
 						{
 							type: 'rotate',
 							degrees: 60
-						}],
-					style: {
-						fill: 'white'
-					}
+						}]
 				},
 				['use', {
 					'xlink:href': '#large-boat'
@@ -795,9 +747,6 @@ module.exports.shaven = function (conf, tools) {
 			['use', {'xlink:href': '#water'}],
 			['use', {
 				transform: 'translate(70, 20) rotate(180)',
-				style: {
-					fill: 'white'
-				},
 				'xlink:href': '#boat'
 			}],
 			['g',
@@ -812,10 +761,7 @@ module.exports.shaven = function (conf, tools) {
 							type: 'rotate',
 							degrees: 90
 						}
-					],
-					style: {
-						fill: 'white'
-					}
+					]
 				},
 				['use', {
 					'xlink:href': '#rowing-boat'
@@ -864,9 +810,6 @@ module.exports.shaven = function (conf, tools) {
 					transform: 'translate(50, 70) scale(1 -1)'
 				},
 				['use', {
-					style: {
-						fill: 'white'
-					},
 					'xlink:href': '#boat-outline'
 				}],
 				['use', {
@@ -906,9 +849,6 @@ module.exports.shaven = function (conf, tools) {
 			}],
 			['use', {
 				transform: 'translate(80, 65) rotate(20)',
-				style: {
-					fill: 'white'
-				},
 				'xlink:href': '#sailing-boat'
 			}]
 		],
@@ -941,9 +881,6 @@ module.exports.shaven = function (conf, tools) {
 			}],
 			['use', {
 				transform: 'translate(85, 60) rotate(40)',
-				style: {
-					fill: 'white'
-				},
 				'xlink:href': '#sailing-boat'
 			}]
 		],
@@ -976,16 +913,12 @@ module.exports.shaven = function (conf, tools) {
 			}],
 			['use', {
 				transform: 'translate(100, 60) rotate(150)',
-				style: {
-					fill: 'white'
-				},
 				'xlink:href': '#sailing-boat'
 			}]
 		],
 		['g.exerciseImage', conf.number === 429,
 			{
 				style: {
-					fill: 'white',
 					'font-size': 11
 				}
 			},
@@ -1040,16 +973,10 @@ module.exports.shaven = function (conf, tools) {
 			['use', {'xlink:href': '#water'}],
 			['use', {
 				transform: 'translate(60, 30) rotate(180)',
-				style: {
-					fill: 'white'
-				},
 				'xlink:href': '#lighted-boat'
 			}],
 			['use', {
 				transform: 'translate(110, 50) rotate(120)',
-				style: {
-					fill: 'white'
-				},
 				'xlink:href': '#sailing-boat'
 			}]
 		],
@@ -1060,9 +987,6 @@ module.exports.shaven = function (conf, tools) {
 					transform: 'translate(60, 70) rotate(180)'
 				},
 				['use', {
-					style: {
-						fill: 'white'
-					},
 					'xlink:href': '#boat-outline'
 				}],
 				['use', {
@@ -1072,18 +996,10 @@ module.exports.shaven = function (conf, tools) {
 			],
 			['use', {
 				transform: 'translate(100, 50) rotate(135) scale(-1 1)',
-				style: {
-					fill: 'white'
-				},
 				'xlink:href': '#sailing-boat'
 			}]
 		],
 		['g.exerciseImage', conf.number === 432,
-			{
-				style: {
-					fill: 'white'
-				}
-			},
 			['use', {'xlink:href': '#water'}],
 			['g',
 				{
@@ -1102,11 +1018,6 @@ module.exports.shaven = function (conf, tools) {
 			}]
 		],
 		['g.exerciseImage', conf.number === 433,
-			{
-				style: {
-					fill: 'white'
-				}
-			},
 			['use', {'xlink:href': '#water'}],
 			['g',
 				{
@@ -1125,11 +1036,6 @@ module.exports.shaven = function (conf, tools) {
 			}]
 		],
 		['g.exerciseImage', conf.number === 434,
-			{
-				style: {
-					fill: 'white'
-				}
-			},
 			['use', {'xlink:href': '#water'}],
 			['g',
 				{
@@ -1148,11 +1054,6 @@ module.exports.shaven = function (conf, tools) {
 			}]
 		],
 		['g.exerciseImage', conf.number === 435,
-			{
-				style: {
-					fill: 'white'
-				}
-			},
 			['use', {'xlink:href': '#water'}],
 			['use', {
 				transform: 'translate(30, 45) rotate(90)',
@@ -1164,11 +1065,6 @@ module.exports.shaven = function (conf, tools) {
 			}]
 		],
 		['g.exerciseImage', conf.number === 436,
-			{
-				style: {
-					fill: 'white'
-				}
-			},
 			['use', {'xlink:href': '#water'}],
 			['g',
 				{
@@ -1202,11 +1098,6 @@ module.exports.shaven = function (conf, tools) {
 			]
 		],
 		['g.exerciseImage', conf.number === 437,
-			{
-				style: {
-					fill: 'white'
-				}
-			},
 			['use', {'xlink:href': '#water'}],
 			['g',
 				{
@@ -1243,11 +1134,6 @@ module.exports.shaven = function (conf, tools) {
 			]
 		],
 		['g.exerciseImage', conf.number === 439,
-			{
-				style: {
-					fill: 'white'
-				}
-			},
 			['use', {'xlink:href': '#water'}],
 			['g',
 				{
@@ -1288,11 +1174,6 @@ module.exports.shaven = function (conf, tools) {
 			}]
 		],
 		['g.exerciseImage', conf.number === 440,
-			{
-				style: {
-					fill: 'white'
-				}
-			},
 			['use', {'xlink:href': '#water'}],
 			['use', {
 				transform: 'translate(110, 55) rotate(45)',
@@ -1311,11 +1192,6 @@ module.exports.shaven = function (conf, tools) {
 			}]
 		],
 		['g.exerciseImage', conf.number === 441,
-			{
-				style: {
-					fill: 'white'
-				}
-			},
 			['use', {'xlink:href': '#water'}],
 			['use', {
 				transform: 'translate(85, 85) rotate(180)',
@@ -1335,11 +1211,6 @@ module.exports.shaven = function (conf, tools) {
 			}]
 		],
 		['g.exerciseImage', conf.number === 442,
-			{
-				style: {
-					fill: 'white'
-				}
-			},
 			['use', {'xlink:href': '#water'}],
 			['use', {
 				transform: 'translate(70, 20) rotate(180)',
