@@ -191,6 +191,36 @@ function getLightedBoat (conf, tools) {
 	]
 }
 
+function getConvoy () {
+
+	return ['g#convoy',
+		['title', 'Schleppverband'],
+		['line', {
+			x1: 45,
+			x2: 60,
+			y2: 12
+
+		}],
+		['line', {
+			x1: 45,
+			x2: 60,
+			y2: -12
+
+		}],
+		['use', {
+			'xlink:href': '#boat-outline'
+		}],
+		['use', {
+			transform: 'translate(60, -12)',
+			'xlink:href': '#boat-outline'
+		}],
+		['use', {
+			transform: 'translate(60, 12)',
+			'xlink:href': '#boat-outline'
+		}]
+	]
+}
+
 
 module.exports.shaven = function (conf, tools) {
 
@@ -365,7 +395,8 @@ module.exports.shaven = function (conf, tools) {
 			getLargeBoat(),
 			getRowingBoat(),
 			getSailingBoat(),
-			getLightedBoat(null, tools)
+			getLightedBoat(null, tools),
+			getConvoy()
 		],
 		['g.exerciseImage', conf.number === 303,
 			['use', {'xlink:href': '#water'}],
@@ -1262,35 +1293,10 @@ module.exports.shaven = function (conf, tools) {
 				x: 20,
 				y: 70
 			}],
-			['g#convoy',
-				{
-					transform: 'translate(110, 35) rotate(180)'
-				},
-				['title', 'Schleppverband'],
-				['line', {
-					x1: 45,
-					x2: 60,
-					y2: 12
-
-				}],
-				['line', {
-					x1: 45,
-					x2: 60,
-					y2: -12
-
-				}],
-				['use', {
-					'xlink:href': '#boat-outline'
-				}],
-				['use', {
-					transform: 'translate(60, -12)',
-					'xlink:href': '#boat-outline'
-				}],
-				['use', {
-					transform: 'translate(60, 12)',
-					'xlink:href': '#boat-outline'
-				}]
-			]
+			['use', {
+				transform: 'translate(110, 35) rotate(180)',
+				'xlink:href': '#convoy'
+			}]
 		]
 	]
 }
