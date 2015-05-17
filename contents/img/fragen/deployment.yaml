@@ -3,4 +3,3 @@ icons:
     fileName: schifferpatent.js
     targets:
       - fileName: defs
-      - number: 457
