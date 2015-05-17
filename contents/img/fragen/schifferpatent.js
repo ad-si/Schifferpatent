@@ -225,24 +225,27 @@ function getConvoy () {
 module.exports.shaven = function (conf, tools) {
 
 	var defaults = {
-		width: 150,
-		height: 100,
-		fill: 'white',
-		stroke: 'black',
-		scale: 5,
-		number: 315
-	}
+			width: 150,
+			height: 100,
+			fill: 'white',
+			stroke: 'black',
+			scale: 5
+		},
+		isDef
+
 
 	conf = tools.svgKit.applyDefaults(conf, defaults)
 
+	isDef = (conf.fileName === 'defs')
+
 
 	return [
-		'svg', {
+		'svg', isDef ? {} : {
 			width: conf.scaledWidth,
 			height: conf.scaledHeight,
 			viewBox: [0, 0, conf.width, conf.height].join()
 		},
-		['style', //conf.number === 303,
+		['style',
 			'g.exerciseImage {\
 				fill:' + conf.fill + ';\
 				stroke:' + conf.stroke + ';\
@@ -256,7 +259,6 @@ module.exports.shaven = function (conf, tools) {
 				fill: black;\
 				stroke: none;\
 			}'
-
 		],
 		['defs',
 			['rect#water', {
@@ -408,1148 +410,1152 @@ module.exports.shaven = function (conf, tools) {
 			getRowingBoat(),
 			getSailingBoat(),
 			getLightedBoat(null, tools),
-			getConvoy()
-		],
-		['g.exerciseImage', conf.number === 303,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(50, 50) rotate(120)'
-				},
-				['use', {
-					style: {
-						fill: 'rgb(60,60,60)'
-					},
-					'xlink:href': '#boat'
-				}],
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
-					},
-					x1: -5,
-					x2: -15,
-					y1: 0.5,
-					y2: 0.5
-				}]
-			],
-			['g',
-				{
-					transform: 'translate(100, 50) rotate(60)'
-				},
-				['use', {
-					'xlink:href': '#boat'
-				}],
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
-					},
-					x1: -5,
-					x2: -15,
-					y1: 0.5,
-					y2: 0.5
-				}]
-			],
-			['text', 'Hafeneinfahrt', {
-				style: {
-					'font-size': 7.5
-				},
-				y: 12,
-				x: 52
-			}],
-			['g',
-				{
-					style: {
-						fill: 'SlateGray'
-					}
-				},
-				['rect', {
-					x: -0.5,
-					y: -0.5,
-					width: 40,
-					height: 20
-				}],
-				['rect', {
-					x: 110.5,
-					y: -0.5,
-					width: 40,
-					height: 20
-				}]
-			]
-		],
-		['g.exerciseImage', conf.number === 304,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(35, 50) rotate(120)'
-				},
-				['use', {
-					'xlink:href': '#boat'
-				}],
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
-					},
-					x1: -5,
-					x2: -15,
-					y1: 0.5,
-					y2: 0.5
-				}]
-			],
-			['g',
-				{
-					transform: 'translate(90,20)'
-				},
-				['use', {
-					style: {
-						fill: 'rgb(60,60,60)'
-					},
-					'xlink:href': '#boat'
-				}],
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
-					},
-					x1: -5,
-					x2: -15,
-					y1: 0.5,
-					y2: 0.5
-				}]
-			]
-		],
-		['g.exerciseImage', conf.number === 307,
-			['use', {'xlink:href': '#water'}],
-			['use', {
-				transform: 'translate(60.5, 40.5) rotate(180)',
-				'xlink:href': '#lighted-boat'
-			}],
-			['g',
-				{
-					transform: 'translate(90, 50) rotate(30)'
-				},
-				['use', {
-					'xlink:href': '#boat'
-				}]
-			]
-		],
-		['g.exerciseImage', conf.number === 308,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(60.5, 65.5) ' +
-					'rotate(180)'
-				},
-				['use', {
-					style: {
-						fill: 'rgb(60,60,60)'
-					},
-					'xlink:href': '#large-boat'
-				}],
-				['use', {
-					'xlink:href': '#light-ball',
-					style: {
-						fill: 'green'
-					}
-				}]
-			],
-			['use', {
-				transform: 'translate(90, 50) rotate(-30)',
-				'xlink:href': '#boat'
-			}]
-		],
-		['g.exerciseImage', conf.number === 309,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(90, 40) ' +
-					'rotate(45)'
-				},
-				['use', {
-					'xlink:href': '#boat'
-				}],
-				['use', {'xlink:href': '#flashing-light-ball'}]
-			],
-			['use', {
-				transform: 'translate(50, 40) rotate(135)',
-				'xlink:href': '#boat'
-			}]
-		],
-		['g.exerciseImage', conf.number === 310,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(50, 40) rotate(135)'
-				},
-				['use', {
-					'xlink:href': '#boat'
-				}],
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
-					},
-					x1: -5,
-					x2: -15,
-					y1: 0.5,
-					y2: 0.5
-				}]
-			],
-			['g',
-				{
-					transform: 'translate(90, 20)'
-				},
-				['use', {
-					'xlink:href': '#boat-outline'
-				}],
-				['use', {
-					'xlink:href': '#small-sail'
-				}],
-				['use', {
-					'xlink:href': '#large-sail'
-				}],
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
-					},
-					x1: -5,
-					x2: -15,
-					y1: 0.5,
-					y2: 0.5
-				}]
-			]
-		],
-		['g.exerciseImage', conf.number === 311,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: [{
-						type: 'translate',
-						x: 20,
-						y: conf.height / 2
-					}]
-				},
-				['use', {
-					'xlink:href': '#boat'
-				}],
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
-					},
-					x1: -5,
-					x2: -15,
-					y1: 0.5,
-					y2: 0.5
-				}]
-			],
-			['g',
-				{
-					transform: 'translate(100, 50)'
-				},
-				['use', {
-					'xlink:href': '#boat'
-				}],
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
-					},
-					x1: -5,
-					x2: -15,
-					y1: 0.5,
-					y2: 0.5
-				}]
-			]
-		],
-		['g.exerciseImage', conf.number === 312,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: [
-						{
-							type: 'translate',
-							x: 50,
-							y: 60
-						},
-						{
-							type: 'rotate',
-							degrees: 225
-						}
-					]
-				},
-				['use', {
-					'xlink:href': '#boat'
-				}]
-			],
-			['g',
-				{
-					transform: 'translate(100, 60) rotate(-45)'
-				},
-				['use', {
-					'xlink:href': '#boat-outline'
-				}],
-				['use', {
-					'xlink:href': '#light-ball'
-				}]
-			]
-		],
-		['g.exerciseImage', conf.number === 313,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: [
-						{
-							type: 'translate',
-							x: 60.5,
-							y: conf.height / 2
-						},
-						{
-							type: 'rotate',
-							degrees: 180
-						}]
-				},
-				['use', {
-					'xlink:href': '#large-boat'
-				}],
-				['use', {
-					'xlink:href': '#light-ball'
-				}]
-			],
-			['use', {
-				transform: 'translate(90, 60)',
-				'xlink:href': '#boat'
-			}]
-		],
-		['g.exerciseImage', conf.number === 314,
-			['use', {'xlink:href': '#water'}],
-			['use', {
-				transform: 'translate(60, 20) rotate(180)',
-				'xlink:href': '#boat'
-			}],
-			['g',
-				{
-					transform: [
-						{
-							type: 'translate',
-							x: 100,
-							y: 40
-						},
-						{
-							type: 'rotate',
-							degrees: 60
-						}]
-				},
-				['use', {
-					'xlink:href': '#large-boat'
-				}],
-				['use', {
-					'xlink:href': '#flag'
-				}]
-			]
-		],
-		['g.exerciseImage', conf.number === 315,
-			['use', {'xlink:href': '#water'}],
-			['use', {
-				transform: 'translate(70, 20) rotate(180)',
-				'xlink:href': '#boat'
-			}],
-			['g',
-				{
-					transform: [
-						{
-							type: 'translate',
-							x: 110,
-							y: 40
-						},
-						{
-							type: 'rotate',
-							degrees: 90
-						}
-					]
-				},
-				['use', {
-					'xlink:href': '#rowing-boat'
-				}]
-			]
-		],
-		['g.exerciseImage', conf.number === 425,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'rotate(35) translate(15 0)'
-				},
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
-					},
-					x2: 50
-				}],
-				['text', 'Wind', {
-					style: {
-						'font-size': 11
-					},
-					x: 8,
-					y: -4
-				}]
-			],
-			['g',
-				{
-					transform: 'translate(80, 30) rotate(-20) scale(1 -1)'
-				},
-				['use', {
-					style: {
-						fill: 'black'
-					},
-					'xlink:href': '#boat-outline'
-				}],
-				['use', {
-					'xlink:href': '#small-sail'
-				}],
-				['use', {
-					'xlink:href': '#large-sail'
-				}]
-			],
-			['g',
-				{
-					transform: 'translate(50, 70) scale(1 -1)'
-				},
-				['use', {
-					'xlink:href': '#boat-outline'
-				}],
-				['use', {
-					'xlink:href': '#small-sail'
-				}],
-				['use', {
-					'xlink:href': '#large-sail'
-				}]
-			]
-		],
-		['g.exerciseImage', conf.number === 426,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(10 50)'
-				},
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
-					},
-					x2: 50
-				}],
-				['text', 'Wind', {
-					style: {
-						'font-size': 11
-					},
-					x: 8,
-					y: -4
-				}]
-			],
-			['use', {
-				transform: 'translate(80, 35) rotate(-20) scale(1 -1)',
-				style: {
-					fill: 'black'
-				},
-				'xlink:href': '#sailing-boat'
-			}],
-			['use', {
-				transform: 'translate(80, 65) rotate(20)',
-				'xlink:href': '#sailing-boat'
-			}]
-		],
-		['g.exerciseImage', conf.number === 427,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(15 55)'
-				},
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
-					},
-					x2: 50
-				}],
-				['text', 'Wind', {
-					style: {
-						'font-size': 11
-					},
-					x: 8,
-					y: -4
-				}]
-			],
-			['use', {
-				transform: 'translate(75 35) rotate(30) scale(-1 1)',
-				style: {
-					fill: 'black'
-				},
-				'xlink:href': '#sailing-boat'
-			}],
-			['use', {
-				transform: 'translate(85, 60) rotate(40)',
-				'xlink:href': '#sailing-boat'
-			}]
-		],
-		['g.exerciseImage', conf.number === 428,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(10 55)'
-				},
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
-					},
-					x2: 50
-				}],
-				['text', 'Wind', {
-					style: {
-						'font-size': 11
-					},
-					x: 8,
-					y: -4
-				}]
-			],
-			['use', {
-				transform: 'translate(120 30) rotate(10) scale(-1 1)',
-				style: {
-					fill: 'black'
-				},
-				'xlink:href': '#sailing-boat'
-			}],
-			['use', {
-				transform: 'translate(100, 60) rotate(150)',
-				'xlink:href': '#sailing-boat'
-			}]
-		],
-		['g.exerciseImage', conf.number === 429,
-			{
-				style: {
-					'font-size': 11
-				}
-			},
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(110 10)'
-				},
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
-					},
-					y2: 30
-				}],
-				['text', 'Wind', {
-					x: 8,
-					y: 20
-				}]
-			],
-			['g',
-				['use', {
-					transform: 'translate(80 50) rotate(-90)',
-					'xlink:href': '#sailing-boat'
-				}],
-				['text', 3, {
-					x: 78,
-					y: 18
-				}]
-			],
-			['g',
-				['use', {
-					transform: 'translate(50, 60) rotate(200)',
-					'xlink:href': '#sailing-boat'
-				}],
-				['text', 2, {
-					x: 12,
-					y: 50
-				}]
-			],
-			['g',
-				['use', {
-					transform: 'translate(80, 65) rotate(-150) scale(-1 1)',
-					'xlink:href': '#sailing-boat'
-				}],
-				['text', 1, {
-					x: 108,
-					y: 86
-				}]
-			]
-		],
-		['g.exerciseImage', conf.number === 430,
-			['use', {'xlink:href': '#water'}],
-			['use', {
-				transform: 'translate(60, 30) rotate(180)',
-				'xlink:href': '#lighted-boat'
-			}],
-			['use', {
-				transform: 'translate(110, 50) rotate(120)',
-				'xlink:href': '#sailing-boat'
-			}]
-		],
-		['g.exerciseImage', conf.number === 431,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(60, 70) rotate(180)'
-				},
-				['use', {
-					'xlink:href': '#boat-outline'
-				}],
-				['use', {
-					'xlink:href': '#light-ball',
-					style: {fill: 'green'}
-				}]
-			],
-			['use', {
-				transform: 'translate(100, 50) rotate(135) scale(-1 1)',
-				'xlink:href': '#sailing-boat'
-			}]
-		],
-		['g.exerciseImage', conf.number === 432,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(100, 60) rotate(-60)'
-				},
-				['use', {
-					'xlink:href': '#boat'
-				}],
-				['use', {
-					'xlink:href': '#flashing-light-ball'
-				}]
-			],
-			['use', {
-				transform: 'translate(60, 70) rotate(-160)',
-				'xlink:href': '#sailing-boat'
-			}]
-		],
-		['g.exerciseImage', conf.number === 433,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(60, 60) rotate(180)'
-				},
-				['use', {
-					'xlink:href': '#boat-outline'
-				}],
-				['use', {
-					'xlink:href': '#light-ball'
-				}]
-			],
-			['use', {
-				transform: 'translate(90, 50) rotate(150) scale(-1 1)',
-				'xlink:href': '#sailing-boat'
-			}]
-		],
-		['g.exerciseImage', conf.number === 434,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(60, 30) rotate(150)'
-				},
-				['use', {
-					'xlink:href': '#boat-outline'
-				}],
-				['use', {
-					'xlink:href': '#flag'
-				}]
-			],
-			['use', {
-				transform: 'translate(100, 50) rotate(-135) scale(-1 1)',
-				'xlink:href': '#sailing-boat'
-			}]
-		],
-		['g.exerciseImage', conf.number === 435,
-			['use', {'xlink:href': '#water'}],
-			['use', {
-				transform: 'translate(30, 45) rotate(90)',
-				'xlink:href': '#rowing-boat'
-			}],
-			['use', {
-				transform: 'translate(80, 25)',
-				'xlink:href': '#sailing-boat'
-			}]
-		],
-		['g.exerciseImage', conf.number === 436,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(60, 55) rotate(180)'
-				},
-				['use', {
-					'xlink:href': '#boat'
-				}],
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
-					},
-					x1: -2,
-					x2: -10
-				}]
-			],
-			['g',
-				{
-					transform: 'translate(90, 45)'
-				},
-				['use', {
-					'xlink:href': '#boat'
-				}],
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
-					},
-					x1: -2,
-					x2: -10
-				}]
-			]
-		],
-		['g.exerciseImage', conf.number === 437,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(45, 50) rotate(130)'
-				},
-				['use', {
-					'xlink:href': '#boat'
-				}],
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
-					},
-					x1: -2,
-					x2: -10
-				}]
-			],
-			['g',
-				{
-					transform: 'translate(90, 25)'
-				},
-				['use', {
-					style: {
-						fill: 'black'
-					},
-					'xlink:href': '#boat'
-				}],
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
-					},
-					x1: -2,
-					x2: -10
-				}]
-			]
-		],
-		['g.exerciseImage', conf.number === 439,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(20, 40) rotate(-20)'
-				},
-				['use', {
-					'xlink:href': '#boat'
-				}],
-				['line', {
-					x1: 48,
-					x2: 78
-				}],
-				['g#water-skier',
+			getConvoy(),
+
+			['g#img303.exerciseImage', conf.number === 303 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
 					{
-						transform: 'translate(78 0)'
+						transform: 'translate(50, 50) rotate(120)'
 					},
-					['title', 'Water skier'],
 					['use', {
-						transform: 'translate(0 -4)',
-						'xlink:href': '#ski'
+						style: {
+							fill: 'rgb(60,60,60)'
+						},
+						'xlink:href': '#boat'
 					}],
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x1: -5,
+						x2: -15,
+						y1: 0.5,
+						y2: 0.5
+					}]
+				],
+				['g',
+					{
+						transform: 'translate(100, 50) rotate(60)'
+					},
 					['use', {
-						transform: 'translate(0 4)',
-						'xlink:href': '#ski'
+						'xlink:href': '#boat'
 					}],
-					['ellipse#water-skier-body', {
-						rx: 4,
-						ry: 8
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x1: -5,
+						x2: -15,
+						y1: 0.5,
+						y2: 0.5
+					}]
+				],
+				['text', 'Hafeneinfahrt', {
+					style: {
+						'font-size': 7.5
+					},
+					y: 12,
+					x: 52
+				}],
+				['g',
+					{
+						style: {
+							fill: 'SlateGray'
+						}
+					},
+					['rect', {
+						x: -0.5,
+						y: -0.5,
+						width: 40,
+						height: 20
 					}],
-					['circle#water-skier-head', {
-						r: 3
+					['rect', {
+						x: 110.5,
+						y: -0.5,
+						width: 40,
+						height: 20
 					}]
 				]
 			],
-			['use', {
-				transform: 'translate(60, 65) rotate(30)',
-				'xlink:href': '#sailing-boat'
-			}]
-		],
-		['g.exerciseImage', conf.number === 440,
-			['use', {'xlink:href': '#water'}],
-			['use', {
-				transform: 'translate(110, 55) rotate(45)',
-				'xlink:href': '#boat'
-			}],
-			['text', 'Schleppverband', {
-				style: {
-					'font-size': 8
-				},
-				x: 20,
-				y: 70
-			}],
-			['use', {
-				transform: 'translate(110, 35) rotate(180)',
-				'xlink:href': '#convoy'
-			}]
-		],
-		['g.exerciseImage', conf.number === 441,
-			['use', {'xlink:href': '#water'}],
-			['use', {
-				transform: 'translate(85, 85) rotate(180)',
-				'xlink:href': '#boat'
-			}],
-			['line', {
-				transform: 'translate(55 55)',
-				style: {
-					'marker-end': 'url(#endMarkerArrow)',
-					'marker-start': 'url(#startMarkerArrow)'
-				},
-				y2: 15
-			}],
-			['use', {
-				transform: 'translate(135, 28) rotate(180)',
-				'xlink:href': '#convoy'
-			}]
-		],
-		['g.exerciseImage', conf.number === 442,
-			['use', {'xlink:href': '#water'}],
-			['use', {
-				transform: 'translate(70, 20) rotate(180)',
-				'xlink:href': '#boat'
-			}],
-			['use', {
-				transform: 'translate(110, 50) rotate(90)',
-				'xlink:href': '#rowing-boat'
-			}]
-		],
-		['g.exerciseImage', conf.number === 443,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(45, 50) rotate(135)'
-				},
+			['g#img304.exerciseImage', conf.number === 304 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(35, 50) rotate(120)'
+					},
+					['use', {
+						'xlink:href': '#boat'
+					}],
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x1: -5,
+						x2: -15,
+						y1: 0.5,
+						y2: 0.5
+					}]
+				],
+				['g',
+					{
+						transform: 'translate(90,20)'
+					},
+					['use', {
+						style: {
+							fill: 'rgb(60,60,60)'
+						},
+						'xlink:href': '#boat'
+					}],
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x1: -5,
+						x2: -15,
+						y1: 0.5,
+						y2: 0.5
+					}]
+				]
+			],
+			['g#img307.exerciseImage', conf.number === 307 || isDef,
+				['use', {'xlink:href': '#water'}],
 				['use', {
+					transform: 'translate(60.5, 40.5) rotate(180)',
+					'xlink:href': '#lighted-boat'
+				}],
+				['g',
+					{
+						transform: 'translate(90, 50) rotate(30)'
+					},
+					['use', {
+						'xlink:href': '#boat'
+					}]
+				]
+			],
+			['g#img308.exerciseImage', conf.number === 308 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(60.5, 65.5) ' +
+						'rotate(180)'
+					},
+					['use', {
+						style: {
+							fill: 'rgb(60,60,60)'
+						},
+						'xlink:href': '#large-boat'
+					}],
+					['use', {
+						'xlink:href': '#light-ball',
+						style: {
+							fill: 'green'
+						}
+					}]
+				],
+				['use', {
+					transform: 'translate(90, 50) rotate(-30)',
+					'xlink:href': '#boat'
+				}]
+			],
+			['g#img309.exerciseImage', conf.number === 309 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(90, 40) ' +
+						'rotate(45)'
+					},
+					['use', {
+						'xlink:href': '#boat'
+					}],
+					['use', {'xlink:href': '#flashing-light-ball'}]
+				],
+				['use', {
+					transform: 'translate(50, 40) rotate(135)',
+					'xlink:href': '#boat'
+				}]
+			],
+			['g#img310.exerciseImage', conf.number === 310 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(50, 40) rotate(135)'
+					},
+					['use', {
+						'xlink:href': '#boat'
+					}],
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x1: -5,
+						x2: -15,
+						y1: 0.5,
+						y2: 0.5
+					}]
+				],
+				['g',
+					{
+						transform: 'translate(90, 20)'
+					},
+					['use', {
+						'xlink:href': '#boat-outline'
+					}],
+					['use', {
+						'xlink:href': '#small-sail'
+					}],
+					['use', {
+						'xlink:href': '#large-sail'
+					}],
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x1: -5,
+						x2: -15,
+						y1: 0.5,
+						y2: 0.5
+					}]
+				]
+			],
+			['g#img311.exerciseImage', conf.number === 311 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: [{
+							type: 'translate',
+							x: 20,
+							y: conf.height / 2
+						}]
+					},
+					['use', {
+						'xlink:href': '#boat'
+					}],
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x1: -5,
+						x2: -15,
+						y1: 0.5,
+						y2: 0.5
+					}]
+				],
+				['g',
+					{
+						transform: 'translate(100, 50)'
+					},
+					['use', {
+						'xlink:href': '#boat'
+					}],
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x1: -5,
+						x2: -15,
+						y1: 0.5,
+						y2: 0.5
+					}]
+				]
+			],
+			['g#img312.exerciseImage', conf.number === 312 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: [
+							{
+								type: 'translate',
+								x: 50,
+								y: 60
+							},
+							{
+								type: 'rotate',
+								degrees: 225
+							}
+						]
+					},
+					['use', {
+						'xlink:href': '#boat'
+					}]
+				],
+				['g',
+					{
+						transform: 'translate(100, 60) rotate(-45)'
+					},
+					['use', {
+						'xlink:href': '#boat-outline'
+					}],
+					['use', {
+						'xlink:href': '#light-ball'
+					}]
+				]
+			],
+			['g#img313.exerciseImage', conf.number === 313 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: [
+							{
+								type: 'translate',
+								x: 60.5,
+								y: conf.height / 2
+							},
+							{
+								type: 'rotate',
+								degrees: 180
+							}]
+					},
+					['use', {
+						'xlink:href': '#large-boat'
+					}],
+					['use', {
+						'xlink:href': '#light-ball'
+					}]
+				],
+				['use', {
+					transform: 'translate(90, 60)',
+					'xlink:href': '#boat'
+				}]
+			],
+			['g#img314.exerciseImage', conf.number === 314 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['use', {
+					transform: 'translate(60, 20) rotate(180)',
 					'xlink:href': '#boat'
 				}],
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
+				['g',
+					{
+						transform: [
+							{
+								type: 'translate',
+								x: 100,
+								y: 40
+							},
+							{
+								type: 'rotate',
+								degrees: 60
+							}]
 					},
-					x1: -5,
-					x2: -15
-				}]
+					['use', {
+						'xlink:href': '#large-boat'
+					}],
+					['use', {
+						'xlink:href': '#flag'
+					}]
+				]
 			],
-			['g',
-				{
-					transform: 'translate(95, 20)'
-				},
+			['g#img315.exerciseImage', conf.number === 315 || isDef,
+				['use', {'xlink:href': '#water'}],
 				['use', {
-					'xlink:href': '#sailing-boat'
-				}],
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
-					},
-					x1: -5,
-					x2: -15
-				}]
-			]
-		],
-		['g.exerciseImage', conf.number === 444,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(55, 30) rotate(150)'
-				},
-				['use', {
-					'xlink:href': '#boat-outline'
-				}],
-				['use', {
-					'xlink:href': '#flag'
-				}]
-			],
-			['use', {
-				transform: 'translate(100, 40) rotate(40)',
-				'xlink:href': '#sailing-boat'
-			}]
-		],
-		['g.exerciseImage', conf.number === 445,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(55, 55) rotate(180)'
-				},
-				['use', {
-					'xlink:href': '#boat-outline'
-				}],
-				['use', {
-					'xlink:href': '#light-ball'
-				}]
-			],
-			['use', {
-				transform: 'translate(95, 45) rotate(-30) scale(1 -1)',
-				'xlink:href': '#sailing-boat'
-			}]
-		],
-		['g.exerciseImage', conf.number === 446,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				['rect', {
-					x: 70,
-					y: -1,
-					height: 30,
-					width: 10
-				}],
-				['rect', {
-					x: -1,
-					y: 80,
-					height: 10,
-					width: 70
-				}],
-				['text', 'Hafeneinfahrt', {
-					style: {'font-size': 8},
-					x: 4,
-					y: 74
-				}]
-			],
-			['g',
-				{
-					transform: 'translate(50, 40) rotate(-140)'
-				},
-				['use', {
+					transform: 'translate(70, 20) rotate(180)',
 					'xlink:href': '#boat'
 				}],
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
+				['g',
+					{
+						transform: [
+							{
+								type: 'translate',
+								x: 110,
+								y: 40
+							},
+							{
+								type: 'rotate',
+								degrees: 90
+							}
+						]
 					},
-					x1: -5,
-					x2: -60
-				}]
+					['use', {
+						'xlink:href': '#rowing-boat'
+					}]
+				]
 			],
-			['use', {
-				transform: 'translate(95, 45) rotate(-30) scale(1 -1)',
-				'xlink:href': '#boat'
-			}]
-		],
-		['g.exerciseImage', conf.number === 447,
-			['use', {'xlink:href': '#water'}],
-			['use', {
-				transform: 'translate(50, 45) rotate(-150)',
-				'xlink:href': '#boat'
-			}],
-			['use', {
-				transform: 'translate(90, 60)',
-				'xlink:href': '#lighted-boat'
-			}]
-		],
-		['g.exerciseImage', conf.number === 448,
-			['use', {'xlink:href': '#water'}],
-			['use', {
-				transform: 'translate(95, 45) rotate(-30)',
-				'xlink:href': '#boat'
-			}],
-			['g',
-				{
-					transform: 'translate(55, 60) rotate(180)'
-				},
+			['g#img426.exerciseImage', conf.number === 426 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'rotate(35) translate(15 0)'
+					},
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x2: 50
+					}],
+					['text', 'Wind', {
+						style: {
+							'font-size': 11
+						},
+						x: 8,
+						y: -4
+					}]
+				],
+				['g',
+					{
+						transform: 'translate(80, 30) rotate(-20) scale(1 -1)'
+					},
+					['use', {
+						style: {
+							fill: 'black'
+						},
+						'xlink:href': '#boat-outline'
+					}],
+					['use', {
+						'xlink:href': '#small-sail'
+					}],
+					['use', {
+						'xlink:href': '#large-sail'
+					}]
+				],
+				['g',
+					{
+						transform: 'translate(50, 70) scale(1 -1)'
+					},
+					['use', {
+						'xlink:href': '#boat-outline'
+					}],
+					['use', {
+						'xlink:href': '#small-sail'
+					}],
+					['use', {
+						'xlink:href': '#large-sail'
+					}]
+				]
+			],
+			['g#img427.exerciseImage', conf.number === 427 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(10 50)'
+					},
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x2: 50
+					}],
+					['text', 'Wind', {
+						style: {
+							'font-size': 11
+						},
+						x: 8,
+						y: -4
+					}]
+				],
 				['use', {
+					transform: 'translate(80, 35) rotate(-20) scale(1 -1)',
 					style: {
 						fill: 'black'
-					}
-					,
-					'xlink:href': '#large-boat'
+					},
+					'xlink:href': '#sailing-boat'
 				}],
 				['use', {
-					style: {fill: 'green'},
-					'xlink:href': '#light-ball'
+					transform: 'translate(80, 65) rotate(20)',
+					'xlink:href': '#sailing-boat'
 				}]
-			]
-		],
-		['g.exerciseImage', conf.number === 449,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(50, 35) rotate(30)'
-				},
+			],
+			['g#img428.exerciseImage', conf.number === 428 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(15 55)'
+					},
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x2: 50
+					}],
+					['text', 'Wind', {
+						style: {
+							'font-size': 11
+						},
+						x: 8,
+						y: -4
+					}]
+				],
 				['use', {
+					transform: 'translate(75 35) rotate(30) scale(-1 1)',
+					style: {
+						fill: 'black'
+					},
+					'xlink:href': '#sailing-boat'
+				}],
+				['use', {
+					transform: 'translate(85, 60) rotate(40)',
+					'xlink:href': '#sailing-boat'
+				}]
+			],
+			['g#img429.exerciseImage', conf.number === 429 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(10 55)'
+					},
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x2: 50
+					}],
+					['text', 'Wind', {
+						style: {
+							'font-size': 11
+						},
+						x: 8,
+						y: -4
+					}]
+				],
+				['use', {
+					transform: 'translate(120 30) rotate(10) scale(-1 1)',
+					style: {
+						fill: 'black'
+					},
+					'xlink:href': '#sailing-boat'
+				}],
+				['use', {
+					transform: 'translate(100, 60) rotate(150)',
+					'xlink:href': '#sailing-boat'
+				}]
+			],
+			['g#img430.exerciseImage', conf.number === 430 || isDef,
+				{
+					style: {
+						'font-size': 11
+					}
+				},
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(110 10)'
+					},
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						y2: 30
+					}],
+					['text', 'Wind', {
+						x: 8,
+						y: 20
+					}]
+				],
+				['g',
+					['use', {
+						transform: 'translate(80 50) rotate(-90)',
+						'xlink:href': '#sailing-boat'
+					}],
+					['text', 3, {
+						x: 78,
+						y: 18
+					}]
+				],
+				['g',
+					['use', {
+						transform: 'translate(50, 60) rotate(200)',
+						'xlink:href': '#sailing-boat'
+					}],
+					['text', 2, {
+						x: 12,
+						y: 50
+					}]
+				],
+				['g',
+					['use', {
+						transform: 'translate(80, 65) rotate(-150) scale(-1 1)',
+						'xlink:href': '#sailing-boat'
+					}],
+					['text', 1, {
+						x: 108,
+						y: 86
+					}]
+				]
+			],
+			['g#img431.exerciseImage', conf.number === 431 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['use', {
+					transform: 'translate(60, 30) rotate(180)',
+					'xlink:href': '#lighted-boat'
+				}],
+				['use', {
+					transform: 'translate(110, 50) rotate(120)',
+					'xlink:href': '#sailing-boat'
+				}]
+			],
+			['g#img432.exerciseImage', conf.number === 432 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(60, 70) rotate(180)'
+					},
+					['use', {
+						'xlink:href': '#boat-outline'
+					}],
+					['use', {
+						'xlink:href': '#light-ball',
+						style: {fill: 'green'}
+					}]
+				],
+				['use', {
+					transform: 'translate(100, 50) rotate(135) scale(-1 1)',
+					'xlink:href': '#sailing-boat'
+				}]
+			],
+			['g#img433.exerciseImage', conf.number === 433 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(100, 60) rotate(-60)'
+					},
+					['use', {
+						'xlink:href': '#boat'
+					}],
+					['use', {
+						'xlink:href': '#flashing-light-ball'
+					}]
+				],
+				['use', {
+					transform: 'translate(60, 70) rotate(-160)',
+					'xlink:href': '#sailing-boat'
+				}]
+			],
+			['g#img434.exerciseImage', conf.number === 434 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(60, 60) rotate(180)'
+					},
+					['use', {
+						'xlink:href': '#boat-outline'
+					}],
+					['use', {
+						'xlink:href': '#light-ball'
+					}]
+				],
+				['use', {
+					transform: 'translate(90, 50) rotate(150) scale(-1 1)',
+					'xlink:href': '#sailing-boat'
+				}]
+			],
+			['g#img435.exerciseImage', conf.number === 435 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(60, 30) rotate(150)'
+					},
+					['use', {
+						'xlink:href': '#boat-outline'
+					}],
+					['use', {
+						'xlink:href': '#flag'
+					}]
+				],
+				['use', {
+					transform: 'translate(100, 50) rotate(-135) scale(-1 1)',
+					'xlink:href': '#sailing-boat'
+				}]
+			],
+			['g#img436.exerciseImage', conf.number === 436 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['use', {
+					transform: 'translate(30, 45) rotate(90)',
+					'xlink:href': '#rowing-boat'
+				}],
+				['use', {
+					transform: 'translate(80, 25)',
+					'xlink:href': '#sailing-boat'
+				}]
+			],
+			['g#img437.exerciseImage', conf.number === 437 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(60, 55) rotate(180)'
+					},
+					['use', {
+						'xlink:href': '#boat'
+					}],
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x1: -2,
+						x2: -10
+					}]
+				],
+				['g',
+					{
+						transform: 'translate(90, 45)'
+					},
+					['use', {
+						'xlink:href': '#boat'
+					}],
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x1: -2,
+						x2: -10
+					}]
+				]
+			],
+			['g#img438.exerciseImage', conf.number === 438 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(45, 50) rotate(130)'
+					},
+					['use', {
+						'xlink:href': '#boat'
+					}],
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x1: -2,
+						x2: -10
+					}]
+				],
+				['g',
+					{
+						transform: 'translate(90, 25)'
+					},
+					['use', {
+						style: {
+							fill: 'black'
+						},
+						'xlink:href': '#boat'
+					}],
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x1: -2,
+						x2: -10
+					}]
+				]
+			],
+			['g#img440.exerciseImage', conf.number === 440 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(20, 40) rotate(-20)'
+					},
+					['use', {
+						'xlink:href': '#boat'
+					}],
+					['line', {
+						x1: 48,
+						x2: 78
+					}],
+					['g#water-skier',
+						{
+							transform: 'translate(78 0)'
+						},
+						['title', 'Water skier'],
+						['use', {
+							transform: 'translate(0 -4)',
+							'xlink:href': '#ski'
+						}],
+						['use', {
+							transform: 'translate(0 4)',
+							'xlink:href': '#ski'
+						}],
+						['ellipse#water-skier-body', {
+							rx: 4,
+							ry: 8
+						}],
+						['circle#water-skier-head', {
+							r: 3
+						}]
+					]
+				],
+				['use', {
+					transform: 'translate(60, 65) rotate(30)',
+					'xlink:href': '#sailing-boat'
+				}]
+			],
+			['g#img441.exerciseImage', conf.number === 441 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['use', {
+					transform: 'translate(110, 55) rotate(45)',
+					'xlink:href': '#boat'
+				}],
+				['text', 'Schleppverband', {
+					style: {
+						'font-size': 8
+					},
+					x: 20,
+					y: 70
+				}],
+				['use', {
+					transform: 'translate(110, 35) rotate(180)',
+					'xlink:href': '#convoy'
+				}]
+			],
+			['g#img442.exerciseImage', conf.number === 442 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['use', {
+					transform: 'translate(85, 85) rotate(180)',
+					'xlink:href': '#boat'
+				}],
+				['line', {
+					transform: 'translate(55 55)',
+					style: {
+						'marker-end': 'url(#endMarkerArrow)',
+						'marker-start': 'url(#startMarkerArrow)'
+					},
+					y2: 15
+				}],
+				['use', {
+					transform: 'translate(135, 28) rotate(180)',
+					'xlink:href': '#convoy'
+				}]
+			],
+			['g#img443.exerciseImage', conf.number === 443 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['use', {
+					transform: 'translate(70, 20) rotate(180)',
 					'xlink:href': '#boat'
 				}],
 				['use', {
-					'xlink:href': '#flashing-light-ball'
+					transform: 'translate(110, 50) rotate(90)',
+					'xlink:href': '#rowing-boat'
 				}]
-			]
-		],
-		['g.exerciseImage', conf.number === 450,
-			['use', {'xlink:href': '#water'}],
-			['use', {
-				transform: 'translate(50, 60) rotate(-145)',
-				'xlink:href': '#boat'
-			}],
-			['g',
-				{
-					transform: 'translate(100, 60) rotate(-45) scale(1 -1)'
-				},
-				['use', {
-					'xlink:href': '#boat-outline'
-				}],
-				['use', {
-					'xlink:href': '#light-ball'
-				}]
-			]
-		],
-		['g.exerciseImage', conf.number === 451,
-			['use', {'xlink:href': '#water'}],
-			['use', {
-				transform: 'translate(90, 55)',
-				'xlink:href': '#boat'
-			}],
-			['g',
-				{
-					transform: 'translate(60, 45) rotate(180)'
-				},
-				['use', {
-					'xlink:href': '#large-boat'
-				}],
-				['use', {
-					'xlink:href': '#light-ball'
-				}]
-			]
-		],
-		['g.exerciseImage', conf.number === 452,
-			['use', {'xlink:href': '#water'}],
-			['use', {
-				transform: 'translate(60, 20) rotate(180)',
-				'xlink:href': '#boat'
-			}],
-			['g',
-				{
-					transform: 'translate(100, 45) rotate(60) scale(1 -1)'
-				},
-				['use', {
-					'xlink:href': '#large-boat'
-				}],
-				['use', {
-					'xlink:href': '#flag'
-				}]
-			]
-		],
-		['g.exerciseImage', conf.number === 455,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(10 55)'
-				},
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
+			],
+			['g#img444.exerciseImage', conf.number === 444 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(45, 50) rotate(135)'
 					},
-					x2: 50
+					['use', {
+						'xlink:href': '#boat'
+					}],
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x1: -5,
+						x2: -15
+					}]
+				],
+				['g',
+					{
+						transform: 'translate(95, 20)'
+					},
+					['use', {
+						'xlink:href': '#sailing-boat'
+					}],
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x1: -5,
+						x2: -15
+					}]
+				]
+			],
+			['g#img445.exerciseImage', conf.number === 445 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(55, 30) rotate(150)'
+					},
+					['use', {
+						'xlink:href': '#boat-outline'
+					}],
+					['use', {
+						'xlink:href': '#flag'
+					}]
+				],
+				['use', {
+					transform: 'translate(100, 40) rotate(40)',
+					'xlink:href': '#sailing-boat'
+				}]
+			],
+			['g#img446.exerciseImage', conf.number === 446 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(55, 55) rotate(180)'
+					},
+					['use', {
+						'xlink:href': '#boat-outline'
+					}],
+					['use', {
+						'xlink:href': '#light-ball'
+					}]
+				],
+				['use', {
+					transform: 'translate(95, 45) rotate(-30) scale(1 -1)',
+					'xlink:href': '#sailing-boat'
+				}]
+			],
+			['g#img447.exerciseImage', conf.number === 447 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					['rect', {
+						x: 70,
+						y: -1,
+						height: 30,
+						width: 10
+					}],
+					['rect', {
+						x: -1,
+						y: 80,
+						height: 10,
+						width: 70
+					}],
+					['text', 'Hafeneinfahrt', {
+						style: {'font-size': 8},
+						x: 4,
+						y: 74
+					}]
+				],
+				['g',
+					{
+						transform: 'translate(50, 40) rotate(-140)'
+					},
+					['use', {
+						'xlink:href': '#boat'
+					}],
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x1: -5,
+						x2: -60
+					}]
+				],
+				['use', {
+					transform: 'translate(95, 45) rotate(-30) scale(1 -1)',
+					'xlink:href': '#boat'
+				}]
+			],
+			['g#img448.exerciseImage', conf.number === 448 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['use', {
+					transform: 'translate(50, 45) rotate(-150)',
+					'xlink:href': '#boat'
 				}],
-				['text', 'Wind', {
+				['use', {
+					transform: 'translate(90, 60)',
+					'xlink:href': '#lighted-boat'
+				}]
+			],
+			['g#img449.exerciseImage', conf.number === 449 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['use', {
+					transform: 'translate(95, 45) rotate(-30)',
+					'xlink:href': '#boat'
+				}],
+				['g',
+					{
+						transform: 'translate(55, 60) rotate(180)'
+					},
+					['use', {
+						style: {
+							fill: 'black'
+						}
+						,
+						'xlink:href': '#large-boat'
+					}],
+					['use', {
+						style: {fill: 'green'},
+						'xlink:href': '#light-ball'
+					}]
+				]
+			],
+			['g#img450.exerciseImage', conf.number === 450 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(50, 35) rotate(30)'
+					},
+					['use', {
+						'xlink:href': '#boat'
+					}],
+					['use', {
+						'xlink:href': '#flashing-light-ball'
+					}]
+				]
+			],
+			['g#img451.exerciseImage', conf.number === 451 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['use', {
+					transform: 'translate(50, 60) rotate(-145)',
+					'xlink:href': '#boat'
+				}],
+				['g',
+					{
+						transform: 'translate(100, 60) rotate(-45) scale(1 -1)'
+					},
+					['use', {
+						'xlink:href': '#boat-outline'
+					}],
+					['use', {
+						'xlink:href': '#light-ball'
+					}]
+				]
+			],
+			['g#img452.exerciseImage', conf.number === 452 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['use', {
+					transform: 'translate(90, 55)',
+					'xlink:href': '#boat'
+				}],
+				['g',
+					{
+						transform: 'translate(60, 45) rotate(180)'
+					},
+					['use', {
+						'xlink:href': '#large-boat'
+					}],
+					['use', {
+						'xlink:href': '#light-ball'
+					}]
+				]
+			],
+			['g#img453.exerciseImage', conf.number === 453 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['use', {
+					transform: 'translate(60, 20) rotate(180)',
+					'xlink:href': '#boat'
+				}],
+				['g',
+					{
+						transform: 'translate(100, 45) rotate(60) scale(1 -1)'
+					},
+					['use', {
+						'xlink:href': '#large-boat'
+					}],
+					['use', {
+						'xlink:href': '#flag'
+					}]
+				]
+			],
+			['g#img455.exerciseImage', conf.number === 455 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(10 55)'
+					},
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x2: 50
+					}],
+					['text', 'Wind', {
+						style: {
+							'font-size': 11
+						},
+						x: 8,
+						y: -4
+					}]
+				],
+				['use', {
+					transform: 'translate(120 30) rotate(10) scale(-1 1)',
+					style: {
+						fill: 'black'
+					},
+					'xlink:href': '#sailing-boat'
+				}],
+				['use', {
+					transform: 'translate(100, 60) rotate(150)',
+					'xlink:href': '#sailing-boat'
+				}]
+			],
+			['g#img456.exerciseImage', conf.number === 456 || isDef,
+				{
 					style: {
 						'font-size': 11
+					}
+				},
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(8 18) rotate(30)'
 					},
-					x: 8,
-					y: -4
-				}]
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x2: 50
+					}],
+					['text', 'Wind', {
+						style: {'font-size': 9},
+						x: 8,
+						y: -5
+					}]
+				],
+				['g',
+					['use', {
+						transform: 'translate(75 45) rotate(-55) scale(1 -1)',
+						'xlink:href': '#sailing-boat'
+					}],
+					['text', 1, {
+						x: 92,
+						y: 18
+					}]
+				],
+				['g',
+					['use', {
+						transform: 'translate(50, 55) rotate(130)',
+						'xlink:href': '#sailing-boat'
+					}],
+					['text', 3, {
+						x: 22,
+						y: 86
+					}]
+				],
+				['g',
+					['use', {
+						transform: 'translate(85, 80) rotate(-15) scale(1 -1)',
+						'xlink:href': '#sailing-boat'
+					}],
+					['text', 2, {
+						x: 118,
+						y: 73
+					}]
+				]
 			],
-			['use', {
-				transform: 'translate(120 30) rotate(10) scale(-1 1)',
-				style: {
-					fill: 'black'
-				},
-				'xlink:href': '#sailing-boat'
-			}],
-			['use', {
-				transform: 'translate(100, 60) rotate(150)',
-				'xlink:href': '#sailing-boat'
-			}]
-		],
-		['g.exerciseImage', conf.number === 456,
-			{
-				style: {
-					'font-size': 11
-				}
-			},
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(8 18) rotate(30)'
-				},
-				['line', {
+			['g#img457.exerciseImage', conf.number === 457 || isDef,
+				['use', {'xlink:href': '#water'}],
+				['g',
+					{
+						transform: 'translate(10 55)'
+					},
+					['line', {
+						style: {
+							'marker-end': 'url(#endMarkerArrow)'
+						},
+						x2: 60
+					}],
+					['text', 'Wind', {
+						style: {
+							'font-size': 10
+						},
+						x: 15,
+						y: -4
+					}]
+				],
+				['use', {
+					transform: 'translate(85 35) rotate(30) scale(-1 1)',
+					'xlink:href': '#sailing-boat'
+				}],
+				['use', {
+					transform: 'translate(95, 55) rotate(45)',
 					style: {
-						'marker-end': 'url(#endMarkerArrow)'
+						fill: 'black'
 					},
-					x2: 50
-				}],
-				['text', 'Wind', {
-					style: {'font-size': 9},
-					x: 8,
-					y: -5
-				}]
-			],
-			['g',
-				['use', {
-					transform: 'translate(75 45) rotate(-55) scale(1 -1)',
 					'xlink:href': '#sailing-boat'
-				}],
-				['text', 1, {
-					x: 92,
-					y: 18
-				}]
-			],
-			['g',
-				['use', {
-					transform: 'translate(50, 55) rotate(130)',
-					'xlink:href': '#sailing-boat'
-				}],
-				['text', 3, {
-					x: 22,
-					y: 86
-				}]
-			],
-			['g',
-				['use', {
-					transform: 'translate(85, 80) rotate(-15) scale(1 -1)',
-					'xlink:href': '#sailing-boat'
-				}],
-				['text', 2, {
-					x: 118,
-					y: 73
 				}]
 			]
 		],
-		['g.exerciseImage', conf.number === 457,
-			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(10 55)'
-				},
-				['line', {
-					style: {
-						'marker-end': 'url(#endMarkerArrow)'
-					},
-					x2: 60
-				}],
-				['text', 'Wind', {
-					style: {
-						'font-size': 10
-					},
-					x: 15,
-					y: -4
-				}]
-			],
-			['use', {
-				transform: 'translate(85 35) rotate(30) scale(-1 1)',
-				'xlink:href': '#sailing-boat'
-			}],
-			['use', {
-				transform: 'translate(95, 55) rotate(45)',
-				style: {
-					fill: 'black'
-				},
-				'xlink:href': '#sailing-boat'
-			}]
-		]
+		['use', Boolean(conf.number), {
+			'xlink:href': '#img' + conf.number
+		}]
 	]
 }
