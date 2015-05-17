@@ -1198,6 +1198,51 @@ module.exports.shaven = function (conf, tools) {
 					x2: -10
 				}]
 			]
+		],
+		['g.exerciseImage', conf.number === 439,
+			{
+				style: {
+					fill: 'white'
+				}
+			},
+			['use', {'xlink:href': '#water'}],
+			['g',
+				{
+					transform: 'translate(20, 40) rotate(-20)'
+				},
+				['use', {
+					'xlink:href': '#boat'
+				}],
+				['line', {
+					x1: 48,
+					x2: 78
+				}],
+				['g#water-skier',
+					{
+						transform: 'translate(78 0)'
+					},
+					['title', 'Water skier'],
+					['use', {
+						transform: 'translate(0 -4)',
+						'xlink:href': '#ski'
+					}],
+					['use', {
+						transform: 'translate(0 4)',
+						'xlink:href': '#ski'
+					}],
+					['ellipse#water-skier-body', {
+						rx: 4,
+						ry: 8
+					}],
+					['circle#water-skier-head', {
+						r: 3
+					}]
+				]
+			],
+			['use', {
+				transform: 'translate(60, 65) rotate(30)',
+				'xlink:href': '#sailingBoat'
+			}]
 		]
 	]
 }
