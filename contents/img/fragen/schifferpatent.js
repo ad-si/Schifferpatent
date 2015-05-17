@@ -279,6 +279,18 @@ module.exports.shaven = function (conf, tools) {
 					d: 'M0,0 L4,2 L0,4 z'
 				}]
 			],
+			['marker#startMarkerArrow',
+				{
+					markerWidth: 4,
+					markerHeight: 4,
+					refX: 2,
+					refY: 2,
+					orient: 'auto'
+				},
+				['path', {
+					d: 'M4,0 L0,2 L4,4 z'
+				}]
+			],
 			['g#light-ball',
 				{
 					transform: 'translate(26 20)'
