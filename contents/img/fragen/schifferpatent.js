@@ -1464,6 +1464,60 @@ module.exports.shaven = function (conf, tools) {
 				transform: 'translate(100, 60) rotate(150)',
 				'xlink:href': '#sailing-boat'
 			}]
+		],
+		['g.exerciseImage', conf.number === 456,
+			{
+				style: {
+					'font-size': 11
+				}
+			},
+			['use', {'xlink:href': '#water'}],
+			['g',
+				{
+					transform: 'translate(8 18) rotate(30)'
+				},
+				['line', {
+					style: {
+						'marker-end': 'url(#endMarkerArrow)'
+					},
+					x2: 50
+				}],
+				['text', 'Wind', {
+					style: {'font-size': 9},
+					x: 8,
+					y: -5
+				}]
+			],
+			['g',
+				['use', {
+					transform: 'translate(75 45) rotate(-55) scale(1 -1)',
+					'xlink:href': '#sailing-boat'
+				}],
+				['text', 1, {
+					x: 92,
+					y: 18
+				}]
+			],
+			['g',
+				['use', {
+					transform: 'translate(50, 55) rotate(130)',
+					'xlink:href': '#sailing-boat'
+				}],
+				['text', 3, {
+					x: 22,
+					y: 86
+				}]
+			],
+			['g',
+				['use', {
+					transform: 'translate(85, 80) rotate(-15) scale(1 -1)',
+					'xlink:href': '#sailing-boat'
+				}],
+				['text', 2, {
+					x: 118,
+					y: 73
+				}]
+			]
 		]
 	]
 }
