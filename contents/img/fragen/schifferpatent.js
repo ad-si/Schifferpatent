@@ -1405,7 +1405,7 @@ module.exports.shaven = function (conf, tools) {
 			}],
 			['g',
 				{
-					transform: 'translate(60, 45) rotate(180) scale(1 1)'
+					transform: 'translate(60, 45) rotate(180)'
 				},
 				['use', {
 					'xlink:href': '#large-boat'
