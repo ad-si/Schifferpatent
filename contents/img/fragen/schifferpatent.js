@@ -1289,6 +1289,47 @@ module.exports.shaven = function (conf, tools) {
 				transform: 'translate(95, 45) rotate(-30) scale(1 -1)',
 				'xlink:href': '#sailing-boat'
 			}]
+		],
+		['g.exerciseImage', conf.number === 446,
+			['use', {'xlink:href': '#water'}],
+			['g',
+				['rect', {
+					x: 70,
+					y: -1,
+					height: 30,
+					width: 10
+				}],
+				['rect', {
+					x: -1,
+					y: 80,
+					height: 10,
+					width: 70
+				}],
+				['text', 'Hafeneinfahrt', {
+					style: {'font-size': 8},
+					x: 4,
+					y: 74
+				}]
+			],
+			['g',
+				{
+					transform: 'translate(50, 40) rotate(-140)'
+				},
+				['use', {
+					'xlink:href': '#boat'
+				}],
+				['line', {
+					style: {
+						'marker-end': 'url(#endMarkerArrow)'
+					},
+					x1: -5,
+					x2: -60
+				}]
+			],
+			['use', {
+				transform: 'translate(95, 45) rotate(-30) scale(1 -1)',
+				'xlink:href': '#boat'
+			}]
 		]
 	]
 }
