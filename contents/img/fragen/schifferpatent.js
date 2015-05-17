@@ -1243,6 +1243,54 @@ module.exports.shaven = function (conf, tools) {
 				transform: 'translate(60, 65) rotate(30)',
 				'xlink:href': '#sailingBoat'
 			}]
+		],
+		['g.exerciseImage', conf.number === 440,
+			{
+				style: {
+					fill: 'white'
+				}
+			},
+			['use', {'xlink:href': '#water'}],
+			['use', {
+				transform: 'translate(110, 55) rotate(45)',
+				'xlink:href': '#boat'
+			}],
+			['text', 'Schleppverband', {
+				style: {
+					'font-size': 8
+				},
+				x: 20,
+				y: 70
+			}],
+			['g#convoy',
+				{
+					transform: 'translate(110, 35) rotate(180)'
+				},
+				['title', 'Schleppverband'],
+				['line', {
+					x1: 45,
+					x2: 60,
+					y2: 12
+
+				}],
+				['line', {
+					x1: 45,
+					x2: 60,
+					y2: -12
+
+				}],
+				['use', {
+					'xlink:href': '#boat-outline'
+				}],
+				['use', {
+					transform: 'translate(60, -12)',
+					'xlink:href': '#boat-outline'
+				}],
+				['use', {
+					transform: 'translate(60, 12)',
+					'xlink:href': '#boat-outline'
+				}]
+			]
 		]
 	]
 }
