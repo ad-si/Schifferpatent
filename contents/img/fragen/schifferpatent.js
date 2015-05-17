@@ -1040,7 +1040,7 @@ module.exports.shaven = function (conf, tools) {
 			['use', {'xlink:href': '#water'}],
 			['g',
 				{
-					transform: 'translate(100, 50) rotate(-60)'
+					transform: 'translate(100, 60) rotate(-60)'
 				},
 				['use', {
 					'xlink:href': '#boat'
@@ -1050,7 +1050,9 @@ module.exports.shaven = function (conf, tools) {
 				}]
 			],
 			['use', {
-				transform: 'translate(60, 80) rotate(-160)',
+				transform: 'translate(60, 70) rotate(-160)',
+				'xlink:href': '#sailingBoat'
+			}]
 				'xlink:href': '#sailingBoat'
 			}]
 		]
