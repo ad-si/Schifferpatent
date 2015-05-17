@@ -312,6 +312,10 @@ module.exports.shaven = function (conf, tools) {
 					r: 2
 				}]
 			],
+			['polygon#ski', {
+				transform: 'translate(-18 0)',
+				points: '0,0 2,-2 30,-2 30,2 2,2'
+			}],
 			['g#small-sail',
 				{
 					transform: [
