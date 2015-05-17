@@ -260,6 +260,28 @@ module.exports.shaven = function (conf, tools) {
 					r: 5
 				}]
 			],
+			['g#flashing-light-ball',
+				{
+					transform: 'translate(20, -20)'
+				},
+				['line', {
+					y2: 20
+				}],
+				['circle',
+					{
+						style: {
+							fill: 'royalBlue'
+						},
+						r: 5
+					},
+					['animate', {
+						attributeName: 'fill',
+						values: 'black; royalBlue; black',
+						dur: '0.8s',
+						repeatCount: 'indefinite'
+					}]
+				]
+			],
 			['g#flag',
 				{
 					transform: 'translate(26 20)'
@@ -512,28 +534,7 @@ module.exports.shaven = function (conf, tools) {
 					},
 					'xlink:href': '#boat'
 				}],
-				['g',
-					{
-						transform: 'translate(20, -20)'
-					},
-					['line', {
-						y2: 20
-					}],
-					['circle',
-						{
-							style: {
-								fill: 'royalBlue'
-							},
-							r: 5
-						},
-						['animate', {
-							attributeName: 'fill',
-							values: 'black; royalBlue; black',
-							dur: '0.8s',
-							repeatCount: 'indefinite'
-						}]
-					]
-				]
+				['use', {'xlink:href': '#flashing-light-ball'}]
 			],
 			['use', {
 				transform: 'translate(50, 40) rotate(135)',
