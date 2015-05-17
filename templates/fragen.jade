@@ -5,18 +5,47 @@ block prepend title
 
 block prepend content
 	#questions
+
+		include ../contents/img/fragen/build/svg/defs.svg
+
 		!= page.html
 
 		table#questionstable
-			- page.metadata.questions.forEach(function(item, index){
-
+			each item, index in page.metadata.questions
 					tr
 						td= index + 1
-						td= item.q
-						td= item.a
-			- })
+						td
+							!= item.q
+							if item.img
+								br
+								svg(
+								viewBox='0 0 150 100',
+								xmlns="http://www.w3.org/2000/svg",
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+								)
+									defs
+										marker#endMarkerArrow(
+										markerWidth=4,
+										markerHeight=4,
+										refX=2,
+										refY=2,
+										orient='auto'
+										)
+											path(d='M0,0 L4,2 L0,4 z')
 
-		date = new Date(page.date).toISOString().substr(0,10)
+										marker#startMarkerArrow(
+										markerWidth=4,
+										markerHeight=4,
+										refX=2,
+										refY=2,
+										orient='auto'
+										)
+											path(d='M4,0 L0,2 L4,4 z')
+
+									use(xlink:href='#img' + (index+1))
+
+						td= item.a
+
 		hr
 		#modified.
-			Letzte Bearbeitung: #{date}
+			Letzte Bearbeitung: #{new Date(page.date).toISOString().substr(0,10)}
