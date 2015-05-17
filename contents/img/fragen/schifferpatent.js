@@ -90,6 +90,108 @@ function getSailingBoat () {
 	]
 }
 
+function getLightedBoat (conf, tools) {
+	return ['g#lighted-boat',
+		['use', {
+			style: {
+				fill: 'rgb(60,60,60)'
+			},
+			'xlink:href': '#boat'
+		}],
+		['g',
+			{
+				'stroke-linecap': 'round',
+				transform: 'translate(46 0)'
+			},
+			['line', {
+				transform: 'rotate(60)',
+				x2: 10
+			}],
+			['line', {
+				transform: 'rotate(-60)',
+				x2: 10
+			}],
+			['path', {
+				fill: 'gold',
+				d: tools.svgKit.circleSection(0, 0, 7, 300, 60)
+			}]
+		],
+		['g',
+			{
+				'stroke-linecap': 'round',
+				transform: 'translate(26 20)'
+			},
+			['line', {
+				y2: -20
+			}],
+			['circle', {
+				style: {
+					fill: 'green'
+				},
+				r: 5
+			}]
+		],
+		['g',
+			{
+				transform: 'translate(26 0)'
+			},
+			['line', {
+				transform: 'rotate(60)',
+				x2: 12
+			}],
+			['line', {
+				transform: 'rotate(-60)',
+				x2: 12
+			}],
+			['path', {
+				style: {
+					fill: 'gold'
+				},
+				d: tools.svgKit.circleSection(0, 0, 7, 60, 300)
+			}]
+		],
+		['g.portBowLight',
+			{
+				transform: 'translate(10 5)'
+			},
+			['line', {
+				transform: 'rotate(60)',
+				x2: 12
+			}],
+			['line', {
+				transform: 'rotate(-180)',
+				x2: 12
+			}],
+			['path', {
+				style: {
+					fill: 'red'
+				},
+				d: tools.svgKit.circleSection(0, 0, 7, 60, 180)
+			}]
+		],
+		['g.starboardBowLight',
+			{
+				transform: 'translate(10 -5)'
+			},
+			['line', {
+				transform: 'rotate(-60)',
+				x2: 12
+			}],
+			['line', {
+				transform: 'rotate(180)',
+				x2: 12
+			}],
+			['path', {
+				style: {
+					fill: 'green'
+				},
+				d: tools.svgKit.circleSection(0, 0, 7, 180, 300)
+			}]
+		]
+	]
+}
+
+
 module.exports.shaven = function (conf, tools) {
 
 	var defaults = {
@@ -236,7 +338,8 @@ module.exports.shaven = function (conf, tools) {
 			getBoat(),
 			getLargeBoat(),
 			getRowingBoat(),
-			getSailingBoat()
+			getSailingBoat(),
+			getLightedBoat(null, tools)
 		],
 		['g.exerciseImage', conf.number === 303,
 			['use', {'xlink:href': '#water'}],
@@ -352,108 +455,10 @@ module.exports.shaven = function (conf, tools) {
 		],
 		['g.exerciseImage', conf.number === 307,
 			['use', {'xlink:href': '#water'}],
-			['g',
-				{
-					transform: 'translate(60.5, 40.5)' +
-					'rotate(180)'
-				},
-				['use', {
-					style: {
-						fill: 'rgb(60,60,60)'
-					},
-					'xlink:href': '#boat'
-				}],
-				['g',
-					{
-						'stroke-linecap': 'round',
-						transform: 'translate(46 0)'
-					},
-					['line', {
-						transform: 'rotate(60)',
-						x2: 10
-					}],
-					['line', {
-						transform: 'rotate(-60)',
-						x2: 10
-					}],
-					['path', {
-						fill: 'gold',
-						d: tools.svgKit.circleSection(0, 0, 7, 300, 60)
-					}]
-				],
-				['g',
-					{
-						'stroke-linecap': 'round',
-						transform: 'translate(26 20)'
-					},
-					['line', {
-						y2: -20
-					}],
-					['circle', {
-						style: {
-							fill: 'green'
-						},
-						r: 5
-					}]
-				],
-				['g',
-					{
-						transform: 'translate(26 0)'
-					},
-					['line', {
-						transform: 'rotate(60)',
-						x2: 12
-					}],
-					['line', {
-						transform: 'rotate(-60)',
-						x2: 12
-					}],
-					['path', {
-						style: {
-							fill: 'gold'
-						},
-						d: tools.svgKit.circleSection(0, 0, 7, 60, 300)
-					}]
-				],
-				['g.portBowLight',
-					{
-						transform: 'translate(10 5)'
-					},
-					['line', {
-						transform: 'rotate(60)',
-						x2: 12
-					}],
-					['line', {
-						transform: 'rotate(-180)',
-						x2: 12
-					}],
-					['path', {
-						style: {
-							fill: 'red'
-						},
-						d: tools.svgKit.circleSection(0, 0, 7, 60, 180)
-					}]
-				],
-				['g.starboardBowLight',
-					{
-						transform: 'translate(10 -5)'
-					},
-					['line', {
-						transform: 'rotate(-60)',
-						x2: 12
-					}],
-					['line', {
-						transform: 'rotate(180)',
-						x2: 12
-					}],
-					['path', {
-						style: {
-							fill: 'green'
-						},
-						d: tools.svgKit.circleSection(0, 0, 7, 180, 300)
-					}]
-				]
-			],
+			['use', {
+				transform: 'translate(60.5, 40.5) rotate(180)',
+				'xlink:href': '#lighted-boat'
+			}],
 			['g',
 				{
 					transform: 'translate(90, 50) rotate(30)'
