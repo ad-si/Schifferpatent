@@ -1253,6 +1253,24 @@ module.exports.shaven = function (conf, tools) {
 					x2: -15
 				}]
 			]
+		],
+		['g.exerciseImage', conf.number === 444,
+			['use', {'xlink:href': '#water'}],
+			['g',
+				{
+					transform: 'translate(55, 30) rotate(150)'
+				},
+				['use', {
+					'xlink:href': '#boat-outline'
+				}],
+				['use', {
+					'xlink:href': '#flag'
+				}]
+			],
+			['use', {
+				transform: 'translate(100, 40) rotate(40)',
+				'xlink:href': '#sailing-boat'
+			}]
 		]
 	]
 }
