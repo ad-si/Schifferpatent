@@ -9,8 +9,8 @@ date: 2012-09-22
 
 ---
 
-<img id="schein_aussen" src="img/schein_aussen_small.jpg" alt="Bodenseeschifferpatent Umschlag"/>
-<img id="schein_innen" src="img/schein_innen_small.jpg" alt="Bodenseeschifferpatent Schein"/>
+<img id="schein_aussen" src="images/schein_aussen_small.jpg" alt="Bodenseeschifferpatent Umschlag"/>
+<img id="schein_innen" src="images/schein_innen_small.jpg" alt="Bodenseeschifferpatent Schein"/>
 
 ---
 
@@ -85,8 +85,8 @@ bzw. der Deutsche Motoryacht Verband (DMYV).<br/>
 Außerdem befreit die Zusatzprüfung "Navigation" in der Kategorie A (Motor) von der
 praktischen Prüfung für den amtlichen Sportbootführerschein See.
 
-<img id="sfb_aussen" src="img/sfb_aussen_klein.jpg" alt="Sportbootführerschein Binnen Außenseite"/>
-<img id="sfb_innen" src="img/sfb_innen_klein.jpg" alt="Sportbootführerschein Binnen Innenseite"/>
+<img id="sfb_aussen" src="images/sfb_aussen_klein.jpg" alt="Sportbootführerschein Binnen Außenseite"/>
+<img id="sfb_innen" src="images/sfb_innen_klein.jpg" alt="Sportbootführerschein Binnen Innenseite"/>
 
 ---
 

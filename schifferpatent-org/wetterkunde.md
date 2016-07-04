@@ -13,19 +13,19 @@ date: 2013-07-09
 
 Weht tagsüber vom Wasser auf das Land (auflandig).
 
-![Landwind](img/seewind.svg)
+![Landwind](images/seewind.svg)
 
 ### Landwind
 
 Weht nachts vom Land auf den See (ablandig)
 
-![Seewind](img/landwind.svg)
+![Seewind](images/landwind.svg)
 
 ---
 
 ### Der Föhn
 
-![Föhn](img/foehn.svg)
+![Föhn](images/foehn.svg)
 
 Wenn nördlich der Alpen ein Hochdruckgebiet und südlich ein Tiefdruckgebiet liegen,
 strömen gewaltige Luftmassen von Norditalien über die Alpen hinweg nach Norden.

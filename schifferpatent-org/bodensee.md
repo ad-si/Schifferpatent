@@ -9,7 +9,7 @@ date: 2013-07-09
 
 ---
 
-![Der Bodensee](img/bodensee.svg "Der Bodensee")
+![Der Bodensee](images/bodensee.svg "Der Bodensee")
 
 ---
 
@@ -30,7 +30,7 @@ Länge           | 63 km
 
 Schematischer Querschnitt zwischen Friedrichshafen und Romanshorn.
 
-![Querschnitt des Bodensees](img/querschnitt.svg "Querschnitt des Bodensees")
+![Querschnitt des Bodensees](images/querschnitt.svg "Querschnitt des Bodensees")
 
 ---
 

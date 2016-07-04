@@ -9,4 +9,4 @@ date: 2013-07-08
 
 ---
 
-![Segelboot](img/segelboot.jpg)
+![Segelboot](images/segelboot.jpg)

@@ -26,7 +26,7 @@ Grün & Rot  | 3 km  | 1.5 km
 
 Im folgenden sehen sie die üblichen Lichter und die Sektoren in denen diese strahlen.
 
-![Lichterführung eines Bootes](img/beleuchtung.svg)
+![Lichterführung eines Bootes](images/beleuchtung.svg)
 
 In folgender Tabelle sehen sie, welche Lichterführung zu welchem Fahrzeug gehört.
 
@@ -46,4 +46,4 @@ Vorrangschiff                       | Topplicht, Seitenlichter, Hecklicht, Rundu
 
 ### Beleuchtung von Häfen und Landestellen
 
-![Beleuchtung von Häfen](img/hafen.svg)
+![Beleuchtung von Häfen](images/hafen.svg)

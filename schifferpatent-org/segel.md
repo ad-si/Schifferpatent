@@ -9,4 +9,4 @@ date: 2013-07-08
 
 ---
 
-![Das Segel](img/segel.svg "Das Segel")
+![Das Segel](images/segel.svg "Das Segel")

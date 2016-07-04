@@ -12,6 +12,6 @@ date: 2013-07-09
 	für die theoretische und praktische Prüfung des Bodenseeschifferpatents
 	sowie die amtlichen Prüfungsfragen mit Antworten.</p>
 
-	<img src="img/bodensee.svg" alt="Der Bodensee" title="Der Bodensee"/>
+	<img src="images/bodensee.svg" alt="Der Bodensee" title="Der Bodensee"/>
 
 </div>

@@ -9,4 +9,4 @@ date: 2013-07-08
 
 ---
 
-![Motorboot](img/motorboot.jpg "Motorboot")
+![Motorboot](images/motorboot.jpg "Motorboot")
