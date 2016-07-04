@@ -9,7 +9,7 @@ block content
         h2
           a(href=article.url)= article.title
       section.content
-        !{ typogr(article.intro).typogrify() }
+        =! typogr(article.intro).typogrify()
         if article.hasMore
           p.more
             a(href=article.url) more
@@ -19,9 +19,6 @@ block prepend footer
     if prevPage
       a(href=prevPage.url) « Newer
     else
-      a(href='/archive.html') « Archives
+      a(href='/archive') « Archives
     if nextPage
       a(href=nextPage.url) Next page »
-
-
-

@@ -3,11 +3,9 @@ extends article
 block append text
 
 	div#signs
-
-		- page.metadata.signs.forEach(function(sign, index){
-
+		each sign, index in page.metadata.signs
 			div
-				img(src="img/schifffahrtszeichen/#{index + 1}.svg", alt="#{sign}")
+				img(src=`images/schifffahrtszeichen/${index + 1}.svg` alt=sign)
 				br
 				span= sign
 
@@ -27,5 +25,3 @@ block append text
 				hr
 				h3 Hinweiszeichen
 				br
-
-		- })
