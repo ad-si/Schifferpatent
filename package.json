@@ -3,10 +3,6 @@
   "description": "Alles Wissenswerte für die theoretische und praktische Prüfung des Bodenseeschifferpatents sowie die amtlichen Prüfungsfragen mit Antworten.",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": "~0.10.18",
-    "npm": "~1.3.8"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/adius/schifferpatent.git"
@@ -23,11 +19,18 @@
     "url": "https://github.com/adius/schifferpatent/issues"
   },
   "devDependencies": {
-    "wintersmith": "^2.2.0",
-    "wintersmith-stylus": "^0.4.1"
+    "eslint": "^3.0.0",
+    "javascript-styleguide": "^0.2.2",
+    "wintersmith": "^2.3.2",
+    "wintersmith-stylus": "^0.5.1"
   },
   "scripts": {
-    "start": "wintersmith preview",
-    "build": "wintersmith build"
+    "build": "./shell-scripts/build.sh",
+    "clean": "rm -r *-build",
+    "test": "npm run build"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": "./node_modules/javascript-styleguide/.eslintrc.yaml"
   }
 }
