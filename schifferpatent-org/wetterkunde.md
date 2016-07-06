@@ -92,26 +92,26 @@ Notmaßnahmen: Hafen oder windgeschütztes Ufer aufsuchen
 
 <script>
 
-	var starkwind = document.getElementById("starkwindwarnung"),
-	    sturm = document.getElementById("sturmwarnung");
+  var starkwind = document.getElementById("starkwindwarnung"),
+      sturm = document.getElementById("sturmwarnung");
 
-	function starkwindwarnung() {
-		starkwind.style.background = "orange"
-		setTimeout(function () {
-			starkwind.style.background = 'white'
-		}, 750)
-		setTimeout(starkwindwarnung, 1500)
-	}
+  function starkwindwarnung() {
+    starkwind.style.background = "orange"
+    setTimeout(function () {
+      starkwind.style.background = 'white'
+    }, 750)
+    setTimeout(starkwindwarnung, 1500)
+  }
 
-	function sturmwarnung() {
-		sturm.style.background = "orange"
-		setTimeout(function () {
-			sturm.style.background = 'white'
-		}, 333)
-		setTimeout(sturmwarnung, 666)
-	}
+  function sturmwarnung() {
+    sturm.style.background = "orange"
+    setTimeout(function () {
+      sturm.style.background = 'white'
+    }, 333)
+    setTimeout(sturmwarnung, 666)
+  }
 
-	starkwindwarnung()
-	sturmwarnung()
+  starkwindwarnung()
+  sturmwarnung()
 
 </script>

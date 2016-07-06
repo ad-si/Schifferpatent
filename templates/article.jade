@@ -1,59 +1,59 @@
 extends layout
 
 block prepend title
-	= page.title + " | "
+  = page.title + " | "
 
 block prepend content
 
-	- var map = {"ae":"ä", "oe":"ö", "ue":"ü"}
+  - var map = {"ae":"ä", "oe":"ö", "ue":"ü"}
 
-	ul.sidebar
-		each value, filename in contents
-			if /.*\.md$/gi.test(filename) && page.metadata.category === value.metadata.category
+  ul.sidebar
+    each value, filename in contents
+      if /.*\.md$/gi.test(filename) && page.metadata.category === value.metadata.category
 
-				- var className = null
-				- var name = filename.slice(0,-3)
-				- var escName = name
+        - var className = null
+        - var name = filename.slice(0,-3)
+        - var escName = name
 
-				if value.metadata.available === false
-					- className = "coming_soon"
+        if value.metadata.available === false
+          - className = "coming_soon"
 
-				each umlaut, ligature in map
-					- escName = escName.replace(ligature, umlaut)
+        each umlaut, ligature in map
+          - escName = escName.replace(ligature, umlaut)
 
-				if name === 'steuerung'
-					- escName = 'Steuerung'
+        if name === 'steuerung'
+          - escName = 'Steuerung'
 
-				li
-					a(href=name, class=className)
-						= escName[0].toUpperCase() + escName.slice(1)
+        li
+          a(href=name, class=className)
+            = escName[0].toUpperCase() + escName.slice(1)
 
-	.text(id=page.title.toLowerCase())
+  .text(id=page.title.toLowerCase())
 
-		if page.metadata.available === false
-			each umlaut, ligature in map
-				- var escTitle = page.title.replace(ligature, umlaut)
-				h2= escTitle[0].toUpperCase() + escTitle.slice(1)
-				hr
-				h3 Diese Seite ist bald verfügbar!
+    if page.metadata.available === false
+      each umlaut, ligature in map
+        - var escTitle = page.title.replace(ligature, umlaut)
+        h2= escTitle[0].toUpperCase() + escTitle.slice(1)
+        hr
+        h3 Diese Seite ist bald verfügbar!
 
-		block text
-			!= page.html
+    block text
+      != page.html
 
-		- var date = new Date(page.date).toISOString().substr(0,10)
-		hr
-		#modified Letzte Bearbeitung: #{date}
+    - var date = new Date(page.date).toISOString().substr(0,10)
+    hr
+    #modified Letzte Bearbeitung: #{date}
 
-	#ad_right
-		script(
-			async
-			src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
-		)
+  #ad_right
+    script(
+      async
+      src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+    )
 
-		ins.adsbygoogle(
-			data-ad-client='ca-pub-4448485104158739'
-			data-ad-slot='9351896398'
-		)
+    ins.adsbygoogle(
+      data-ad-client='ca-pub-4448485104158739'
+      data-ad-slot='9351896398'
+    )
 
-		script.
-			(adsbygoogle = window.adsbygoogle || []).push({})
+    script.
+      (adsbygoogle = window.adsbygoogle || []).push({})

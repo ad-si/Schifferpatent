@@ -2,16 +2,16 @@ extends article
 
 block append text
 
-	#fittings
-		each fitting in page.metadata.fittings
+  #fittings
+    each fitting in page.metadata.fittings
 
-			- var map = {ae: "ä", oe: "ö", ue: "ü"}
-			- var name = fitting
+      - var map = {ae: "ä", oe: "ö", ue: "ü"}
+      - var name = fitting
 
-			each umlaut, ligature in map
-				- name = name.replace(umlaut, ligature)
+      each umlaut, ligature in map
+        - name = name.replace(umlaut, ligature)
 
-			div
-				img(src="images/beschlaege/#{name}.png", alt=fitting)
-				br
-				span= fitting[0].toUpperCase() + fitting.slice(1)
+      div
+        img(src="images/beschlaege/#{name}.png", alt=fitting)
+        br
+        span= fitting[0].toUpperCase() + fitting.slice(1)

@@ -2,43 +2,43 @@ extends article
 
 block append text
 
-	- var circle = '<svg height="10" width="10">'
-	- circle += '<circle cx="5" cy="5" r="4"/></svg>'
+  - var circle = '<svg height="10" width="10">'
+  - circle += '<circle cx="5" cy="5" r="4"/></svg>'
 
-	- var rect = '<svg height="10" width="32">'
-	- rect += '<rect x="0" y="1" height="8" width="32px"/></svg>'
+  - var rect = '<svg height="10" width="32">'
+  - rect += '<rect x="0" y="1" height="8" width="32px"/></svg>'
 
-	p.
-		!{circle} = 1 Sekunde <br>
-		!{rect} = 4 Sekunden
-	table
-		tr
-			td !{circle}
-			td Ich richte meinen Kurs nach Steuerbord
-		tr
-			td !{circle}!{circle}
-			td Ich richte meinen Kurs nach Backbord
-		tr
-			td !{circle}!{circle}!{circle}
-			td Meine Maschine geht rückwärts
-		tr
-			td !{circle}!{circle}!{circle}!{circle}
-			td Ich bin manövrierunfähig
-		tr
-			td !{rect}
-			td.
-				Achtung ich behalte meinen Kurs bei, Hafenausfahrtssignal,
-				Nebelsignal (ausgenommen Vorrangschiffe),
-				Brückendurchfahrtssignal
-		tr
-			td !{rect} !{rect}
-			td Nebelsignal der Vorrangschiffe
-		tr
-			td !{rect} !{rect} !{rect}
-			td Hafeneinfahrtssignal der Vorrangschiffe, Schleppverbände und Schiffe in Not
-		tr
-			td Folge langer Töne
-			td Notsignal
-		tr
-			td !{circle}!{circle} <br> 3x pro Minute <br> oder Glockengeläute
-			td Nebelsignal der Häfen, Landestellen und Nebelwarnanlagen
+  p.
+    !{circle} = 1 Sekunde <br>
+    !{rect} = 4 Sekunden
+  table
+    tr
+      td !{circle}
+      td Ich richte meinen Kurs nach Steuerbord
+    tr
+      td !{circle}!{circle}
+      td Ich richte meinen Kurs nach Backbord
+    tr
+      td !{circle}!{circle}!{circle}
+      td Meine Maschine geht rückwärts
+    tr
+      td !{circle}!{circle}!{circle}!{circle}
+      td Ich bin manövrierunfähig
+    tr
+      td !{rect}
+      td.
+        Achtung ich behalte meinen Kurs bei, Hafenausfahrtssignal,
+        Nebelsignal (ausgenommen Vorrangschiffe),
+        Brückendurchfahrtssignal
+    tr
+      td !{rect} !{rect}
+      td Nebelsignal der Vorrangschiffe
+    tr
+      td !{rect} !{rect} !{rect}
+      td Hafeneinfahrtssignal der Vorrangschiffe, Schleppverbände und Schiffe in Not
+    tr
+      td Folge langer Töne
+      td Notsignal
+    tr
+      td !{circle}!{circle} <br> 3x pro Minute <br> oder Glockengeläute
+      td Nebelsignal der Häfen, Landestellen und Nebelwarnanlagen

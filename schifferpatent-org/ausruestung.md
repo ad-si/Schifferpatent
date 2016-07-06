@@ -32,5 +32,5 @@ Bodenseeschifferpatent, Zulassungspapiere
 -   Kompass
 -   Verbandskasten
 -   2 kg Feuerlöscher für Innenborder mit mehr als 4.4 kW, Außenborder
-	mit mehr als 7,4 kW und Boote mit Koch- und Heizeinrichtung
+  mit mehr als 7,4 kW und Boote mit Koch- und Heizeinrichtung
 -   Werkzeugkasten

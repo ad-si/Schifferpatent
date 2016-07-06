@@ -12,12 +12,12 @@ date: 2013-07-09
 ### Navigationslichter
 
 Anhand der Lichter eines Schiffes lässt sich erkennen um welche Art von Schiff es sich handelt
-	und welchen Kurs es hat. Die Lichter müssen zwischen Sonnenuntergang und Sonnenaufgang und bei schlechter Sicht
-	geführt werden. Sie dienen NICHT dazu die Nacht zu erhellen um besser zu sehen, sondern ausschließlich um
-	besser gesehen zu werden.
+  und welchen Kurs es hat. Die Lichter müssen zwischen Sonnenuntergang und Sonnenaufgang und bei schlechter Sicht
+  geführt werden. Sie dienen NICHT dazu die Nacht zu erhellen um besser zu sehen, sondern ausschließlich um
+  besser gesehen zu werden.
 
 Es wird zwischen hellen und gewöhnlichen Lichtern unterschieden, wobei Gewerbliche Schiffe helle Lichter
-	führen müssen. Sie unterscheiden sich hauptsächlich in ihrer Sichtweite:
+  führen müssen. Sie unterscheiden sich hauptsächlich in ihrer Sichtweite:
 
 <p></p>     | Hell  | Gewöhnlich
 ------------|-------|------------

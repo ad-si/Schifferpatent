@@ -2,13 +2,13 @@ extends article
 
 block append text
 
-	#hullforms
-		- page.metadata.hullforms.forEach(function(hullform, index){
-			div
-				img(
-					src="images/1px.gif",
-					alt="#{hullform}",
-					style="background-position: 0 #{index * 72}px"
-				)
-				span= hullform
-		- })
+  #hullforms
+    - page.metadata.hullforms.forEach(function(hullform, index){
+      div
+        img(
+          src="images/1px.gif",
+          alt="#{hullform}",
+          style="background-position: 0 #{index * 72}px"
+        )
+        span= hullform
+    - })

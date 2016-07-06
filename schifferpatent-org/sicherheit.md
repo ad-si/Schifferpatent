@@ -42,7 +42,7 @@ Nach dem Tanken ist folgendes zu beachten:
 - Luken und Fenster öffnen
 - Verschütteten Treibstoff beseitigen
 - Das Lüftergebläse im Motorraum für kurze Zeit laufen lassen (sollte auch vor dem Start des Motors gemacht
-	werden)
+  werden)
 
 ---
 
@@ -55,55 +55,55 @@ oder mit Koch- und Heizeinrichtungen ist mindestens ein 2 kg Feuerlöscher vorge
 Pro 100 l Treibstoff muss ein weiterer Feuerlöscher mitgeführt werden.
 
 <table>
-	<tr>
-		<th><p></p></th>
-		<th>Glutbrandlöscher</th>
-		<th>Schaumlöscher</th>
-		<th>CO<sub>2</sub>-Löscher</th>
-	</tr>
-	<tr>
-		<td>Funktionsweise</td>
-		<td>Funktionieren mit dem [antikatalytischen
-			Prinzip](http://de.wikipedia.org/wiki/Heterogene_Inhibition).
-		</td>
-		<td>Die geschlossene Oberfläche verhindert ein erneutes Nachzünden und kühlt den Brandherd ab.</td>
-		<td>Verdrängt den für ein Feuer nötigen Sauerstoff und funktioniert somit rückstandsfrei.</td>
-	</tr>
-	<tr>
-		<td>Nachteile</td>
-		<td>Gelöschtes Material wird nicht abgekühlt. Somit gast es weiter</td>
-		<td>Es bleiben Rückstände</td>
-		<td>Gefahr einer CO<sub>2</sub>-Vergiftung in kleinen Räumen</td>
-	</tr>
-	<tr>
-		<td>Brandklasse A: Feste Stoffe (Holz, Papier, Textilien, Gummi)</td>
-		<td>✔</td>
-		<td>✔</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>Brandklasse B: Flüssige und flüssig werdene Stoffe
-		    (Benzin, Öle, Lacke, Wachse, Alkohol, Kunststoffe)
-		</td>
-		<td>✔</td>
-		<td>✔</td>
-		<td>✔</td>
-	</tr>
-	<tr>
-		<td>Brandklasse C: Gasförmige Stoffe
-		    (Methan, Propan, Wasserstoff, Stadtgas)</td>
-		<td>✔</td>
-		<td></td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>Brandklasse D: Metalle
-		    (Aluminium, Magnesium, Lithium, Natrium, Kalium)
-		</td>
-		<td>~</td>
-		<td></td>
-		<td></td>
-	</tr>
+  <tr>
+    <th><p></p></th>
+    <th>Glutbrandlöscher</th>
+    <th>Schaumlöscher</th>
+    <th>CO<sub>2</sub>-Löscher</th>
+  </tr>
+  <tr>
+    <td>Funktionsweise</td>
+    <td>Funktionieren mit dem [antikatalytischen
+      Prinzip](http://de.wikipedia.org/wiki/Heterogene_Inhibition).
+    </td>
+    <td>Die geschlossene Oberfläche verhindert ein erneutes Nachzünden und kühlt den Brandherd ab.</td>
+    <td>Verdrängt den für ein Feuer nötigen Sauerstoff und funktioniert somit rückstandsfrei.</td>
+  </tr>
+  <tr>
+    <td>Nachteile</td>
+    <td>Gelöschtes Material wird nicht abgekühlt. Somit gast es weiter</td>
+    <td>Es bleiben Rückstände</td>
+    <td>Gefahr einer CO<sub>2</sub>-Vergiftung in kleinen Räumen</td>
+  </tr>
+  <tr>
+    <td>Brandklasse A: Feste Stoffe (Holz, Papier, Textilien, Gummi)</td>
+    <td>✔</td>
+    <td>✔</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Brandklasse B: Flüssige und flüssig werdene Stoffe
+        (Benzin, Öle, Lacke, Wachse, Alkohol, Kunststoffe)
+    </td>
+    <td>✔</td>
+    <td>✔</td>
+    <td>✔</td>
+  </tr>
+  <tr>
+    <td>Brandklasse C: Gasförmige Stoffe
+        (Methan, Propan, Wasserstoff, Stadtgas)</td>
+    <td>✔</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Brandklasse D: Metalle
+        (Aluminium, Magnesium, Lithium, Natrium, Kalium)
+    </td>
+    <td>~</td>
+    <td></td>
+    <td></td>
+  </tr>
 </table>
 
 ---

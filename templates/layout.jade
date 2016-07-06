@@ -1,65 +1,65 @@
 doctype html
 html
-	head
-		meta(charset="UTF-8")
-		title
-			block title
-				| Bodenseeschifferpatent
+  head
+    meta(charset="UTF-8")
+    title
+      block title
+        | Bodenseeschifferpatent
 
-		meta(name='description' content=description)
-		meta(name='keywords' content='Bodenseeschifferpatent, Schifferpatent')
-		meta(name='viewport' content='width=device-width, initial-scale=1.0')
-		meta(name='apple-mobile-web-app-capable' content='yes')
-		meta(name='apple-mobile-web-app-status-bar-style' content='black')
+    meta(name='description' content=description)
+    meta(name='keywords' content='Bodenseeschifferpatent, Schifferpatent')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name='apple-mobile-web-app-capable' content='yes')
+    meta(name='apple-mobile-web-app-status-bar-style' content='black')
 
-		link(rel='stylesheet' media='all' href='styles/screen.css' type='text/css')
-		link(rel='icon' href='images/favicon.png' type='image/svg+xml')
-		link(rel='apple-touch-icon-precomposed' href='images/favicon_hq.png')
-		link(rel='apple-touch-startup-image' href='images/startup.png')
+    link(rel='stylesheet' media='all' href='styles/screen.css' type='text/css')
+    link(rel='icon' href='images/favicon.png' type='image/svg+xml')
+    link(rel='apple-touch-icon-precomposed' href='images/favicon_hq.png')
+    link(rel='apple-touch-startup-image' href='images/startup.png')
 
-	body
-		nav
-			h1
-				a(href='/') Bodenseeschifferpatent
-			#links
-				a(href='schifferpatent', title='Allgemeine Informationen') Allgemeines
-				a(href='segelboot', title='Alles rund um das Segelboot') Segelboot
-				a(href='motorboot', title='Alles rund um das Motorboot') Motorboot
-				a(href='fragen', title='Alle offiziellen Prüfungsfragen') Fragenkatalog
+  body
+    nav
+      h1
+        a(href='/') Bodenseeschifferpatent
+      #links
+        a(href='schifferpatent', title='Allgemeine Informationen') Allgemeines
+        a(href='segelboot', title='Alles rund um das Segelboot') Segelboot
+        a(href='motorboot', title='Alles rund um das Motorboot') Motorboot
+        a(href='fragen', title='Alle offiziellen Prüfungsfragen') Fragenkatalog
 
-			a#adrian(href='http://www.adriansieber.com/') © Adrian Sieber
+      a#adrian(href='http://www.adriansieber.com/') © Adrian Sieber
 
-		block content
+    block content
 
-		script.
-			var _paq = _paq || []
-				_paq.push(['trackPageView'])
-				_paq.push(['enableLinkTracking'])
-				!function() {
-					var u=(
-							("https:" == document.location.protocol) ?
-							"https" :
-							"http"
-						) + "://piwik.adriansieber.com/"
-					_paq.push(['setTrackerUrl', u+'piwik.php'])
-					_paq.push(['setSiteId', 6])
+    script.
+      var _paq = _paq || []
+        _paq.push(['trackPageView'])
+        _paq.push(['enableLinkTracking'])
+        !function() {
+          var u=(
+              ("https:" == document.location.protocol) ?
+              "https" :
+              "http"
+            ) + "://piwik.adriansieber.com/"
+          _paq.push(['setTrackerUrl', u+'piwik.php'])
+          _paq.push(['setSiteId', 6])
 
-					var d=document,
-					g=d.createElement('script'),
-					s=d.getElementsByTagName('script')[0]
-					g.type='text/javascript'
-					g.defer=true
-					g.async=true
-					g.src=u+'piwik.js'
-					s.parentNode.insertBefore(g,s)
-				}()
+          var d=document,
+          g=d.createElement('script'),
+          s=d.getElementsByTagName('script')[0]
+          g.type='text/javascript'
+          g.defer=true
+          g.async=true
+          g.src=u+'piwik.js'
+          s.parentNode.insertBefore(g,s)
+        }()
 
-		noscript
-			p
-				img(
-				src="http://piwik.adriansieber.com/piwik.php?idsite=6",
-				style="border:0",
-				alt=""
-				)
+    noscript
+      p
+        img(
+        src="http://piwik.adriansieber.com/piwik.php?idsite=6",
+        style="border:0",
+        alt=""
+        )
 
-		block footer
+    block footer
