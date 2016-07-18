@@ -10,6 +10,14 @@ sowie die amtlichen Prüfungsfragen mit Antworten.
 npm install
 ```
 
+## Testing
+
+- Change `"filenameTemplate": ":file"` to `"filenameTemplate": ":file.html"`
+  in `config.json`.
+- `npm run build`
+- Serve the `*-build` directories
+  (e.g. `php -S localhost:1234` or `python3 -m http.server`)
+
 
 ## Deployment
 
@@ -18,4 +26,9 @@ npm run build
 ```
 
 Now you can host the `*-build` directories on
-a static website hoster (e.g. Amazon S3)
+a static website hoster.
+
+For example Amazon S3:
+```shell
+s3cmd sync ./schifferpatent-org-build/ s3://schifferpatent.org
+```
