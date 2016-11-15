@@ -31,11 +31,13 @@ block prepend content
   .text(id=page.title.toLowerCase())
 
     if page.metadata.available === false
+      - var escapedTitle = page.title
       each umlaut, ligature in map
-        - var escTitle = page.title.replace(ligature, umlaut)
-        h2= escTitle[0].toUpperCase() + escTitle.slice(1)
-        hr
-        h3 Diese Seite ist bald verfügbar!
+        - escapedTitle = escapedTitle.replace(ligature, umlaut)
+
+      h2= escapedTitle[0].toUpperCase() + escapedTitle.slice(1)
+      hr
+      h3 Diese Seite ist bald verfügbar!
 
     block text
       != page.html

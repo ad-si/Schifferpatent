@@ -6,7 +6,7 @@ sowie die amtlichen Prüfungsfragen mit Antworten.
 
 ## Installation
 
-```
+```shell
 npm install
 ```
 
