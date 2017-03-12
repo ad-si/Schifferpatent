@@ -11,40 +11,52 @@ block prepend content
     != page.html
 
     table#questionstable
-      each item, index in page.metadata.questions
-          tr
-            td= index + 1
-            td
-              != item.q
-              if item.img
-                br
-                svg(
-                viewBox='0 0 150 100',
-                xmlns="http://www.w3.org/2000/svg",
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                )
-                  defs
-                    marker#endMarkerArrow(
-                    markerWidth=4,
-                    markerHeight=4,
-                    refX=2,
-                    refY=2,
-                    orient='auto'
-                    )
-                      path(d='M0,0 L4,2 L0,4 z')
+      for item, index in page.metadata.questions
+        - const capitalize = string => string[0].toUpperCase() + string.slice(1)
+        - const formatedCategories = item.c.map(capitalize).join(', ')
+        tr
+          td
+            span= index + 1
+            br
+            small
+              em= 'Kategorien: '
+              span= formatedCategories
+            br
+            small
+              em= 'Gebiet: '
+              span= item.s
 
-                    marker#startMarkerArrow(
-                    markerWidth=4,
-                    markerHeight=4,
-                    refX=2,
-                    refY=2,
-                    orient='auto'
-                    )
-                      path(d='M4,0 L0,2 L4,4 z')
+          td
+            != item.q
+            if item.img
+              br
+              svg(
+              viewBox='0 0 150 100',
+              xmlns="http://www.w3.org/2000/svg",
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              )
+                defs
+                  marker#endMarkerArrow(
+                  markerWidth=4,
+                  markerHeight=4,
+                  refX=2,
+                  refY=2,
+                  orient='auto'
+                  )
+                    path(d='M0,0 L4,2 L0,4 z')
 
-                  use(xlink:href='#img' + (index+1))
+                  marker#startMarkerArrow(
+                  markerWidth=4,
+                  markerHeight=4,
+                  refX=2,
+                  refY=2,
+                  orient='auto'
+                  )
+                    path(d='M4,0 L0,2 L4,4 z')
 
-            td= item.a
+                use(xlink:href='#img' + (index+1))
+
+          td= item.a
 
     hr
     #modified.
