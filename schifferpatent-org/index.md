@@ -8,7 +8,7 @@ date: 2013-07-09
 
   <h2>Herzlich Willkommen</h2>
 
-  <p>Auf dieser Website finden sie alles Wissenswerte
+  <p>Auf dieser Website finden Sie alles Wissenswerte
   für die theoretische und praktische Prüfung des Bodenseeschifferpatents
   sowie die amtlichen Prüfungsfragen mit Antworten.</p>
 
