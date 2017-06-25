@@ -3,7 +3,7 @@
 set -e
 
 build_website () {
-  local contentdir=$1
+  local contentdir="source/$1"
   local sourcedir="$contentdir-temp"
   local builddir="$contentdir-build"
 
@@ -23,5 +23,5 @@ build_website () {
 
 
 # Build websites from content directories
-build_website 'schifferpatent-org'
-build_website 'sailing-guide-website'
+build_website 'schifferpatent_org'
+build_website 'sail-guide_com'

@@ -6,7 +6,7 @@
   box-sizing: border-box
 
 html
-  background: url(../images/bg.gif)
+  background: url(images/bg.gif)
 
 body
   width: 1080px
@@ -85,17 +85,23 @@ nav
   background-image: linear-gradient(rgb(50, 180, 250), rgb(40, 120, 220))
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5)
   border-radius: 0 0 8px 8px
+  text-shadow 0px 1px 0px rgba(255, 255, 255, 0.2)
 
   h1 a
-    text-indent: -9999px
-    background: url(../images/logo.svg) 50% no-repeat
-    background-size: 220px
-    background-position: 50% 40%
-    border-radius: 0 0 0 8px
-    display: inline-block
-    vertical-align: top
-    width: 260px
-    height: 30px
+    background url(images/logo.svg)
+    background-position 1.5em 40%
+    background-repeat no-repeat
+    background-size 1.3em
+    border-radius 0 0 0 8px
+    color rgba(0, 0, 0, 0.7)
+    display inline-block
+    font-family 'home', sans-serif
+    font-weight 600
+    line-height 30px
+    padding 0 1em 0 3em
+    text-decoration none
+    vertical-align top
+
     &:active,
     &:focus
       box-shadow: inset 2px 0px 10px rgba(0, 0, 0, 0.5) !important
@@ -103,16 +109,17 @@ nav
   #links
     display: inline-block
     a
-      display: inline-block
-      vertical-align: top
-      font: 700 13px/30px "Arial", sans-serif
-      height: 30px
-      text-decoration: none
-      color: rgba(0, 0, 0, 0.7)
-      padding: 0px 10px 0px 10px
-      border-right: 1px solid rgba(0, 0, 0, 0.2)
-      box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2)
-      text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4)
+      border-right 1px solid rgba(0, 0, 0, 0.2)
+      box-shadow 1px 0 0 rgba(255, 255, 255, 0.2)
+      color rgba(0, 0, 0, 0.7)
+      display inline-block
+      font-family Arial, sans-serif
+      font-weight 500
+      line-height 30px
+      padding 0px 10px 0px 10px
+      text-decoration none
+      vertical-align top
+
       &:first-of-type
         border-left: 1px solid rgba(255, 255, 255, 0.2)
         box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2), -1px 0 0 rgba(0, 0, 0, 0.2)
@@ -174,7 +181,8 @@ nav
   right: 0px
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5)
 
-ins
+ins.adsbygoogle
+  display inline-block
   width 120px
   height 600px
 

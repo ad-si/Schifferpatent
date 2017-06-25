@@ -25,12 +25,15 @@
     "url": "https://github.com/adius/schifferpatent/issues"
   },
   "devDependencies": {
-    "eslint": "^3.17.1",
+    "eslint": "^4.1.0",
     "eslint-config-javascript": "^1.3.0",
-    "wintersmith": "^2.3.6",
+    "wintersmith": "^2.4.1",
     "wintersmith-stylus": "^0.5.1"
   },
   "eslintConfig": {
     "extends": "eslint-config-javascript"
+  },
+  "dependencies": {
+    "stylus": "^0.54.5"
   }
 }

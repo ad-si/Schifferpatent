@@ -1,7 +1,7 @@
 # Schifferpatent
 
-Alles Wissenswerte für die theoretische und praktische Prüfung des Bodenseeschifferpatents
-sowie die amtlichen Prüfungsfragen mit Antworten.
+Alles Wissenswerte für die theoretische und praktische Prüfung
+des Bodenseeschifferpatents sowie die amtlichen Prüfungsfragen mit Antworten.
 
 
 ## Installation
@@ -10,25 +10,23 @@ sowie die amtlichen Prüfungsfragen mit Antworten.
 npm install
 ```
 
+
 ## Testing
 
 - Change `"filenameTemplate": ":file"` to `"filenameTemplate": ":file.html"`
   in `config.json`.
-- `npm run build`
-- Serve the `*-build` directories
-  (e.g. `php -S localhost:1234` or `python3 -m http.server`)
+- `make`
+- Serve the `build/*` directories
+  (e.g. with `php -S localhost:1234` or `python3 -m http.server`)
 
 
 ## Deployment
 
-```shell
-npm run build
-```
+Change `"filenameTemplate": ":file.html"` to `"filenameTemplate": ":file"`
+in `config.json`.
 
-Now you can host the `*-build` directories on
-a static website hoster.
+Build the website and sync it to AWS:
 
-For example Amazon S3:
 ```shell
-s3cmd sync ./schifferpatent-org-build/ s3://schifferpatent.org
+make deploy-schifferpatent_org
 ```

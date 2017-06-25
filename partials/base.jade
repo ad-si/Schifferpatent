@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title
+      block title
+        =title
+
+    meta(name='description' content=description)
+    meta(name='keywords' content=keywords)
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name='apple-mobile-web-app-capable' content='yes')
+    meta(name='apple-mobile-web-app-status-bar-style' content='black')
+
+    link(rel='stylesheet' media='all' href='screen.css' type='text/css')
+    link(rel='icon' href='images/favicon.png' type='image/svg+xml')
+    link(rel='apple-touch-icon-precomposed' href='images/favicon_hq.png')
+    link(rel='apple-touch-startup-image' href='images/startup.png')
+
+  body
+    block body
+    block footer

@@ -1,0 +1,46 @@
+extends ../../../partials/base.jade
+
+block body
+  nav
+    h1
+      a(href='/')= title
+    #links
+      a(href='schifferpatent' title='Allgemeine Informationen') Allgemeines
+      a(href='segelboot' title='Alles rund um das Segelboot') Segelboot
+      a(href='motorboot' title='Alles rund um das Motorboot') Motorboot
+      a(href='fragen' title='Alle offiziellen Prüfungsfragen') Fragenkatalog
+
+    a#adrian(href='https://adriansieber.com') © Adrian Sieber
+
+  block content
+
+  script.
+    var _paq = _paq || []
+    _paq.push(['trackPageView'])
+    _paq.push(['enableLinkTracking'])
+    !function() {
+      var u=(
+          ("https:" == document.location.protocol) ?
+          "https" :
+          "http"
+        ) + "://piwik.adriansieber.com/"
+      _paq.push(['setTrackerUrl', u+'piwik.php'])
+      _paq.push(['setSiteId', 6])
+
+      var d=document,
+      g=d.createElement('script'),
+      s=d.getElementsByTagName('script')[0]
+      g.type='text/javascript'
+      g.defer=true
+      g.async=true
+      g.src=u+'piwik.js'
+      s.parentNode.insertBefore(g,s)
+    }()
+
+  noscript
+    p
+      img(
+        src='http://piwik.adriansieber.com/piwik.php?idsite=6',
+        style='border:0',
+        alt=''
+      )

@@ -54,9 +54,9 @@ Die Zulassung zur Prüfung wird mit
 Landratsamt beantragt.
 Dem Antrag muss folgendes beigefügt werden:
 
-- Ein Lichtbild (38mm x 45mm)
+- Ein Lichtbild (38 mm x 45 mm)
 - <a href="pdf/attest.pdf" target="_blank">Dieses amtsärztliche oder ärztliche Zeugnis</a>
-    (Seh-,Hör-, Farbuntescheidungsvermögen)
+    (Seh-, Hör-, Farbuntescheidungsvermögen)
 - Ein Führungszeugnis (nur auf Verlangen)
 
 ---

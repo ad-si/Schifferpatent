@@ -1,0 +1,16 @@
+extends ../../../partials/base.jade
+
+block body
+  nav
+    h1
+      a(href='/')= title
+
+    #links
+      a(href='general' title='General Information') General
+      a(href='sailboat' title='All about sailboats') Sailboat
+      //- a(href='motorboat' title='All about motorboats') Motorboat
+      //- a(href='questionaire' title='Official test questions') Questionnaire
+
+    a#adrian(href='https://adriansieber.com') © Adrian Sieber
+
+  block content
