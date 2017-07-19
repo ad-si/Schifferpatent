@@ -24,3 +24,6 @@ Es ergeben sich folgende Vorfahrtsregeln:
 -   Backbordbug vor Steuerbordbug
 -   Lee vor Luv
 -   Ruder & Tretboote haben Vorfahrt vor Motorbooten
+
+Eine Ausnahme dazu bilden jedoch die Rheinstrecken,
+da dort Segelboote keinen besonderen Vorrang vor Motorbooten mehr haben.
