@@ -26,4 +26,4 @@ Es ergeben sich folgende Vorfahrtsregeln:
 -   Ruder & Tretboote haben Vorfahrt vor Motorbooten
 
 Eine Ausnahme dazu bilden jedoch die Rheinstrecken,
-da dort Segelboote keinen besonderen Vorrang vor Motorbooten mehr haben.
+da Segelboote dort keinen besonderen Vorrang mehr vor Motorbooten haben.

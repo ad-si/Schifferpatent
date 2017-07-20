@@ -10,6 +10,12 @@ des Bodenseeschifferpatents sowie die amtlichen Prüfungsfragen mit Antworten.
 npm install
 ```
 
+or
+
+```shell
+yarn install
+```
+
 
 ## Testing
 
@@ -30,3 +36,7 @@ Build the website and sync it to AWS:
 ```shell
 make deploy-schifferpatent_org
 ```
+
+Finally invalidate the cache on [cloudfront].
+
+[cloudfront]: https://console.aws.amazon.com/cloudfront
