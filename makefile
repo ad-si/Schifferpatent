@@ -6,7 +6,7 @@
 all: build/sail-guide_com build/schifferpatent_org
 
 build/%: source/%/* build/%/screen.css build/%/images config.json
-	wintersmith build \
+	npx wintersmith build \
 		--locals $(<D)/locals.json \
 		--templates $(<D)/templates \
 		--contents $(<D)/pages \
