@@ -1,6 +1,6 @@
 ---
 title: Fragen
-template: fragen.jade
+template: fragen.pug
 date: 2017-03-12
 
 # q := question

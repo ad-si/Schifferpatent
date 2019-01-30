@@ -1,5 +1,5 @@
 ---
-template: article.jade
+template: article.pug
 title: Das Segel
 category: segelboot
 date: 2013-07-08

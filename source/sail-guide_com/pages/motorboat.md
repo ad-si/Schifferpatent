@@ -1,7 +1,7 @@
 ---
 title: Motorboat
 category: motorboat
-template: article.jade
+template: article.pug
 date: 2017-06-25
 ---
 

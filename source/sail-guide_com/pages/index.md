@@ -1,6 +1,6 @@
 ---
 title: Welcome
-template: page.jade
+template: page.pug
 date: 2017-06-25
 ---
 

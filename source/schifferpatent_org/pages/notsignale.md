@@ -1,5 +1,5 @@
 ---
-template: article.jade
+template: article.pug
 title: Notsignale
 category: allgemeines
 date: 2013-07-08

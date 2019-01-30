@@ -1,5 +1,5 @@
 ---
-template: beschlaege.jade
+template: beschlaege.pug
 title: Beschläge
 category: segelboot
 date: 2014-06-27

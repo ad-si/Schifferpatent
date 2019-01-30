@@ -1,5 +1,5 @@
 ---
-template: schallsignale.jade
+template: schallsignale.pug
 title: Schallsignale
 category: allgemeines
 date: 2013-07-08

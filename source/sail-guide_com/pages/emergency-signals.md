@@ -1,5 +1,5 @@
 ---
-template: article.jade
+template: article.pug
 title: Emergency Signals
 category: general
 date: 2017-06-25

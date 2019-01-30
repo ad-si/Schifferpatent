@@ -1,5 +1,5 @@
 ---
-template: article.jade
+template: article.pug
 title: Bodensee
 category: allgemeines
 date: 2013-07-09

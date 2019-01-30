@@ -1,5 +1,5 @@
 ---
-template: article.jade
+template: article.pug
 title: Segelboot
 category: segelboot
 date: 2013-07-08

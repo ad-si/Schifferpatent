@@ -1,7 +1,7 @@
 ---
 title: Sailboat
 category: sailboat
-template: article.jade
+template: article.pug
 date: 2017-06-25
 ---
 

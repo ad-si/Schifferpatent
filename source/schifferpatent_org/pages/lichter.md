@@ -1,5 +1,5 @@
 ---
-template: article.jade
+template: article.pug
 title: Lichter
 category: allgemeines
 date: 2013-07-09

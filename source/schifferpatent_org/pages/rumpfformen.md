@@ -1,5 +1,5 @@
 ---
-template: rumpfformen.jade
+template: rumpfformen.pug
 title: Rumpfformen
 category: segelboot
 date: 2013-07-08

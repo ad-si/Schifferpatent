@@ -1,5 +1,5 @@
 ---
-template: schifffahrtszeichen.jade
+template: schifffahrtszeichen.pug
 title: Schifffahrtszeichen
 category: allgemeines
 date: 2013-07-08

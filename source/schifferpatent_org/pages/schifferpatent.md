@@ -1,6 +1,6 @@
 ---
 title: Schifferpatent
-template: article.jade
+template: article.pug
 category: allgemeines
 date: 2012-09-22
 ---
