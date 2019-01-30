@@ -27,9 +27,9 @@ Weht nachts vom Land auf den See (ablandig)
 
 ![Föhn](images/foehn.svg)
 
-Wenn nördlich der Alpen ein Hochdruckgebiet und südlich ein Tiefdruckgebiet liegen,
+Wenn nördlich der Alpen ein Tiefdruckgebiet und südlich ein Hochdruckgebiet liegen,
 strömen gewaltige Luftmassen von Norditalien über die Alpen hinweg nach Norden.
-Beim aufsteigen der Luft wird sie abgekühlt und die vom Mittelmeer kommende Feuchtigkeit
+Beim Aufsteigen der Luft wird sie abgekühlt und die vom Mittelmeer kommende Feuchtigkeit
 kondensiert und wird auf der Südseite der Alpen abgeregnet. Beim Absinken der Luftmassen wird
 die nun trockene Luft wieder aufgewärmt. Da sich trockene Luft allerdings schneller erwärmt
 als sich die feuchte Luft abgekühlt hat, kommt sie viel Wärmer an, als sie einmal auf gleicher
@@ -46,11 +46,11 @@ um im Notfall rechtzeitig reagieren zu können .
 
 #### Wärmegewitter
 
-Enstehen bei einer länger anhaltender Hochdrucklage und bringen starke thermische Winde mit sich.
+Entstehen bei einer länger anhaltender Hochdrucklage und bringen starke thermische Winde mit sich.
 Wenn sich das Land stark erwärmt transportieren die Seewinde große Mengen an Feuchtigkeit in obere
 Luftschichten wo sie schließlich kondensieren und Gewitterwolken (Cumulonimbus) bilden.
 Diese Art von Gewitter sind meistens auf eine bestimmte Region beschränkt, können aber böige und starke
-Winde hervorbringen. Sie entsehen hauptsächlich im östlichen, südlichen oder westlichen Teil des Sees.
+Winde hervorbringen. Sie entstehen hauptsächlich im östlichen, südlichen oder westlichen Teil des Sees.
 Die besondere Gefahr besteht darin, dass der Wind kurz vor dem Ausbruch des Gewitters abflaut und
 anschließend um 180° dreht.
 
