@@ -10,12 +10,6 @@ des Bodenseeschifferpatents sowie die amtlichen Prüfungsfragen mit Antworten.
 npm install
 ```
 
-or
-
-```shell
-yarn install
-```
-
 
 ## Testing
 
