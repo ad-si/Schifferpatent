@@ -5,7 +5,8 @@
 
 all: build/sail-guide_com build/schifferpatent_org
 
-build/%: source/%/* build/%/screen.css build/%/images config.json
+build/%: source/%/* build/%/screen.css build/%/ads.txt \
+  build/%/images config.json
 	npx wintersmith build \
 		--locals $(<D)/locals.json \
 		--templates $(<D)/templates \
@@ -21,6 +22,9 @@ build/%/screen.css: styles/screen.styl | build
 build/%/images: images | build
 	-mkdir -p $(@D)
 	rsync --archive --delete $</ $@
+
+build/%/ads.txt: ads.txt | build
+	cp $< $@
 
 build:
 	-mkdir $@
