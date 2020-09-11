@@ -13,6 +13,13 @@ npm install
 
 ## Testing
 
+<!--
+TODO: CSS must be generated differently first
+```sh
+make serve/schifferpatent_org
+```
+-->
+
 1. Change `"filenameTemplate": ":file"` to `"filenameTemplate": ":file.html"`
   in `config.json`.
 1. `make`

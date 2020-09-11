@@ -25,8 +25,15 @@ build/%/images: images | build
 build:
 	-mkdir $@
 
-clean:
-	rm -r build*
-
 deploy-%: build/%
 	s3cmd sync --delete-removed $</ s3://$(subst _,.,$(<F))
+
+# TODO: CSS must be generated differently first
+# serve/%: source/%/*
+# 	npx wintersmith preview \
+# 		--locals $(<D)/locals.json \
+# 		--templates $(<D)/templates \
+# 		--contents $(<D)/pages
+
+clean:
+	rm -r build*
