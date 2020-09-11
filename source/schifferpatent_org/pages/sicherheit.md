@@ -63,8 +63,10 @@ Pro 100 l Treibstoff muss ein weiterer Feuerlöscher mitgeführt werden.
   </tr>
   <tr>
     <td>Funktionsweise</td>
-    <td>Funktionieren mit dem [antikatalytischen
-      Prinzip](http://de.wikipedia.org/wiki/Heterogene_Inhibition).
+    <td>Funktionieren mit dem
+      <a href="http://de.wikipedia.org/wiki/Heterogene_Inhibition">
+        antikatalytischen Prinzip
+      </a>
     </td>
     <td>Die geschlossene Oberfläche verhindert ein erneutes Nachzünden und kühlt den Brandherd ab.</td>
     <td>Verdrängt den für ein Feuer nötigen Sauerstoff und funktioniert somit rückstandsfrei.</td>
