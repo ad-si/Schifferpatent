@@ -1,7 +1,7 @@
 .PHONY: all, clean, deploy-%
 
-# Prevent deleting of CSS files and images
-.PRECIOUS: build/%/screen.css build/%/images
+# Prevent deletion by rsync of several files
+.PRECIOUS: build/%/screen.css build/%/images build/%/ads.txt
 
 all: build/sail-guide_com build/schifferpatent_org
 
