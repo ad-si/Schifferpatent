@@ -31,6 +31,10 @@ build/%/ads.txt: ads.txt | build
 	cp $< $@
 
 
+build/%/CNAME: build
+	echo $(subst build/,,$(subst _,.,$(@D))) > $@
+
+
 build: node_modules
 	-mkdir $@
 
