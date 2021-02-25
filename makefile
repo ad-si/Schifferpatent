@@ -1,5 +1,5 @@
 # Prevent deletion by rsync of several files
-.PRECIOUS: build/%/screen.css build/%/images build/%/ads.txt
+.PRECIOUS: build/%/screen.css build/%/images build/%/ads.txt build/%/CNAME
 
 
 .PHONY: all
@@ -7,7 +7,7 @@ all: build/sail-guide_com build/schifferpatent_org
 
 
 build/%: source/%/* build/%/screen.css build/%/ads.txt \
-  build/%/images config.json
+  build/%/images build/%/CNAME config.json
 	npx wintersmith build \
 		--locals $(<D)/locals.json \
 		--templates $(<D)/templates \
