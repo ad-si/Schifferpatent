@@ -31,8 +31,13 @@ build/%/ads.txt: ads.txt | build
 	cp $< $@
 
 
-build:
+build: node_modules
 	-mkdir $@
+
+
+node_modules: package.json package-lock.json
+	npm install
+
 
 # TODO: CSS must be generated differently first
 # serve/%: source/%/*
@@ -44,4 +49,5 @@ build:
 
 .PHONY: clean
 clean:
-	rm -r build*
+	-rm -rf build
+	-rm -rf node_modules
