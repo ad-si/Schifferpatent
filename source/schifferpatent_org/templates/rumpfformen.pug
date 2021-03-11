@@ -3,12 +3,11 @@ extends article
 block append text
 
   #hullforms
-    - page.metadata.hullforms.forEach(function(hullform, index){
+    each hullform, index in page.metadata.hullforms
       div
         img(
           src="images/1px.gif",
           alt=hullform,
-          style=`background-position: 0 ${index * 72}px`
+          style=`background-position: 0 ${-index * 72}px`
         )
         span= hullform
-    - })

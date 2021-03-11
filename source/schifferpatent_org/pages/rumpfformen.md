@@ -9,7 +9,7 @@ hullforms:
 - Trimaran
 - Rundspant mit Flügelkiel
 - Knickspant
-- Rundspant
+- Rundspant mit zwei Seitenkielen
 - Rundspant mit S-Schlag
 - Spitz- oder V-Boden
 - Flachboden
