@@ -39,8 +39,8 @@ build: node_modules
 	-mkdir $@
 
 
-node_modules: package.json package-lock.json
-	npm install
+node_modules: package.json
+	if test ! -d $@; then bun install; fi
 
 
 # TODO: CSS must be generated differently first
@@ -49,6 +49,13 @@ node_modules: package.json package-lock.json
 # 		--locals $(<D)/locals.json \
 # 		--templates $(<D)/templates \
 # 		--contents $(<D)/pages
+
+
+.PHONY: deploy
+deploy:
+	@echo "========================================================"
+	@echo "Push code to GitHub for automatic deployment via Netlify"
+	@echo "========================================================"
 
 
 .PHONY: clean
