@@ -1,9 +1,10 @@
+.PHONY: help
+help: makefile
+	@tail -n +4 makefile | grep ".PHONY"
+
+
 # Prevent deletion by rsync of several files
 .PRECIOUS: build/%/screen.css build/%/images build/%/ads.txt build/%/CNAME
-
-
-.PHONY: all
-all: build/sail-guide_com build/schifferpatent_org
 
 
 build/%: source/%/* build/%/screen.css build/%/ads.txt \
@@ -37,6 +38,14 @@ build/%/CNAME: build
 
 build: node_modules
 	-mkdir $@
+
+
+.PHONY: all
+all: build/sail-guide_com build/schifferpatent_org
+
+
+.PHONY: test
+test: all
 
 
 node_modules: package.json
