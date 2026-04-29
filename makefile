@@ -48,6 +48,14 @@ all: build/sail-guide_com build/schifferpatent_org
 test: all
 
 
+.PHONY: serve
+serve:
+	miniserve \
+		--index=index.html \
+		--pretty-urls \
+		build/schifferpatent_org
+
+
 node_modules: package.json
 	if test ! -d $@; then bun install; fi
 
