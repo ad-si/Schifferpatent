@@ -10,7 +10,7 @@ date: 2017-06-25
 ---
 
 - Sequence of long tones
-- Gunshots or bang signals with intervals of 1 minute
-- Circular pivoting a red flag, a light, or a flashy object
+- Gunshots or bang signals at intervals of 1 minute
+- Circular waving of a red flag, a light, or a conspicuous object
 - Smoke signal with orange smoke
 - Red parachute flare or red torch

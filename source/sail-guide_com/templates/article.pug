@@ -5,7 +5,11 @@ block prepend title
 
 block prepend content
 
-  - var map = {"ae":"ä", "oe":"ö", "ue":"ü"}
+  - function titleize(name) {
+  -   return name.split('-').map(function (word) {
+  -     return word[0].toUpperCase() + word.slice(1)
+  -   }).join(' ')
+  - }
 
   ul.sidebar
     each value, filename in contents
@@ -13,31 +17,20 @@ block prepend content
 
         - var className = null
         - var name = filename.slice(0,-3)
-        - var escName = name
 
         if value.metadata.available === false
           - className = "coming_soon"
 
-        each umlaut, ligature in map
-          - escName = escName.replace(ligature, umlaut)
-
-        if name === 'steuerung'
-          - escName = 'Steuerung'
-
         li
           a(href=name, class=className)
-            = escName[0].toUpperCase() + escName.slice(1)
+            = titleize(name)
 
   .text(id=page.title.toLowerCase())
 
     if page.metadata.available === false
-      - var escapedTitle = page.title
-      each umlaut, ligature in map
-        - escapedTitle = escapedTitle.replace(ligature, umlaut)
-
-      h2= escapedTitle[0].toUpperCase() + escapedTitle.slice(1)
+      h2= page.title
       hr
-      h3 Diese Seite ist bald verfügbar!
+      h3 This page will be available soon!
 
     block text
       != page.html
